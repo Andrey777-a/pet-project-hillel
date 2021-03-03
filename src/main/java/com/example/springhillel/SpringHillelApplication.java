@@ -9,7 +9,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class SpringHillelApplication {
 
 	public static void main(String[] args) {
-		/*SpringApplication.run(SpringHillelApplication.class, args);*/
+		//SpringApplication.run(SpringHillelApplication.class, args);
 		log.info("Application has started");
 	}
 
