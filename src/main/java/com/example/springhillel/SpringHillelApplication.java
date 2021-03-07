@@ -8,9 +8,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class SpringHillelApplication {
 
-	public static void main(String[] args) {
-		/*SpringApplication.run(SpringHillelApplication.class, args);*/
-		log.info("Application has started");
-	}
 
+	public static void main(String[] args) {
+		SpringApplication.run(SpringHillelApplication.class, args);
+	}
 }
