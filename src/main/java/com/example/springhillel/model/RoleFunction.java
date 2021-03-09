@@ -7,5 +7,4 @@ public enum RoleFunction {
     CREATE_TICKET,
     CLOSE_TICKET
 
-
 }
