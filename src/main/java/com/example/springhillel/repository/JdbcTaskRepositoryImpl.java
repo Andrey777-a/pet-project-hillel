@@ -3,6 +3,7 @@ package com.example.springhillel.repository;
 import com.example.springhillel.model.StatusTask;
 import com.example.springhillel.model.TaskAttribute;
 import com.example.springhillel.model.TypeTask;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
@@ -13,6 +14,7 @@ import java.sql.SQLException;
 import java.time.LocalDateTime;
 import java.util.List;
 
+@Slf4j
 @Repository
 public class JdbcTaskRepositoryImpl implements TaskRepository{
 
@@ -26,6 +28,8 @@ public class JdbcTaskRepositoryImpl implements TaskRepository{
                 taskAttribute.getName(), taskAttribute.getDescription(), taskAttribute.getAssignee(),
                 taskAttribute.getStatus().getAssign(), taskAttribute.getPriority(), taskAttribute.getTimeSpent(),
                 taskAttribute.getTimeEstimated(), LocalDateTime.now(), taskAttribute.getTypeTask().getType());
+
+        log.info("Task " + taskAttribute.getName() + " created");
     }
 
     @Override
@@ -33,6 +37,9 @@ public class JdbcTaskRepositoryImpl implements TaskRepository{
         jdbcTemplate.update("UPDATE task_user SET description = ?, status = ?, priority = ?, time_spent = ? " +
                         "where id = ?", taskAttribute.getDescription(), taskAttribute.getStatus().getAssign(), taskAttribute.getPriority(),
                 taskAttribute.getTimeSpent(), taskAttribute.getId());
+
+        log.info("Task " + taskAttribute.getId() + "information updated");
+
     }
 
     @Override
@@ -42,8 +49,8 @@ public class JdbcTaskRepositoryImpl implements TaskRepository{
                 new RowMapper<TaskAttribute>() {
                     @Override
                     public TaskAttribute mapRow(ResultSet rs, int i) throws SQLException {
-                        return new TaskAttribute(rs.getString("name"), rs.getString("description"),
-                                rs.getInt("assignee"), StatusTask.valueOf(rs.getString("status")), rs.getInt("priority"),
+                        return new TaskAttribute(rs.getInt("id"),rs.getString("name"),
+                                rs.getString("description"), rs.getInt("assignee"), StatusTask.valueOf(rs.getString("status")), rs.getInt("priority"),
                                 rs.getDouble("time_spent"),
                                 LocalDateTime.of(rs.getDate("time_estimated").toLocalDate(), rs.getTime("time_estimated").toLocalTime()),
                                 LocalDateTime.of(rs.getDate("created_on_date").toLocalDate(), rs.getTime("created_on_date").toLocalTime()),
@@ -54,6 +61,8 @@ public class JdbcTaskRepositoryImpl implements TaskRepository{
         for(TaskAttribute taskAttribute: strLst){
             System.out.println(taskAttribute);
         }
+
+        log.info("Information about user tasks received");
 
         return strLst;
     }

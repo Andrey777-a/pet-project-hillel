@@ -1,35 +1,36 @@
 package com.example.springhillel.api;
 
-import com.example.springhillel.model.TaskAttribute;
 import com.example.springhillel.model.User;
-import com.example.springhillel.repository.AbstractRepository;
+import com.example.springhillel.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 public class UserController {
 
     @Autowired
-    AbstractRepository abstractRepository;
+    private UserService userService;
 
     @GetMapping("/getAllUser")
-    public void getAllUser() {
+    public List<User> getAllUser() {
 
-        abstractRepository.getAll();
+        return userService.getAll();
 
     }
 
     @PostMapping("/insertUser")
     public void insertUser(@RequestBody User user) {
 
-        abstractRepository.create(user);
+        userService.create(user);
 
     }
 
     @DeleteMapping("/deleteUser/{id}")
     public void deleteUser(@PathVariable int id) {
 
-        abstractRepository.deleted(id);
+        userService.deleted(id);
 
     }
 }

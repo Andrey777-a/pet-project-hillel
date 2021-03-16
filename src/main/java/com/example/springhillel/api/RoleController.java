@@ -1,8 +1,7 @@
 package com.example.springhillel.api;
 
 import com.example.springhillel.model.UserRoleClass;
-import com.example.springhillel.repository.AbstractRepository;
-import com.example.springhillel.repository.RoleRepository;
+import com.example.springhillel.service.RoleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -10,19 +9,19 @@ import org.springframework.web.bind.annotation.*;
 public class RoleController {
 
     @Autowired
-    RoleRepository roleRepository;
+    private RoleService roleService;
 
     @PostMapping("/addRoleUser")
     public void addRoleUser(@RequestBody UserRoleClass userRole) {
 
-        roleRepository.roleAssignment(userRole);
+        roleService.roleAssignment(userRole);
 
     }
 
     @DeleteMapping("/deleteUserRole/{id}")
     public void deleteUserRole(@PathVariable int id) {
 
-        roleRepository.deleteRole(id);
+        roleService.deleteRole(id);
 
     }
 }

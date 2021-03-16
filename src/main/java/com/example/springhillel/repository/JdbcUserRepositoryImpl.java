@@ -5,7 +5,6 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
-import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import org.springframework.stereotype.Repository;
 
 import java.sql.ResultSet;
@@ -14,7 +13,7 @@ import java.util.List;
 
 @Slf4j
 @Repository
-public class JdbcRepositoryImpl implements AbstractRepository {
+public class JdbcUserRepositoryImpl implements UserRepository {
 
     @Autowired
     private JdbcTemplate jdbcTemplate;
@@ -31,10 +30,8 @@ public class JdbcRepositoryImpl implements AbstractRepository {
                         resultSet.getString("email"));
             }
         });
-            for(User users: strLst){
-                System.out.println(users);
-            }
 
+            log.info("User information received");
         return strLst;
     }
 
@@ -48,9 +45,26 @@ public class JdbcRepositoryImpl implements AbstractRepository {
 
     @Override
     public void deleted(int id) {
+
         jdbcTemplate.update("DELETE FROM user WHERE id = ?", id);
 
         log.info("User " + id + " deleted");
+    }
+
+    @Override
+    public User findUserById(int userId){
+
+
+        List<User> userList =jdbcTemplate.query("select * from user where id = ?",
+                preparedStatement -> preparedStatement.setInt(1, userId),
+                (ResultSet resultSet, int i) -> new User(resultSet.getInt("id")));
+
+        if (userList.size()==1){
+            return userList.get(0);
+        }else {
+            log.info("User is not found");
+        }
+        return new User();
     }
 
 }

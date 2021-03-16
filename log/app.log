@@ -1,0 +1,1442 @@
+"2021-03-16 00:02:41 [main] INFO  c.e.s.SpringHillelApplication - Starting SpringHillelApplication using Java 13.0.2 on DESKTOP-PI8E00V with PID 10100 (C:\Users\aandr\IdeaProjects\spring-hillel\target\classes started by aandr in C:\Users\aandr\IdeaProjects\spring-hillel)
+""2021-03-16 00:02:41 [main] INFO  c.e.s.SpringHillelApplication - No active profile set, falling back to default profiles: default
+""2021-03-16 00:02:42 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+""2021-03-16 00:02:42 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 22 ms. Found 0 JPA repository interfaces.
+""2021-03-16 00:02:43 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8880 (http)
+""2021-03-16 00:02:43 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+""2021-03-16 00:02:43 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.43]
+""2021-03-16 00:02:43 [main] INFO  o.a.c.c.C.[.[.[/bug-tracker] - Initializing Spring embedded WebApplicationContext
+""2021-03-16 00:02:43 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1796 ms
+""2021-03-16 00:02:43 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+""2021-03-16 00:02:43 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+""2021-03-16 00:02:43 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+""2021-03-16 00:02:44 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.4.28.Final
+""2021-03-16 00:02:44 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+""2021-03-16 00:02:44 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+""2021-03-16 00:02:44 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+""2021-03-16 00:02:44 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+""2021-03-16 00:02:44 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+""2021-03-16 00:02:44 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+""2021-03-16 00:02:45 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8880 (http) with context path '/bug-tracker'
+""2021-03-16 00:02:45 [main] INFO  c.e.s.SpringHillelApplication - Started SpringHillelApplication in 4.342 seconds (JVM running for 5.601)
+""2021-03-16 00:02:47 [http-nio-8880-exec-1] INFO  o.a.c.c.C.[.[.[/bug-tracker] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+""2021-03-16 00:02:47 [http-nio-8880-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+""2021-03-16 00:02:47 [http-nio-8880-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+""2021-03-16 00:02:48 [http-nio-8880-exec-1] INFO  c.e.springhillel.aop.LoggingAspect - public java.util.List com.example.springhillel.api.UserController.getAllUser() method started working.
+""2021-03-16 00:02:48 [http-nio-8880-exec-1] INFO  c.e.springhillel.aop.LoggingAspect - public java.util.List com.example.springhillel.service.UserServiceImpl.getAll() method started working.
+""2021-03-16 00:02:48 [http-nio-8880-exec-1] INFO  c.e.springhillel.aop.LoggingAspect - public java.util.List com.example.springhillel.repository.JdbcUserRepositoryImpl.getAll() method started working.
+""2021-03-16 00:02:48 [http-nio-8880-exec-1] INFO  c.e.s.r.JdbcUserRepositoryImpl - User information received
+""2021-03-16 00:02:48 [http-nio-8880-exec-1] INFO  c.e.springhillel.aop.LoggingAspect - User(id=4, firstName=Ira, lastName=Gibson, email=dfgdf, userRole=null)
+""2021-03-16 00:02:48 [http-nio-8880-exec-1] INFO  c.e.springhillel.aop.LoggingAspect - User(id=5, firstName=Ira, lastName=Gibson, email=dfgdf, userRole=null)
+""2021-03-16 00:02:48 [http-nio-8880-exec-1] INFO  c.e.springhillel.aop.LoggingAspect - User(id=7, firstName=Roy2, lastName=gib2, email= hello2, userRole=null)
+""2021-03-16 00:02:48 [http-nio-8880-exec-1] INFO  c.e.springhillel.aop.LoggingAspect - User(id=9, firstName=Roy, lastName=Gibson, email=email1@gmail.com, userRole=null)
+""2021-03-16 00:02:48 [http-nio-8880-exec-1] INFO  c.e.springhillel.aop.LoggingAspect - User(id=10, firstName=Dima, lastName=Smirnov, email=email2@gmail.com, userRole=null)
+""2021-03-16 00:02:48 [http-nio-8880-exec-1] INFO  c.e.springhillel.aop.LoggingAspect - User(id=11, firstName=Igor, lastName=Serov, email=email3@gmail.com, userRole=null)
+""2021-03-16 00:02:48 [http-nio-8880-exec-1] INFO  c.e.springhillel.aop.LoggingAspect - Method public java.util.List com.example.springhillel.repository.JdbcUserRepositoryImpl.getAll() finished.
+""2021-03-16 00:02:48 [http-nio-8880-exec-1] INFO  c.e.springhillel.aop.LoggingAspect - User(id=4, firstName=Ira, lastName=Gibson, email=dfgdf, userRole=null)
+""2021-03-16 00:02:48 [http-nio-8880-exec-1] INFO  c.e.springhillel.aop.LoggingAspect - User(id=5, firstName=Ira, lastName=Gibson, email=dfgdf, userRole=null)
+""2021-03-16 00:02:48 [http-nio-8880-exec-1] INFO  c.e.springhillel.aop.LoggingAspect - User(id=7, firstName=Roy2, lastName=gib2, email= hello2, userRole=null)
+""2021-03-16 00:02:48 [http-nio-8880-exec-1] INFO  c.e.springhillel.aop.LoggingAspect - User(id=9, firstName=Roy, lastName=Gibson, email=email1@gmail.com, userRole=null)
+""2021-03-16 00:02:48 [http-nio-8880-exec-1] INFO  c.e.springhillel.aop.LoggingAspect - User(id=10, firstName=Dima, lastName=Smirnov, email=email2@gmail.com, userRole=null)
+""2021-03-16 00:02:48 [http-nio-8880-exec-1] INFO  c.e.springhillel.aop.LoggingAspect - User(id=11, firstName=Igor, lastName=Serov, email=email3@gmail.com, userRole=null)
+""2021-03-16 00:02:48 [http-nio-8880-exec-1] INFO  c.e.springhillel.aop.LoggingAspect - Method public java.util.List com.example.springhillel.service.UserServiceImpl.getAll() finished.
+""2021-03-16 00:02:48 [http-nio-8880-exec-1] INFO  c.e.springhillel.aop.LoggingAspect - Method public java.util.List com.example.springhillel.api.UserController.getAllUser() finished.
+""2021-03-16 00:07:24 [http-nio-8880-exec-5] INFO  c.e.springhillel.aop.LoggingAspect - public java.util.List com.example.springhillel.api.UserController.getAllUser() method started working.
+""2021-03-16 00:07:24 [http-nio-8880-exec-5] INFO  c.e.springhillel.aop.LoggingAspect - public java.util.List com.example.springhillel.service.UserServiceImpl.getAll() method started working.
+""2021-03-16 00:07:24 [http-nio-8880-exec-5] INFO  c.e.springhillel.aop.LoggingAspect - public java.util.List com.example.springhillel.repository.JdbcUserRepositoryImpl.getAll() method started working.
+""2021-03-16 00:07:24 [http-nio-8880-exec-5] INFO  c.e.s.r.JdbcUserRepositoryImpl - User information received
+""2021-03-16 00:07:24 [http-nio-8880-exec-5] INFO  c.e.springhillel.aop.LoggingAspect - User(id=4, firstName=Ira, lastName=Gibson, email=dfgdf, userRole=null)
+""2021-03-16 00:07:24 [http-nio-8880-exec-5] INFO  c.e.springhillel.aop.LoggingAspect - User(id=5, firstName=Ira, lastName=Gibson, email=dfgdf, userRole=null)
+""2021-03-16 00:07:24 [http-nio-8880-exec-5] INFO  c.e.springhillel.aop.LoggingAspect - User(id=7, firstName=Roy2, lastName=gib2, email= hello2, userRole=null)
+""2021-03-16 00:07:24 [http-nio-8880-exec-5] INFO  c.e.springhillel.aop.LoggingAspect - User(id=9, firstName=Roy, lastName=Gibson, email=email1@gmail.com, userRole=null)
+""2021-03-16 00:07:24 [http-nio-8880-exec-5] INFO  c.e.springhillel.aop.LoggingAspect - User(id=10, firstName=Dima, lastName=Smirnov, email=email2@gmail.com, userRole=null)
+""2021-03-16 00:07:24 [http-nio-8880-exec-5] INFO  c.e.springhillel.aop.LoggingAspect - User(id=11, firstName=Igor, lastName=Serov, email=email3@gmail.com, userRole=null)
+""2021-03-16 00:07:24 [http-nio-8880-exec-5] INFO  c.e.springhillel.aop.LoggingAspect - Method public java.util.List com.example.springhillel.repository.JdbcUserRepositoryImpl.getAll() finished.
+""2021-03-16 00:07:24 [http-nio-8880-exec-5] INFO  c.e.springhillel.aop.LoggingAspect - User(id=4, firstName=Ira, lastName=Gibson, email=dfgdf, userRole=null)
+""2021-03-16 00:07:24 [http-nio-8880-exec-5] INFO  c.e.springhillel.aop.LoggingAspect - User(id=5, firstName=Ira, lastName=Gibson, email=dfgdf, userRole=null)
+""2021-03-16 00:07:24 [http-nio-8880-exec-5] INFO  c.e.springhillel.aop.LoggingAspect - User(id=7, firstName=Roy2, lastName=gib2, email= hello2, userRole=null)
+""2021-03-16 00:07:24 [http-nio-8880-exec-5] INFO  c.e.springhillel.aop.LoggingAspect - User(id=9, firstName=Roy, lastName=Gibson, email=email1@gmail.com, userRole=null)
+""2021-03-16 00:07:24 [http-nio-8880-exec-5] INFO  c.e.springhillel.aop.LoggingAspect - User(id=10, firstName=Dima, lastName=Smirnov, email=email2@gmail.com, userRole=null)
+""2021-03-16 00:07:24 [http-nio-8880-exec-5] INFO  c.e.springhillel.aop.LoggingAspect - User(id=11, firstName=Igor, lastName=Serov, email=email3@gmail.com, userRole=null)
+""2021-03-16 00:07:24 [http-nio-8880-exec-5] INFO  c.e.springhillel.aop.LoggingAspect - Method public java.util.List com.example.springhillel.service.UserServiceImpl.getAll() finished.
+""2021-03-16 00:07:24 [http-nio-8880-exec-5] INFO  c.e.springhillel.aop.LoggingAspect - Method public java.util.List com.example.springhillel.api.UserController.getAllUser() finished.
+""2021-03-16 00:09:15 [main] INFO  c.e.s.SpringHillelApplication - Starting SpringHillelApplication using Java 13.0.2 on DESKTOP-PI8E00V with PID 19024 (C:\Users\aandr\IdeaProjects\spring-hillel\target\classes started by aandr in C:\Users\aandr\IdeaProjects\spring-hillel)
+""2021-03-16 00:09:15 [main] INFO  c.e.s.SpringHillelApplication - No active profile set, falling back to default profiles: default
+""2021-03-16 00:09:16 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+""2021-03-16 00:09:16 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 23 ms. Found 0 JPA repository interfaces.
+""2021-03-16 00:09:16 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8880 (http)
+""2021-03-16 00:09:16 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+""2021-03-16 00:09:16 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.43]
+""2021-03-16 00:09:16 [main] INFO  o.a.c.c.C.[.[.[/bug-tracker] - Initializing Spring embedded WebApplicationContext
+""2021-03-16 00:09:16 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1454 ms
+""2021-03-16 00:09:16 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+""2021-03-16 00:09:17 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+""2021-03-16 00:09:17 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+""2021-03-16 00:09:17 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.4.28.Final
+""2021-03-16 00:09:17 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+""2021-03-16 00:09:17 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+""2021-03-16 00:09:17 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+""2021-03-16 00:09:17 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+""2021-03-16 00:09:17 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+""2021-03-16 00:09:17 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+""2021-03-16 00:09:18 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8880 (http) with context path '/bug-tracker'
+""2021-03-16 00:09:18 [main] INFO  c.e.s.SpringHillelApplication - Started SpringHillelApplication in 3.556 seconds (JVM running for 4.876)
+""2021-03-16 00:09:20 [http-nio-8880-exec-2] INFO  o.a.c.c.C.[.[.[/bug-tracker] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+""2021-03-16 00:09:20 [http-nio-8880-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+""2021-03-16 00:09:20 [http-nio-8880-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+""2021-03-16 00:09:20 [http-nio-8880-exec-2] INFO  c.e.springhillel.aop.LoggingAspect - public java.util.List com.example.springhillel.api.UserController.getAllUser() method started working.
+""2021-03-16 00:09:20 [http-nio-8880-exec-2] INFO  c.e.springhillel.aop.LoggingAspect - public java.util.List com.example.springhillel.service.UserServiceImpl.getAll() method started working.
+""2021-03-16 00:09:20 [http-nio-8880-exec-2] INFO  c.e.springhillel.aop.LoggingAspect - public java.util.List com.example.springhillel.repository.JdbcUserRepositoryImpl.getAll() method started working.
+""2021-03-16 00:09:20 [http-nio-8880-exec-2] INFO  c.e.s.r.JdbcUserRepositoryImpl - User information received
+""2021-03-16 00:09:20 [http-nio-8880-exec-2] INFO  c.e.springhillel.aop.LoggingAspect - User(id=4, firstName=Ira, lastName=Gibson, email=dfgdf, userRole=null)
+""2021-03-16 00:09:20 [http-nio-8880-exec-2] INFO  c.e.springhillel.aop.LoggingAspect - User(id=5, firstName=Ira, lastName=Gibson, email=dfgdf, userRole=null)
+""2021-03-16 00:09:20 [http-nio-8880-exec-2] INFO  c.e.springhillel.aop.LoggingAspect - User(id=7, firstName=Roy2, lastName=gib2, email= hello2, userRole=null)
+""2021-03-16 00:09:20 [http-nio-8880-exec-2] INFO  c.e.springhillel.aop.LoggingAspect - User(id=9, firstName=Roy, lastName=Gibson, email=email1@gmail.com, userRole=null)
+""2021-03-16 00:09:20 [http-nio-8880-exec-2] INFO  c.e.springhillel.aop.LoggingAspect - User(id=10, firstName=Dima, lastName=Smirnov, email=email2@gmail.com, userRole=null)
+""2021-03-16 00:09:20 [http-nio-8880-exec-2] INFO  c.e.springhillel.aop.LoggingAspect - User(id=11, firstName=Igor, lastName=Serov, email=email3@gmail.com, userRole=null)
+""2021-03-16 00:09:20 [http-nio-8880-exec-2] INFO  c.e.springhillel.aop.LoggingAspect - Method public java.util.List com.example.springhillel.repository.JdbcUserRepositoryImpl.getAll() finished.
+""2021-03-16 00:09:20 [http-nio-8880-exec-2] INFO  c.e.springhillel.aop.LoggingAspect - Method public java.util.List com.example.springhillel.service.UserServiceImpl.getAll() finished.
+""2021-03-16 00:09:20 [http-nio-8880-exec-2] INFO  c.e.springhillel.aop.LoggingAspect - Method public java.util.List com.example.springhillel.api.UserController.getAllUser() finished.
+""2021-03-16 00:16:25 [main] INFO  c.e.s.SpringHillelApplication - Starting SpringHillelApplication using Java 13.0.2 on DESKTOP-PI8E00V with PID 25496 (C:\Users\aandr\IdeaProjects\spring-hillel\target\classes started by aandr in C:\Users\aandr\IdeaProjects\spring-hillel)
+""2021-03-16 00:16:25 [main] INFO  c.e.s.SpringHillelApplication - No active profile set, falling back to default profiles: default
+""2021-03-16 00:16:26 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+""2021-03-16 00:16:26 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 19 ms. Found 0 JPA repository interfaces.
+""2021-03-16 00:16:26 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'projectingArgumentResolverBeanPostProcessor' defined in class path resource [org/springframework/data/web/config/ProjectingArgumentResolverRegistrar.class]: BeanPostProcessor before instantiation of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration': Initialization of bean failed; nested exception is java.lang.IllegalArgumentException: warning no match for this type name: com.example.springhillel.repository [Xlint:invalidAbsoluteTypeName]
+""2021-03-16 00:16:26 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+""2021-03-16 00:16:26 [main] ERROR o.s.boot.SpringApplication - Application run failed
+"org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'projectingArgumentResolverBeanPostProcessor' defined in class path resource [org/springframework/data/web/config/ProjectingArgumentResolverRegistrar.class]: BeanPostProcessor before instantiation of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration': Initialization of bean failed; nested exception is java.lang.IllegalArgumentException: warning no match for this type name: com.example.springhillel.repository [Xlint:invalidAbsoluteTypeName]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:519)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:213)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.registerBeanPostProcessors(PostProcessorRegistrationDelegate.java:270)
+	at org.springframework.context.support.AbstractApplicationContext.registerBeanPostProcessors(AbstractApplicationContext.java:761)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:566)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:144)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:767)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:426)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:326)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1311)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1300)
+	at com.example.springhillel.SpringHillelApplication.main(SpringHillelApplication.java:13)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration': Initialization of bean failed; nested exception is java.lang.IllegalArgumentException: warning no match for this type name: com.example.springhillel.repository [Xlint:invalidAbsoluteTypeName]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:610)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:410)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1334)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1177)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:564)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:213)
+	at org.springframework.aop.framework.autoproxy.BeanFactoryAdvisorRetrievalHelper.findAdvisorBeans(BeanFactoryAdvisorRetrievalHelper.java:91)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findCandidateAdvisors(AbstractAdvisorAutoProxyCreator.java:111)
+	at org.springframework.aop.aspectj.annotation.AnnotationAwareAspectJAutoProxyCreator.findCandidateAdvisors(AnnotationAwareAspectJAutoProxyCreator.java:92)
+	at org.springframework.aop.aspectj.autoproxy.AspectJAwareAdvisorAutoProxyCreator.shouldSkip(AspectJAwareAdvisorAutoProxyCreator.java:101)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.postProcessBeforeInstantiation(AbstractAutoProxyCreator.java:251)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInstantiation(AbstractAutowireCapableBeanFactory.java:1142)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.resolveBeforeInstantiation(AbstractAutowireCapableBeanFactory.java:1117)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:513)
+	... 15 common frames omitted
+Caused by: java.lang.IllegalArgumentException: warning no match for this type name: com.example.springhillel.repository [Xlint:invalidAbsoluteTypeName]
+	at org.aspectj.weaver.tools.PointcutParser.parsePointcutExpression(PointcutParser.java:319)
+	at org.springframework.aop.aspectj.AspectJExpressionPointcut.buildPointcutExpression(AspectJExpressionPointcut.java:227)
+	at org.springframework.aop.aspectj.AspectJExpressionPointcut.obtainPointcutExpression(AspectJExpressionPointcut.java:198)
+	at org.springframework.aop.aspectj.AspectJExpressionPointcut.getClassFilter(AspectJExpressionPointcut.java:177)
+	at org.springframework.aop.support.AopUtils.canApply(AopUtils.java:226)
+	at org.springframework.aop.support.AopUtils.canApply(AopUtils.java:289)
+	at org.springframework.aop.support.AopUtils.findAdvisorsThatCanApply(AopUtils.java:321)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findAdvisorsThatCanApply(AbstractAdvisorAutoProxyCreator.java:128)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findEligibleAdvisors(AbstractAdvisorAutoProxyCreator.java:97)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.getAdvicesAndAdvisorsForBean(AbstractAdvisorAutoProxyCreator.java:78)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.wrapIfNecessary(AbstractAutoProxyCreator.java:337)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.postProcessAfterInitialization(AbstractAutoProxyCreator.java:289)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsAfterInitialization(AbstractAutowireCapableBeanFactory.java:437)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1790)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:602)
+	... 37 common frames omitted
+"2021-03-16 00:17:06 [main] INFO  c.e.s.SpringHillelApplication - Starting SpringHillelApplication using Java 13.0.2 on DESKTOP-PI8E00V with PID 32724 (C:\Users\aandr\IdeaProjects\spring-hillel\target\classes started by aandr in C:\Users\aandr\IdeaProjects\spring-hillel)
+""2021-03-16 00:17:06 [main] INFO  c.e.s.SpringHillelApplication - No active profile set, falling back to default profiles: default
+""2021-03-16 00:17:06 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+""2021-03-16 00:17:06 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 26 ms. Found 0 JPA repository interfaces.
+""2021-03-16 00:17:07 [main] INFO  o.s.aop.framework.CglibAopProxy - Unable to proxy interface-implementing method [public final void org.springframework.boot.web.servlet.RegistrationBean.onStartup(javax.servlet.ServletContext) throws javax.servlet.ServletException] because it is marked as final: Consider using interface-based JDK proxies instead!
+""2021-03-16 00:17:07 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8880 (http)
+""2021-03-16 00:17:07 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+""2021-03-16 00:17:07 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.43]
+""2021-03-16 00:17:07 [main] INFO  o.a.c.c.C.[.[.[/bug-tracker] - Initializing Spring embedded WebApplicationContext
+""2021-03-16 00:17:07 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1506 ms
+""2021-03-16 00:17:07 [main] INFO  o.s.aop.framework.CglibAopProxy - Unable to proxy interface-implementing method [public final void org.springframework.web.filter.OncePerRequestFilter.doFilter(javax.servlet.ServletRequest,javax.servlet.ServletResponse,javax.servlet.FilterChain) throws javax.servlet.ServletException,java.io.IOException] because it is marked as final: Consider using interface-based JDK proxies instead!
+""2021-03-16 00:17:07 [main] INFO  o.s.aop.framework.CglibAopProxy - Unable to proxy interface-implementing method [public final void org.springframework.web.filter.GenericFilterBean.init(javax.servlet.FilterConfig) throws javax.servlet.ServletException] because it is marked as final: Consider using interface-based JDK proxies instead!
+""2021-03-16 00:17:07 [main] INFO  o.s.aop.framework.CglibAopProxy - Unable to proxy interface-implementing method [public final void org.springframework.web.filter.OncePerRequestFilter.doFilter(javax.servlet.ServletRequest,javax.servlet.ServletResponse,javax.servlet.FilterChain) throws javax.servlet.ServletException,java.io.IOException] because it is marked as final: Consider using interface-based JDK proxies instead!
+""2021-03-16 00:17:07 [main] INFO  o.s.aop.framework.CglibAopProxy - Unable to proxy interface-implementing method [public final void org.springframework.web.filter.GenericFilterBean.init(javax.servlet.FilterConfig) throws javax.servlet.ServletException] because it is marked as final: Consider using interface-based JDK proxies instead!
+""2021-03-16 00:17:07 [main] INFO  o.s.aop.framework.CglibAopProxy - Unable to proxy interface-implementing method [public final void org.springframework.web.filter.OncePerRequestFilter.doFilter(javax.servlet.ServletRequest,javax.servlet.ServletResponse,javax.servlet.FilterChain) throws javax.servlet.ServletException,java.io.IOException] because it is marked as final: Consider using interface-based JDK proxies instead!
+""2021-03-16 00:17:07 [main] INFO  o.s.aop.framework.CglibAopProxy - Unable to proxy interface-implementing method [public final void org.springframework.web.filter.GenericFilterBean.init(javax.servlet.FilterConfig) throws javax.servlet.ServletException] because it is marked as final: Consider using interface-based JDK proxies instead!
+""2021-03-16 00:17:07 [main] ERROR o.a.c.c.C.[.[.[/bug-tracker] - Exception starting filter [requestContextFilter]
+"java.lang.NullPointerException: null
+	at org.springframework.web.filter.GenericFilterBean.init(GenericFilterBean.java:241)
+	at org.apache.catalina.core.ApplicationFilterConfig.initFilter(ApplicationFilterConfig.java:270)
+	at org.apache.catalina.core.ApplicationFilterConfig.<init>(ApplicationFilterConfig.java:106)
+	at org.apache.catalina.core.StandardContext.filterStart(StandardContext.java:4566)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5203)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1384)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1374)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:140)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:909)
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:843)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1384)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1374)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:140)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:909)
+	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:262)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:434)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:930)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:486)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:123)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.<init>(TomcatWebServer.java:104)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getTomcatWebServer(TomcatServletWebServerFactory.java:450)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:199)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory$$FastClassBySpringCGLIB$$9c83fa9f.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:779)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:692)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory$$EnhancerBySpringCGLIB$$a82ed763.getWebServer(<generated>)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:181)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:159)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:576)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:144)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:767)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:426)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:326)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1311)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1300)
+	at com.example.springhillel.SpringHillelApplication.main(SpringHillelApplication.java:13)
+"2021-03-16 00:17:07 [main] ERROR o.a.c.c.C.[.[.[/bug-tracker] - Exception starting filter [characterEncodingFilter]
+"java.lang.NullPointerException: null
+	at org.springframework.web.filter.GenericFilterBean.init(GenericFilterBean.java:241)
+	at org.apache.catalina.core.ApplicationFilterConfig.initFilter(ApplicationFilterConfig.java:270)
+	at org.apache.catalina.core.ApplicationFilterConfig.<init>(ApplicationFilterConfig.java:106)
+	at org.apache.catalina.core.StandardContext.filterStart(StandardContext.java:4566)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5203)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1384)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1374)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:140)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:909)
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:843)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1384)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1374)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:140)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:909)
+	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:262)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:434)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:930)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:486)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:123)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.<init>(TomcatWebServer.java:104)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getTomcatWebServer(TomcatServletWebServerFactory.java:450)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:199)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory$$FastClassBySpringCGLIB$$9c83fa9f.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:779)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:692)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory$$EnhancerBySpringCGLIB$$a82ed763.getWebServer(<generated>)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:181)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:159)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:576)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:144)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:767)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:426)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:326)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1311)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1300)
+	at com.example.springhillel.SpringHillelApplication.main(SpringHillelApplication.java:13)
+"2021-03-16 00:17:07 [main] ERROR o.a.c.c.C.[.[.[/bug-tracker] - Exception starting filter [formContentFilter]
+"java.lang.NullPointerException: null
+	at org.springframework.web.filter.GenericFilterBean.init(GenericFilterBean.java:241)
+	at org.apache.catalina.core.ApplicationFilterConfig.initFilter(ApplicationFilterConfig.java:270)
+	at org.apache.catalina.core.ApplicationFilterConfig.<init>(ApplicationFilterConfig.java:106)
+	at org.apache.catalina.core.StandardContext.filterStart(StandardContext.java:4566)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5203)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1384)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1374)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:140)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:909)
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:843)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1384)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1374)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:140)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:909)
+	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:262)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:434)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:930)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:486)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:123)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.<init>(TomcatWebServer.java:104)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getTomcatWebServer(TomcatServletWebServerFactory.java:450)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:199)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory$$FastClassBySpringCGLIB$$9c83fa9f.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:779)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:692)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory$$EnhancerBySpringCGLIB$$a82ed763.getWebServer(<generated>)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:181)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:159)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:576)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:144)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:767)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:426)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:326)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1311)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1300)
+	at com.example.springhillel.SpringHillelApplication.main(SpringHillelApplication.java:13)
+"2021-03-16 00:17:07 [main] ERROR o.a.catalina.core.StandardContext - One or more Filters failed to start. Full details will be found in the appropriate container log file
+""2021-03-16 00:17:07 [main] ERROR o.a.catalina.core.StandardContext - Context [/bug-tracker] startup failed due to previous errors
+""2021-03-16 00:17:08 [main] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+""2021-03-16 00:17:08 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+""2021-03-16 00:17:08 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+""2021-03-16 00:17:08 [main] ERROR o.s.boot.SpringApplication - Application run failed
+"org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:162)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:576)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:144)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:767)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:426)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:326)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1311)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1300)
+	at com.example.springhillel.SpringHillelApplication.main(SpringHillelApplication.java:13)
+Caused by: org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:142)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.<init>(TomcatWebServer.java:104)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getTomcatWebServer(TomcatServletWebServerFactory.java:450)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:199)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory$$FastClassBySpringCGLIB$$9c83fa9f.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:779)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:692)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory$$EnhancerBySpringCGLIB$$a82ed763.getWebServer(<generated>)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:181)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:159)
+	... 9 common frames omitted
+Caused by: java.lang.IllegalStateException: StandardEngine[Tomcat].StandardHost[localhost].TomcatEmbeddedContext[/bug-tracker] failed to start
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.rethrowDeferredStartupExceptions(TomcatWebServer.java:187)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:126)
+	... 24 common frames omitted
+"2021-03-16 00:17:27 [main] INFO  c.e.s.SpringHillelApplication - Starting SpringHillelApplication using Java 13.0.2 on DESKTOP-PI8E00V with PID 27948 (C:\Users\aandr\IdeaProjects\spring-hillel\target\classes started by aandr in C:\Users\aandr\IdeaProjects\spring-hillel)
+""2021-03-16 00:17:27 [main] INFO  c.e.s.SpringHillelApplication - No active profile set, falling back to default profiles: default
+""2021-03-16 00:17:27 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+""2021-03-16 00:17:28 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 21 ms. Found 0 JPA repository interfaces.
+""2021-03-16 00:17:28 [main] INFO  o.s.aop.framework.CglibAopProxy - Unable to proxy interface-implementing method [public final void org.springframework.boot.web.servlet.RegistrationBean.onStartup(javax.servlet.ServletContext) throws javax.servlet.ServletException] because it is marked as final: Consider using interface-based JDK proxies instead!
+""2021-03-16 00:17:28 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8880 (http)
+""2021-03-16 00:17:28 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+""2021-03-16 00:17:28 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.43]
+""2021-03-16 00:17:28 [main] INFO  o.a.c.c.C.[.[.[/bug-tracker] - Initializing Spring embedded WebApplicationContext
+""2021-03-16 00:17:28 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1493 ms
+""2021-03-16 00:17:28 [main] INFO  o.s.aop.framework.CglibAopProxy - Unable to proxy interface-implementing method [public final void org.springframework.web.filter.OncePerRequestFilter.doFilter(javax.servlet.ServletRequest,javax.servlet.ServletResponse,javax.servlet.FilterChain) throws javax.servlet.ServletException,java.io.IOException] because it is marked as final: Consider using interface-based JDK proxies instead!
+""2021-03-16 00:17:28 [main] INFO  o.s.aop.framework.CglibAopProxy - Unable to proxy interface-implementing method [public final void org.springframework.web.filter.GenericFilterBean.init(javax.servlet.FilterConfig) throws javax.servlet.ServletException] because it is marked as final: Consider using interface-based JDK proxies instead!
+""2021-03-16 00:17:28 [main] INFO  o.s.aop.framework.CglibAopProxy - Unable to proxy interface-implementing method [public final void org.springframework.web.filter.OncePerRequestFilter.doFilter(javax.servlet.ServletRequest,javax.servlet.ServletResponse,javax.servlet.FilterChain) throws javax.servlet.ServletException,java.io.IOException] because it is marked as final: Consider using interface-based JDK proxies instead!
+""2021-03-16 00:17:28 [main] INFO  o.s.aop.framework.CglibAopProxy - Unable to proxy interface-implementing method [public final void org.springframework.web.filter.GenericFilterBean.init(javax.servlet.FilterConfig) throws javax.servlet.ServletException] because it is marked as final: Consider using interface-based JDK proxies instead!
+""2021-03-16 00:17:28 [main] INFO  o.s.aop.framework.CglibAopProxy - Unable to proxy interface-implementing method [public final void org.springframework.web.filter.OncePerRequestFilter.doFilter(javax.servlet.ServletRequest,javax.servlet.ServletResponse,javax.servlet.FilterChain) throws javax.servlet.ServletException,java.io.IOException] because it is marked as final: Consider using interface-based JDK proxies instead!
+""2021-03-16 00:17:28 [main] INFO  o.s.aop.framework.CglibAopProxy - Unable to proxy interface-implementing method [public final void org.springframework.web.filter.GenericFilterBean.init(javax.servlet.FilterConfig) throws javax.servlet.ServletException] because it is marked as final: Consider using interface-based JDK proxies instead!
+""2021-03-16 00:17:28 [main] ERROR o.a.c.c.C.[.[.[/bug-tracker] - Exception starting filter [requestContextFilter]
+"java.lang.NullPointerException: null
+	at org.springframework.web.filter.GenericFilterBean.init(GenericFilterBean.java:241)
+	at org.apache.catalina.core.ApplicationFilterConfig.initFilter(ApplicationFilterConfig.java:270)
+	at org.apache.catalina.core.ApplicationFilterConfig.<init>(ApplicationFilterConfig.java:106)
+	at org.apache.catalina.core.StandardContext.filterStart(StandardContext.java:4566)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5203)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1384)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1374)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:140)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:909)
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:843)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1384)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1374)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:140)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:909)
+	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:262)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:434)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:930)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:486)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:123)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.<init>(TomcatWebServer.java:104)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getTomcatWebServer(TomcatServletWebServerFactory.java:450)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:199)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory$$FastClassBySpringCGLIB$$9c83fa9f.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:779)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:692)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory$$EnhancerBySpringCGLIB$$33394d9.getWebServer(<generated>)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:181)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:159)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:576)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:144)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:767)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:426)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:326)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1311)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1300)
+	at com.example.springhillel.SpringHillelApplication.main(SpringHillelApplication.java:13)
+"2021-03-16 00:17:28 [main] ERROR o.a.c.c.C.[.[.[/bug-tracker] - Exception starting filter [characterEncodingFilter]
+"java.lang.NullPointerException: null
+	at org.springframework.web.filter.GenericFilterBean.init(GenericFilterBean.java:241)
+	at org.apache.catalina.core.ApplicationFilterConfig.initFilter(ApplicationFilterConfig.java:270)
+	at org.apache.catalina.core.ApplicationFilterConfig.<init>(ApplicationFilterConfig.java:106)
+	at org.apache.catalina.core.StandardContext.filterStart(StandardContext.java:4566)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5203)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1384)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1374)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:140)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:909)
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:843)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1384)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1374)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:140)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:909)
+	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:262)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:434)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:930)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:486)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:123)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.<init>(TomcatWebServer.java:104)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getTomcatWebServer(TomcatServletWebServerFactory.java:450)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:199)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory$$FastClassBySpringCGLIB$$9c83fa9f.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:779)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:692)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory$$EnhancerBySpringCGLIB$$33394d9.getWebServer(<generated>)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:181)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:159)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:576)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:144)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:767)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:426)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:326)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1311)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1300)
+	at com.example.springhillel.SpringHillelApplication.main(SpringHillelApplication.java:13)
+"2021-03-16 00:17:28 [main] ERROR o.a.c.c.C.[.[.[/bug-tracker] - Exception starting filter [formContentFilter]
+"java.lang.NullPointerException: null
+	at org.springframework.web.filter.GenericFilterBean.init(GenericFilterBean.java:241)
+	at org.apache.catalina.core.ApplicationFilterConfig.initFilter(ApplicationFilterConfig.java:270)
+	at org.apache.catalina.core.ApplicationFilterConfig.<init>(ApplicationFilterConfig.java:106)
+	at org.apache.catalina.core.StandardContext.filterStart(StandardContext.java:4566)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5203)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1384)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1374)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:140)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:909)
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:843)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1384)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1374)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:140)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:909)
+	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:262)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:434)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:930)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:486)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:123)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.<init>(TomcatWebServer.java:104)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getTomcatWebServer(TomcatServletWebServerFactory.java:450)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:199)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory$$FastClassBySpringCGLIB$$9c83fa9f.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:779)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:692)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory$$EnhancerBySpringCGLIB$$33394d9.getWebServer(<generated>)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:181)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:159)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:576)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:144)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:767)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:426)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:326)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1311)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1300)
+	at com.example.springhillel.SpringHillelApplication.main(SpringHillelApplication.java:13)
+"2021-03-16 00:17:28 [main] ERROR o.a.catalina.core.StandardContext - One or more Filters failed to start. Full details will be found in the appropriate container log file
+""2021-03-16 00:17:28 [main] ERROR o.a.catalina.core.StandardContext - Context [/bug-tracker] startup failed due to previous errors
+""2021-03-16 00:17:29 [main] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+""2021-03-16 00:17:29 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+""2021-03-16 00:17:29 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+""2021-03-16 00:17:29 [main] ERROR o.s.boot.SpringApplication - Application run failed
+"org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:162)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:576)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:144)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:767)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:426)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:326)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1311)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1300)
+	at com.example.springhillel.SpringHillelApplication.main(SpringHillelApplication.java:13)
+Caused by: org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:142)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.<init>(TomcatWebServer.java:104)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getTomcatWebServer(TomcatServletWebServerFactory.java:450)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:199)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory$$FastClassBySpringCGLIB$$9c83fa9f.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:779)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:692)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory$$EnhancerBySpringCGLIB$$33394d9.getWebServer(<generated>)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:181)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:159)
+	... 9 common frames omitted
+Caused by: java.lang.IllegalStateException: StandardEngine[Tomcat].StandardHost[localhost].TomcatEmbeddedContext[/bug-tracker] failed to start
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.rethrowDeferredStartupExceptions(TomcatWebServer.java:187)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:126)
+	... 24 common frames omitted
+"2021-03-16 00:17:43 [main] INFO  c.e.s.SpringHillelApplication - Starting SpringHillelApplication using Java 13.0.2 on DESKTOP-PI8E00V with PID 32544 (C:\Users\aandr\IdeaProjects\spring-hillel\target\classes started by aandr in C:\Users\aandr\IdeaProjects\spring-hillel)
+""2021-03-16 00:17:43 [main] INFO  c.e.s.SpringHillelApplication - No active profile set, falling back to default profiles: default
+""2021-03-16 00:17:43 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+""2021-03-16 00:17:43 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 19 ms. Found 0 JPA repository interfaces.
+""2021-03-16 00:17:44 [main] INFO  o.s.aop.framework.CglibAopProxy - Unable to proxy interface-implementing method [public final void org.springframework.boot.web.servlet.RegistrationBean.onStartup(javax.servlet.ServletContext) throws javax.servlet.ServletException] because it is marked as final: Consider using interface-based JDK proxies instead!
+""2021-03-16 00:17:44 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8880 (http)
+""2021-03-16 00:17:44 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+""2021-03-16 00:17:44 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.43]
+""2021-03-16 00:17:44 [main] INFO  o.a.c.c.C.[.[.[/bug-tracker] - Initializing Spring embedded WebApplicationContext
+""2021-03-16 00:17:44 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1587 ms
+""2021-03-16 00:17:44 [main] INFO  o.s.aop.framework.CglibAopProxy - Unable to proxy interface-implementing method [public final void org.springframework.web.filter.OncePerRequestFilter.doFilter(javax.servlet.ServletRequest,javax.servlet.ServletResponse,javax.servlet.FilterChain) throws javax.servlet.ServletException,java.io.IOException] because it is marked as final: Consider using interface-based JDK proxies instead!
+""2021-03-16 00:17:44 [main] INFO  o.s.aop.framework.CglibAopProxy - Unable to proxy interface-implementing method [public final void org.springframework.web.filter.GenericFilterBean.init(javax.servlet.FilterConfig) throws javax.servlet.ServletException] because it is marked as final: Consider using interface-based JDK proxies instead!
+""2021-03-16 00:17:44 [main] INFO  o.s.aop.framework.CglibAopProxy - Unable to proxy interface-implementing method [public final void org.springframework.web.filter.OncePerRequestFilter.doFilter(javax.servlet.ServletRequest,javax.servlet.ServletResponse,javax.servlet.FilterChain) throws javax.servlet.ServletException,java.io.IOException] because it is marked as final: Consider using interface-based JDK proxies instead!
+""2021-03-16 00:17:44 [main] INFO  o.s.aop.framework.CglibAopProxy - Unable to proxy interface-implementing method [public final void org.springframework.web.filter.GenericFilterBean.init(javax.servlet.FilterConfig) throws javax.servlet.ServletException] because it is marked as final: Consider using interface-based JDK proxies instead!
+""2021-03-16 00:17:44 [main] INFO  o.s.aop.framework.CglibAopProxy - Unable to proxy interface-implementing method [public final void org.springframework.web.filter.OncePerRequestFilter.doFilter(javax.servlet.ServletRequest,javax.servlet.ServletResponse,javax.servlet.FilterChain) throws javax.servlet.ServletException,java.io.IOException] because it is marked as final: Consider using interface-based JDK proxies instead!
+""2021-03-16 00:17:44 [main] INFO  o.s.aop.framework.CglibAopProxy - Unable to proxy interface-implementing method [public final void org.springframework.web.filter.GenericFilterBean.init(javax.servlet.FilterConfig) throws javax.servlet.ServletException] because it is marked as final: Consider using interface-based JDK proxies instead!
+""2021-03-16 00:17:44 [main] ERROR o.a.c.c.C.[.[.[/bug-tracker] - Exception starting filter [requestContextFilter]
+"java.lang.NullPointerException: null
+	at org.springframework.web.filter.GenericFilterBean.init(GenericFilterBean.java:241)
+	at org.apache.catalina.core.ApplicationFilterConfig.initFilter(ApplicationFilterConfig.java:270)
+	at org.apache.catalina.core.ApplicationFilterConfig.<init>(ApplicationFilterConfig.java:106)
+	at org.apache.catalina.core.StandardContext.filterStart(StandardContext.java:4566)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5203)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1384)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1374)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:140)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:909)
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:843)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1384)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1374)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:140)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:909)
+	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:262)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:434)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:930)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:486)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:123)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.<init>(TomcatWebServer.java:104)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getTomcatWebServer(TomcatServletWebServerFactory.java:450)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:199)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory$$FastClassBySpringCGLIB$$9c83fa9f.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:779)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
+	at org.springframework.aop.framework.adapter.AfterReturningAdviceInterceptor.invoke(AfterReturningAdviceInterceptor.java:57)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
+	at org.springframework.aop.framework.adapter.AfterReturningAdviceInterceptor.invoke(AfterReturningAdviceInterceptor.java:57)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:692)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory$$EnhancerBySpringCGLIB$$9f07bac4.getWebServer(<generated>)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:181)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:159)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:576)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:144)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:767)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:426)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:326)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1311)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1300)
+	at com.example.springhillel.SpringHillelApplication.main(SpringHillelApplication.java:13)
+"2021-03-16 00:17:44 [main] ERROR o.a.c.c.C.[.[.[/bug-tracker] - Exception starting filter [characterEncodingFilter]
+"java.lang.NullPointerException: null
+	at org.springframework.web.filter.GenericFilterBean.init(GenericFilterBean.java:241)
+	at org.apache.catalina.core.ApplicationFilterConfig.initFilter(ApplicationFilterConfig.java:270)
+	at org.apache.catalina.core.ApplicationFilterConfig.<init>(ApplicationFilterConfig.java:106)
+	at org.apache.catalina.core.StandardContext.filterStart(StandardContext.java:4566)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5203)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1384)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1374)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:140)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:909)
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:843)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1384)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1374)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:140)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:909)
+	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:262)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:434)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:930)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:486)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:123)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.<init>(TomcatWebServer.java:104)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getTomcatWebServer(TomcatServletWebServerFactory.java:450)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:199)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory$$FastClassBySpringCGLIB$$9c83fa9f.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:779)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
+	at org.springframework.aop.framework.adapter.AfterReturningAdviceInterceptor.invoke(AfterReturningAdviceInterceptor.java:57)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
+	at org.springframework.aop.framework.adapter.AfterReturningAdviceInterceptor.invoke(AfterReturningAdviceInterceptor.java:57)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:692)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory$$EnhancerBySpringCGLIB$$9f07bac4.getWebServer(<generated>)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:181)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:159)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:576)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:144)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:767)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:426)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:326)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1311)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1300)
+	at com.example.springhillel.SpringHillelApplication.main(SpringHillelApplication.java:13)
+"2021-03-16 00:17:44 [main] ERROR o.a.c.c.C.[.[.[/bug-tracker] - Exception starting filter [formContentFilter]
+"java.lang.NullPointerException: null
+	at org.springframework.web.filter.GenericFilterBean.init(GenericFilterBean.java:241)
+	at org.apache.catalina.core.ApplicationFilterConfig.initFilter(ApplicationFilterConfig.java:270)
+	at org.apache.catalina.core.ApplicationFilterConfig.<init>(ApplicationFilterConfig.java:106)
+	at org.apache.catalina.core.StandardContext.filterStart(StandardContext.java:4566)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5203)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1384)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1374)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:140)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:909)
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:843)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1384)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1374)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:140)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:909)
+	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:262)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:434)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:930)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:486)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:123)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.<init>(TomcatWebServer.java:104)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getTomcatWebServer(TomcatServletWebServerFactory.java:450)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:199)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory$$FastClassBySpringCGLIB$$9c83fa9f.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:779)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
+	at org.springframework.aop.framework.adapter.AfterReturningAdviceInterceptor.invoke(AfterReturningAdviceInterceptor.java:57)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
+	at org.springframework.aop.framework.adapter.AfterReturningAdviceInterceptor.invoke(AfterReturningAdviceInterceptor.java:57)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:692)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory$$EnhancerBySpringCGLIB$$9f07bac4.getWebServer(<generated>)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:181)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:159)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:576)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:144)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:767)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:426)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:326)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1311)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1300)
+	at com.example.springhillel.SpringHillelApplication.main(SpringHillelApplication.java:13)
+"2021-03-16 00:17:44 [main] ERROR o.a.catalina.core.StandardContext - One or more Filters failed to start. Full details will be found in the appropriate container log file
+""2021-03-16 00:17:44 [main] ERROR o.a.catalina.core.StandardContext - Context [/bug-tracker] startup failed due to previous errors
+""2021-03-16 00:17:45 [main] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+""2021-03-16 00:17:45 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+""2021-03-16 00:17:45 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+""2021-03-16 00:17:45 [main] ERROR o.s.boot.SpringApplication - Application run failed
+"org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:162)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:576)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:144)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:767)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:426)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:326)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1311)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1300)
+	at com.example.springhillel.SpringHillelApplication.main(SpringHillelApplication.java:13)
+Caused by: org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:142)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.<init>(TomcatWebServer.java:104)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getTomcatWebServer(TomcatServletWebServerFactory.java:450)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:199)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory$$FastClassBySpringCGLIB$$9c83fa9f.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:779)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
+	at org.springframework.aop.framework.adapter.AfterReturningAdviceInterceptor.invoke(AfterReturningAdviceInterceptor.java:57)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
+	at org.springframework.aop.framework.adapter.AfterReturningAdviceInterceptor.invoke(AfterReturningAdviceInterceptor.java:57)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:692)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory$$EnhancerBySpringCGLIB$$9f07bac4.getWebServer(<generated>)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:181)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:159)
+	... 9 common frames omitted
+Caused by: java.lang.IllegalStateException: StandardEngine[Tomcat].StandardHost[localhost].TomcatEmbeddedContext[/bug-tracker] failed to start
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.rethrowDeferredStartupExceptions(TomcatWebServer.java:187)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:126)
+	... 30 common frames omitted
+"2021-03-16 00:18:15 [main] INFO  c.e.s.SpringHillelApplication - Starting SpringHillelApplication using Java 13.0.2 on DESKTOP-PI8E00V with PID 18576 (C:\Users\aandr\IdeaProjects\spring-hillel\target\classes started by aandr in C:\Users\aandr\IdeaProjects\spring-hillel)
+""2021-03-16 00:18:15 [main] INFO  c.e.s.SpringHillelApplication - No active profile set, falling back to default profiles: default
+""2021-03-16 00:18:15 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+""2021-03-16 00:18:15 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 22 ms. Found 0 JPA repository interfaces.
+""2021-03-16 00:18:16 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8880 (http)
+""2021-03-16 00:18:16 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+""2021-03-16 00:18:16 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.43]
+""2021-03-16 00:18:16 [main] INFO  o.a.c.c.C.[.[.[/bug-tracker] - Initializing Spring embedded WebApplicationContext
+""2021-03-16 00:18:16 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1363 ms
+""2021-03-16 00:18:16 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+""2021-03-16 00:18:16 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+""2021-03-16 00:18:16 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+""2021-03-16 00:18:16 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.4.28.Final
+""2021-03-16 00:18:16 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+""2021-03-16 00:18:17 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+""2021-03-16 00:18:17 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+""2021-03-16 00:18:17 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+""2021-03-16 00:18:17 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+""2021-03-16 00:18:17 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+""2021-03-16 00:18:18 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8880 (http) with context path '/bug-tracker'
+""2021-03-16 00:18:18 [main] INFO  c.e.s.SpringHillelApplication - Started SpringHillelApplication in 3.481 seconds (JVM running for 4.575)
+""2021-03-16 00:18:21 [http-nio-8880-exec-1] INFO  o.a.c.c.C.[.[.[/bug-tracker] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+""2021-03-16 00:18:21 [http-nio-8880-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+""2021-03-16 00:18:21 [http-nio-8880-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+""2021-03-16 00:18:21 [http-nio-8880-exec-1] INFO  c.e.springhillel.aop.LoggingAspect - public java.util.List com.example.springhillel.api.UserController.getAllUser() method started working.
+""2021-03-16 00:18:21 [http-nio-8880-exec-1] INFO  c.e.springhillel.aop.LoggingAspect - public java.util.List com.example.springhillel.service.UserServiceImpl.getAll() method started working.
+""2021-03-16 00:18:21 [http-nio-8880-exec-1] INFO  c.e.springhillel.aop.LoggingAspect - public java.util.List com.example.springhillel.repository.JdbcUserRepositoryImpl.getAll() method started working.
+""2021-03-16 00:18:21 [http-nio-8880-exec-1] INFO  c.e.s.r.JdbcUserRepositoryImpl - User information received
+""2021-03-16 00:18:21 [http-nio-8880-exec-1] INFO  c.e.springhillel.aop.LoggingAspect - User(id=4, firstName=Ira, lastName=Gibson, email=dfgdf, userRole=null)
+""2021-03-16 00:18:21 [http-nio-8880-exec-1] INFO  c.e.springhillel.aop.LoggingAspect - User(id=5, firstName=Ira, lastName=Gibson, email=dfgdf, userRole=null)
+""2021-03-16 00:18:21 [http-nio-8880-exec-1] INFO  c.e.springhillel.aop.LoggingAspect - User(id=7, firstName=Roy2, lastName=gib2, email= hello2, userRole=null)
+""2021-03-16 00:18:21 [http-nio-8880-exec-1] INFO  c.e.springhillel.aop.LoggingAspect - User(id=9, firstName=Roy, lastName=Gibson, email=email1@gmail.com, userRole=null)
+""2021-03-16 00:18:21 [http-nio-8880-exec-1] INFO  c.e.springhillel.aop.LoggingAspect - User(id=10, firstName=Dima, lastName=Smirnov, email=email2@gmail.com, userRole=null)
+""2021-03-16 00:18:21 [http-nio-8880-exec-1] INFO  c.e.springhillel.aop.LoggingAspect - User(id=11, firstName=Igor, lastName=Serov, email=email3@gmail.com, userRole=null)
+""2021-03-16 00:18:21 [http-nio-8880-exec-1] INFO  c.e.springhillel.aop.LoggingAspect - Method public java.util.List com.example.springhillel.repository.JdbcUserRepositoryImpl.getAll() finished.
+""2021-03-16 00:18:21 [http-nio-8880-exec-1] INFO  c.e.springhillel.aop.LoggingAspect - Method public java.util.List com.example.springhillel.service.UserServiceImpl.getAll() finished.
+""2021-03-16 00:18:21 [http-nio-8880-exec-1] INFO  c.e.springhillel.aop.LoggingAspect - Method public java.util.List com.example.springhillel.api.UserController.getAllUser() finished.
+""2021-03-16 00:19:12 [http-nio-8880-exec-4] INFO  c.e.springhillel.aop.LoggingAspect - 5 - parameters method.
+""2021-03-16 00:19:12 [http-nio-8880-exec-4] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [/bug-tracker] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
+"java.lang.NullPointerException: null
+	at com.example.springhillel.repository.JdbcTaskRepositoryImpl$1.mapRow(JdbcTaskRepositoryImpl.java:55)
+	at com.example.springhillel.repository.JdbcTaskRepositoryImpl$1.mapRow(JdbcTaskRepositoryImpl.java:49)
+	at org.springframework.jdbc.core.RowMapperResultSetExtractor.extractData(RowMapperResultSetExtractor.java:94)
+	at org.springframework.jdbc.core.RowMapperResultSetExtractor.extractData(RowMapperResultSetExtractor.java:61)
+	at org.springframework.jdbc.core.JdbcTemplate$1QueryStatementCallback.doInStatement(JdbcTemplate.java:453)
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:381)
+	at org.springframework.jdbc.core.JdbcTemplate.query(JdbcTemplate.java:465)
+	at org.springframework.jdbc.core.JdbcTemplate.query(JdbcTemplate.java:475)
+	at com.example.springhillel.repository.JdbcTaskRepositoryImpl.getTaskUser(JdbcTaskRepositoryImpl.java:48)
+	at com.example.springhillel.repository.JdbcTaskRepositoryImpl$$FastClassBySpringCGLIB$$1684ca66.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:779)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
+	at org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:58)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:692)
+	at com.example.springhillel.repository.JdbcTaskRepositoryImpl$$EnhancerBySpringCGLIB$$10f58d9c.getTaskUser(<generated>)
+	at com.example.springhillel.service.TaskServiceImpl.getTaskUser(TaskServiceImpl.java:39)
+	at com.example.springhillel.api.TaskController.getTaskUser(TaskController.java:33)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1060)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:962)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:887)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1684)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:830)
+"2021-03-16 00:19:17 [http-nio-8880-exec-6] INFO  c.e.springhillel.aop.LoggingAspect - 4 - parameters method.
+""2021-03-16 00:19:17 [http-nio-8880-exec-6] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [/bug-tracker] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
+"java.lang.NullPointerException: null
+	at com.example.springhillel.repository.JdbcTaskRepositoryImpl$1.mapRow(JdbcTaskRepositoryImpl.java:55)
+	at com.example.springhillel.repository.JdbcTaskRepositoryImpl$1.mapRow(JdbcTaskRepositoryImpl.java:49)
+	at org.springframework.jdbc.core.RowMapperResultSetExtractor.extractData(RowMapperResultSetExtractor.java:94)
+	at org.springframework.jdbc.core.RowMapperResultSetExtractor.extractData(RowMapperResultSetExtractor.java:61)
+	at org.springframework.jdbc.core.JdbcTemplate$1QueryStatementCallback.doInStatement(JdbcTemplate.java:453)
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:381)
+	at org.springframework.jdbc.core.JdbcTemplate.query(JdbcTemplate.java:465)
+	at org.springframework.jdbc.core.JdbcTemplate.query(JdbcTemplate.java:475)
+	at com.example.springhillel.repository.JdbcTaskRepositoryImpl.getTaskUser(JdbcTaskRepositoryImpl.java:48)
+	at com.example.springhillel.repository.JdbcTaskRepositoryImpl$$FastClassBySpringCGLIB$$1684ca66.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:779)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
+	at org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:58)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:692)
+	at com.example.springhillel.repository.JdbcTaskRepositoryImpl$$EnhancerBySpringCGLIB$$10f58d9c.getTaskUser(<generated>)
+	at com.example.springhillel.service.TaskServiceImpl.getTaskUser(TaskServiceImpl.java:39)
+	at com.example.springhillel.api.TaskController.getTaskUser(TaskController.java:33)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1060)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:962)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:887)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1684)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:830)
+"2021-03-16 00:20:31 [http-nio-8880-exec-8] INFO  c.e.springhillel.aop.LoggingAspect - 5 - parameters method.
+""2021-03-16 00:20:31 [http-nio-8880-exec-8] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [/bug-tracker] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
+"java.lang.NullPointerException: null
+	at com.example.springhillel.repository.JdbcTaskRepositoryImpl$1.mapRow(JdbcTaskRepositoryImpl.java:55)
+	at com.example.springhillel.repository.JdbcTaskRepositoryImpl$1.mapRow(JdbcTaskRepositoryImpl.java:49)
+	at org.springframework.jdbc.core.RowMapperResultSetExtractor.extractData(RowMapperResultSetExtractor.java:94)
+	at org.springframework.jdbc.core.RowMapperResultSetExtractor.extractData(RowMapperResultSetExtractor.java:61)
+	at org.springframework.jdbc.core.JdbcTemplate$1QueryStatementCallback.doInStatement(JdbcTemplate.java:453)
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:381)
+	at org.springframework.jdbc.core.JdbcTemplate.query(JdbcTemplate.java:465)
+	at org.springframework.jdbc.core.JdbcTemplate.query(JdbcTemplate.java:475)
+	at com.example.springhillel.repository.JdbcTaskRepositoryImpl.getTaskUser(JdbcTaskRepositoryImpl.java:48)
+	at com.example.springhillel.repository.JdbcTaskRepositoryImpl$$FastClassBySpringCGLIB$$1684ca66.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:779)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
+	at org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:58)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:692)
+	at com.example.springhillel.repository.JdbcTaskRepositoryImpl$$EnhancerBySpringCGLIB$$10f58d9c.getTaskUser(<generated>)
+	at com.example.springhillel.service.TaskServiceImpl.getTaskUser(TaskServiceImpl.java:39)
+	at com.example.springhillel.api.TaskController.getTaskUser(TaskController.java:33)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1060)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:962)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:887)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1684)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:830)
+"2021-03-16 00:21:44 [main] INFO  c.e.s.SpringHillelApplication - Starting SpringHillelApplication using Java 13.0.2 on DESKTOP-PI8E00V with PID 6928 (C:\Users\aandr\IdeaProjects\spring-hillel\target\classes started by aandr in C:\Users\aandr\IdeaProjects\spring-hillel)
+""2021-03-16 00:21:44 [main] INFO  c.e.s.SpringHillelApplication - No active profile set, falling back to default profiles: default
+""2021-03-16 00:21:45 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+""2021-03-16 00:21:45 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 22 ms. Found 0 JPA repository interfaces.
+""2021-03-16 00:21:45 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8880 (http)
+""2021-03-16 00:21:45 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+""2021-03-16 00:21:45 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.43]
+""2021-03-16 00:21:45 [main] INFO  o.a.c.c.C.[.[.[/bug-tracker] - Initializing Spring embedded WebApplicationContext
+""2021-03-16 00:21:45 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1433 ms
+""2021-03-16 00:21:46 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+""2021-03-16 00:21:46 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+""2021-03-16 00:21:46 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+""2021-03-16 00:21:46 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.4.28.Final
+""2021-03-16 00:21:46 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+""2021-03-16 00:21:46 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+""2021-03-16 00:21:46 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+""2021-03-16 00:21:46 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+""2021-03-16 00:21:46 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+""2021-03-16 00:21:47 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+""2021-03-16 00:21:47 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8880 (http) with context path '/bug-tracker'
+""2021-03-16 00:21:47 [main] INFO  c.e.s.SpringHillelApplication - Started SpringHillelApplication in 3.639 seconds (JVM running for 4.73)
+""2021-03-16 00:21:50 [http-nio-8880-exec-2] INFO  o.a.c.c.C.[.[.[/bug-tracker] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+""2021-03-16 00:21:50 [http-nio-8880-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+""2021-03-16 00:21:50 [http-nio-8880-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+""2021-03-16 00:21:50 [http-nio-8880-exec-2] INFO  c.e.springhillel.aop.LoggingAspect - 5 - parameters method.
+""2021-03-16 00:21:50 [http-nio-8880-exec-2] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [/bug-tracker] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
+"java.lang.NullPointerException: null
+	at com.example.springhillel.repository.JdbcTaskRepositoryImpl$1.mapRow(JdbcTaskRepositoryImpl.java:55)
+	at com.example.springhillel.repository.JdbcTaskRepositoryImpl$1.mapRow(JdbcTaskRepositoryImpl.java:49)
+	at org.springframework.jdbc.core.RowMapperResultSetExtractor.extractData(RowMapperResultSetExtractor.java:94)
+	at org.springframework.jdbc.core.RowMapperResultSetExtractor.extractData(RowMapperResultSetExtractor.java:61)
+	at org.springframework.jdbc.core.JdbcTemplate$1QueryStatementCallback.doInStatement(JdbcTemplate.java:453)
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:381)
+	at org.springframework.jdbc.core.JdbcTemplate.query(JdbcTemplate.java:465)
+	at org.springframework.jdbc.core.JdbcTemplate.query(JdbcTemplate.java:475)
+	at com.example.springhillel.repository.JdbcTaskRepositoryImpl.getTaskUser(JdbcTaskRepositoryImpl.java:48)
+	at com.example.springhillel.repository.JdbcTaskRepositoryImpl$$FastClassBySpringCGLIB$$1684ca66.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:779)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
+	at org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:58)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:692)
+	at com.example.springhillel.repository.JdbcTaskRepositoryImpl$$EnhancerBySpringCGLIB$$dbe10d61.getTaskUser(<generated>)
+	at com.example.springhillel.service.TaskServiceImpl.getTaskUser(TaskServiceImpl.java:39)
+	at com.example.springhillel.api.TaskController.getTaskUser(TaskController.java:33)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1060)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:962)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:887)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1684)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:830)
+"2021-03-16 00:23:27 [http-nio-8880-exec-4] INFO  c.e.springhillel.aop.LoggingAspect - 5 - parameters method.
+""2021-03-16 00:23:27 [http-nio-8880-exec-4] INFO  c.e.s.r.JdbcTaskRepositoryImpl - Information about user tasks received
+""2021-03-16 00:24:18 [main] INFO  c.e.s.SpringHillelApplication - Starting SpringHillelApplication using Java 13.0.2 on DESKTOP-PI8E00V with PID 29580 (C:\Users\aandr\IdeaProjects\spring-hillel\target\classes started by aandr in C:\Users\aandr\IdeaProjects\spring-hillel)
+""2021-03-16 00:24:18 [main] INFO  c.e.s.SpringHillelApplication - No active profile set, falling back to default profiles: default
+""2021-03-16 00:24:18 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+""2021-03-16 00:24:18 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 20 ms. Found 0 JPA repository interfaces.
+""2021-03-16 00:24:19 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8880 (http)
+""2021-03-16 00:24:19 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+""2021-03-16 00:24:19 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.43]
+""2021-03-16 00:24:19 [main] INFO  o.a.c.c.C.[.[.[/bug-tracker] - Initializing Spring embedded WebApplicationContext
+""2021-03-16 00:24:19 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1409 ms
+""2021-03-16 00:24:19 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+""2021-03-16 00:24:19 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+""2021-03-16 00:24:19 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+""2021-03-16 00:24:20 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.4.28.Final
+""2021-03-16 00:24:20 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+""2021-03-16 00:24:20 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+""2021-03-16 00:24:20 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+""2021-03-16 00:24:20 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+""2021-03-16 00:24:20 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+""2021-03-16 00:24:20 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+""2021-03-16 00:24:21 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8880 (http) with context path '/bug-tracker'
+""2021-03-16 00:24:21 [main] INFO  c.e.s.SpringHillelApplication - Started SpringHillelApplication in 3.588 seconds (JVM running for 4.793)
+""2021-03-16 00:24:27 [http-nio-8880-exec-2] INFO  o.a.c.c.C.[.[.[/bug-tracker] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+""2021-03-16 00:24:27 [http-nio-8880-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+""2021-03-16 00:24:27 [http-nio-8880-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+""2021-03-16 00:24:27 [http-nio-8880-exec-2] INFO  c.e.springhillel.aop.LoggingAspect - 5 - parameters method.
+""2021-03-16 00:24:27 [http-nio-8880-exec-2] INFO  c.e.s.r.JdbcTaskRepositoryImpl - Information about user tasks received
+""2021-03-16 00:24:59 [main] INFO  c.e.s.SpringHillelApplication - Starting SpringHillelApplication using Java 13.0.2 on DESKTOP-PI8E00V with PID 18984 (C:\Users\aandr\IdeaProjects\spring-hillel\target\classes started by aandr in C:\Users\aandr\IdeaProjects\spring-hillel)
+""2021-03-16 00:24:59 [main] INFO  c.e.s.SpringHillelApplication - No active profile set, falling back to default profiles: default
+""2021-03-16 00:24:59 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+""2021-03-16 00:24:59 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 20 ms. Found 0 JPA repository interfaces.
+""2021-03-16 00:25:00 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8880 (http)
+""2021-03-16 00:25:00 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+""2021-03-16 00:25:00 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.43]
+""2021-03-16 00:25:00 [main] INFO  o.a.c.c.C.[.[.[/bug-tracker] - Initializing Spring embedded WebApplicationContext
+""2021-03-16 00:25:00 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1429 ms
+""2021-03-16 00:25:00 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+""2021-03-16 00:25:00 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+""2021-03-16 00:25:00 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+""2021-03-16 00:25:00 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.4.28.Final
+""2021-03-16 00:25:01 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+""2021-03-16 00:25:01 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+""2021-03-16 00:25:01 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+""2021-03-16 00:25:01 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+""2021-03-16 00:25:01 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+""2021-03-16 00:25:01 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+""2021-03-16 00:25:02 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8880 (http) with context path '/bug-tracker'
+""2021-03-16 00:25:02 [main] INFO  c.e.s.SpringHillelApplication - Started SpringHillelApplication in 3.577 seconds (JVM running for 4.699)
+""2021-03-16 00:25:05 [http-nio-8880-exec-1] INFO  o.a.c.c.C.[.[.[/bug-tracker] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+""2021-03-16 00:25:05 [http-nio-8880-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+""2021-03-16 00:25:05 [http-nio-8880-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+""2021-03-16 00:25:05 [http-nio-8880-exec-1] INFO  c.e.springhillel.aop.LoggingAspect - 5 - parameters method.
+""2021-03-16 00:25:05 [http-nio-8880-exec-1] INFO  c.e.s.r.JdbcTaskRepositoryImpl - Information about user tasks received
+""2021-03-16 00:25:49 [http-nio-8880-exec-3] INFO  c.e.springhillel.aop.LoggingAspect - public java.util.List com.example.springhillel.api.UserController.getAllUser() method started working.
+""2021-03-16 00:25:49 [http-nio-8880-exec-3] INFO  c.e.springhillel.aop.LoggingAspect - public java.util.List com.example.springhillel.service.UserServiceImpl.getAll() method started working.
+""2021-03-16 00:25:49 [http-nio-8880-exec-3] INFO  c.e.springhillel.aop.LoggingAspect - public java.util.List com.example.springhillel.repository.JdbcUserRepositoryImpl.getAll() method started working.
+""2021-03-16 00:25:49 [http-nio-8880-exec-3] INFO  c.e.s.r.JdbcUserRepositoryImpl - User information received
+""2021-03-16 00:25:49 [http-nio-8880-exec-3] INFO  c.e.springhillel.aop.LoggingAspect - User(id=4, firstName=Ira, lastName=Gibson, email=dfgdf, userRole=null)
+""2021-03-16 00:25:49 [http-nio-8880-exec-3] INFO  c.e.springhillel.aop.LoggingAspect - User(id=5, firstName=Ira, lastName=Gibson, email=dfgdf, userRole=null)
+""2021-03-16 00:25:49 [http-nio-8880-exec-3] INFO  c.e.springhillel.aop.LoggingAspect - User(id=7, firstName=Roy2, lastName=gib2, email= hello2, userRole=null)
+""2021-03-16 00:25:49 [http-nio-8880-exec-3] INFO  c.e.springhillel.aop.LoggingAspect - User(id=9, firstName=Roy, lastName=Gibson, email=email1@gmail.com, userRole=null)
+""2021-03-16 00:25:49 [http-nio-8880-exec-3] INFO  c.e.springhillel.aop.LoggingAspect - User(id=10, firstName=Dima, lastName=Smirnov, email=email2@gmail.com, userRole=null)
+""2021-03-16 00:25:49 [http-nio-8880-exec-3] INFO  c.e.springhillel.aop.LoggingAspect - User(id=11, firstName=Igor, lastName=Serov, email=email3@gmail.com, userRole=null)
+""2021-03-16 00:25:49 [http-nio-8880-exec-3] INFO  c.e.springhillel.aop.LoggingAspect - Method public java.util.List com.example.springhillel.repository.JdbcUserRepositoryImpl.getAll() finished.
+""2021-03-16 00:25:49 [http-nio-8880-exec-3] INFO  c.e.springhillel.aop.LoggingAspect - Method public java.util.List com.example.springhillel.service.UserServiceImpl.getAll() finished.
+""2021-03-16 00:25:49 [http-nio-8880-exec-3] INFO  c.e.springhillel.aop.LoggingAspect - Method public java.util.List com.example.springhillel.api.UserController.getAllUser() finished.
+""2021-03-16 20:05:36 [main] INFO  c.e.s.SpringHillelApplication - Starting SpringHillelApplication using Java 13.0.2 on DESKTOP-PI8E00V with PID 7692 (C:\Users\aandr\IdeaProjects\spring-hillel\target\classes started by aandr in C:\Users\aandr\IdeaProjects\spring-hillel)
+""2021-03-16 20:05:36 [main] INFO  c.e.s.SpringHillelApplication - No active profile set, falling back to default profiles: default
+""2021-03-16 20:05:37 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+""2021-03-16 20:05:37 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 24 ms. Found 0 JPA repository interfaces.
+""2021-03-16 20:05:37 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8880 (http)
+""2021-03-16 20:05:37 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+""2021-03-16 20:05:37 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.43]
+""2021-03-16 20:05:37 [main] INFO  o.a.c.c.C.[.[.[/bug-tracker] - Initializing Spring embedded WebApplicationContext
+""2021-03-16 20:05:37 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1732 ms
+""2021-03-16 20:05:38 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+""2021-03-16 20:05:38 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+""2021-03-16 20:05:38 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+""2021-03-16 20:05:38 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.4.28.Final
+""2021-03-16 20:05:38 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+""2021-03-16 20:05:38 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+""2021-03-16 20:05:38 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+""2021-03-16 20:05:38 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+""2021-03-16 20:05:39 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+""2021-03-16 20:05:39 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+""2021-03-16 20:05:39 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8880 (http) with context path '/bug-tracker'
+""2021-03-16 20:05:39 [main] INFO  c.e.s.SpringHillelApplication - Started SpringHillelApplication in 4.225 seconds (JVM running for 5.398)
+""2021-03-16 20:05:47 [http-nio-8880-exec-3] INFO  o.a.c.c.C.[.[.[/bug-tracker] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+""2021-03-16 20:05:47 [http-nio-8880-exec-3] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+""2021-03-16 20:05:47 [http-nio-8880-exec-3] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+""2021-03-16 20:05:47 [http-nio-8880-exec-3] INFO  c.e.springhillel.aop.LoggingAspect - public java.util.List com.example.springhillel.api.UserController.getAllUser() method started working.
+""2021-03-16 20:05:47 [http-nio-8880-exec-3] INFO  c.e.springhillel.aop.LoggingAspect - public java.util.List com.example.springhillel.service.UserServiceImpl.getAll() method started working.
+""2021-03-16 20:05:47 [http-nio-8880-exec-3] INFO  c.e.springhillel.aop.LoggingAspect - public java.util.List com.example.springhillel.repository.JdbcUserRepositoryImpl.getAll() method started working.
+""2021-03-16 20:05:48 [http-nio-8880-exec-3] INFO  c.e.s.r.JdbcUserRepositoryImpl - User information received
+""2021-03-16 20:05:48 [http-nio-8880-exec-3] INFO  c.e.springhillel.aop.LoggingAspect - Complete method ---------------------
+""2021-03-16 20:05:48 [http-nio-8880-exec-3] INFO  c.e.springhillel.aop.LoggingAspect - Method public java.util.List com.example.springhillel.repository.JdbcUserRepositoryImpl.getAll() finished.
+""2021-03-16 20:05:48 [http-nio-8880-exec-3] INFO  c.e.springhillel.aop.LoggingAspect - Complete method ---------------------
+""2021-03-16 20:05:48 [http-nio-8880-exec-3] INFO  c.e.springhillel.aop.LoggingAspect - Method public java.util.List com.example.springhillel.service.UserServiceImpl.getAll() finished.
+""2021-03-16 20:05:48 [http-nio-8880-exec-3] INFO  c.e.springhillel.aop.LoggingAspect - Complete method ---------------------
+""2021-03-16 20:05:48 [http-nio-8880-exec-3] INFO  c.e.springhillel.aop.LoggingAspect - Method public java.util.List com.example.springhillel.api.UserController.getAllUser() finished.
+""2021-03-16 20:10:44 [main] INFO  c.e.s.SpringHillelApplication - Starting SpringHillelApplication using Java 13.0.2 on DESKTOP-PI8E00V with PID 13292 (C:\Users\aandr\IdeaProjects\spring-hillel\target\classes started by aandr in C:\Users\aandr\IdeaProjects\spring-hillel)
+""2021-03-16 20:10:44 [main] INFO  c.e.s.SpringHillelApplication - No active profile set, falling back to default profiles: default
+""2021-03-16 20:10:45 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+""2021-03-16 20:10:45 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 18 ms. Found 0 JPA repository interfaces.
+""2021-03-16 20:10:45 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8880 (http)
+""2021-03-16 20:10:45 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+""2021-03-16 20:10:45 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.43]
+""2021-03-16 20:10:46 [main] INFO  o.a.c.c.C.[.[.[/bug-tracker] - Initializing Spring embedded WebApplicationContext
+""2021-03-16 20:10:46 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1281 ms
+""2021-03-16 20:10:46 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+""2021-03-16 20:10:46 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+""2021-03-16 20:10:46 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+""2021-03-16 20:10:46 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.4.28.Final
+""2021-03-16 20:10:46 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+""2021-03-16 20:10:46 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+""2021-03-16 20:10:46 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+""2021-03-16 20:10:46 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+""2021-03-16 20:10:46 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+""2021-03-16 20:10:47 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+""2021-03-16 20:10:47 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8880 (http) with context path '/bug-tracker'
+""2021-03-16 20:10:47 [main] INFO  c.e.s.SpringHillelApplication - Started SpringHillelApplication in 3.174 seconds (JVM running for 4.235)
+""2021-03-16 20:10:52 [http-nio-8880-exec-1] INFO  o.a.c.c.C.[.[.[/bug-tracker] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+""2021-03-16 20:10:52 [http-nio-8880-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+""2021-03-16 20:10:52 [http-nio-8880-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+""2021-03-16 20:10:52 [http-nio-8880-exec-1] INFO  c.e.springhillel.aop.LoggingAspect - public java.util.List com.example.springhillel.api.UserController.getAllUser() method started working.
+""2021-03-16 20:10:52 [http-nio-8880-exec-1] INFO  c.e.springhillel.aop.LoggingAspect - public java.util.List com.example.springhillel.service.UserServiceImpl.getAll() method started working.
+""2021-03-16 20:10:52 [http-nio-8880-exec-1] INFO  c.e.springhillel.aop.LoggingAspect - public java.util.List com.example.springhillel.repository.JdbcUserRepositoryImpl.getAll() method started working.
+""2021-03-16 20:10:52 [http-nio-8880-exec-1] INFO  c.e.s.r.JdbcUserRepositoryImpl - User information received
+""2021-03-16 20:10:52 [http-nio-8880-exec-1] INFO  c.e.springhillel.aop.LoggingAspect - User(id=4, firstName=Ira, lastName=Gibson, email=dfgdf, userRole=null)
+""2021-03-16 20:10:52 [http-nio-8880-exec-1] INFO  c.e.springhillel.aop.LoggingAspect - User(id=5, firstName=Ira, lastName=Gibson, email=dfgdf, userRole=null)
+""2021-03-16 20:10:52 [http-nio-8880-exec-1] INFO  c.e.springhillel.aop.LoggingAspect - User(id=7, firstName=Roy2, lastName=gib2, email= hello2, userRole=null)
+""2021-03-16 20:10:52 [http-nio-8880-exec-1] INFO  c.e.springhillel.aop.LoggingAspect - User(id=9, firstName=Roy, lastName=Gibson, email=email1@gmail.com, userRole=null)
+""2021-03-16 20:10:52 [http-nio-8880-exec-1] INFO  c.e.springhillel.aop.LoggingAspect - User(id=10, firstName=Dima, lastName=Smirnov, email=email2@gmail.com, userRole=null)
+""2021-03-16 20:10:52 [http-nio-8880-exec-1] INFO  c.e.springhillel.aop.LoggingAspect - User(id=11, firstName=Igor, lastName=Serov, email=email3@gmail.com, userRole=null)
+""2021-03-16 20:10:52 [http-nio-8880-exec-1] INFO  c.e.springhillel.aop.LoggingAspect - Method public java.util.List com.example.springhillel.repository.JdbcUserRepositoryImpl.getAll() finished. time - 19856400
+""2021-03-16 20:10:52 [http-nio-8880-exec-1] INFO  c.e.springhillel.aop.LoggingAspect - Method public java.util.List com.example.springhillel.service.UserServiceImpl.getAll() finished. time - 22671400
+""2021-03-16 20:10:52 [http-nio-8880-exec-1] INFO  c.e.springhillel.aop.LoggingAspect - Method public java.util.List com.example.springhillel.api.UserController.getAllUser() finished. time - 32224900
+""2021-03-16 20:12:01 [main] INFO  c.e.s.SpringHillelApplication - Starting SpringHillelApplication using Java 13.0.2 on DESKTOP-PI8E00V with PID 13160 (C:\Users\aandr\IdeaProjects\spring-hillel\target\classes started by aandr in C:\Users\aandr\IdeaProjects\spring-hillel)
+""2021-03-16 20:12:01 [main] INFO  c.e.s.SpringHillelApplication - No active profile set, falling back to default profiles: default
+""2021-03-16 20:12:02 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+""2021-03-16 20:12:02 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 17 ms. Found 0 JPA repository interfaces.
+""2021-03-16 20:12:02 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8880 (http)
+""2021-03-16 20:12:02 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+""2021-03-16 20:12:02 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.43]
+""2021-03-16 20:12:02 [main] INFO  o.a.c.c.C.[.[.[/bug-tracker] - Initializing Spring embedded WebApplicationContext
+""2021-03-16 20:12:02 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1213 ms
+""2021-03-16 20:12:02 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+""2021-03-16 20:12:02 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+""2021-03-16 20:12:02 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+""2021-03-16 20:12:02 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.4.28.Final
+""2021-03-16 20:12:03 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+""2021-03-16 20:12:03 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+""2021-03-16 20:12:03 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+""2021-03-16 20:12:03 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+""2021-03-16 20:12:03 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+""2021-03-16 20:12:03 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+""2021-03-16 20:12:04 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8880 (http) with context path '/bug-tracker'
+""2021-03-16 20:12:04 [main] INFO  c.e.s.SpringHillelApplication - Started SpringHillelApplication in 3.052 seconds (JVM running for 3.969)
+""2021-03-16 20:12:06 [http-nio-8880-exec-3] INFO  o.a.c.c.C.[.[.[/bug-tracker] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+""2021-03-16 20:12:06 [http-nio-8880-exec-3] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+""2021-03-16 20:12:06 [http-nio-8880-exec-3] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+""2021-03-16 20:12:06 [http-nio-8880-exec-3] INFO  c.e.springhillel.aop.LoggingAspect - public java.util.List com.example.springhillel.api.UserController.getAllUser() method started working.
+""2021-03-16 20:12:06 [http-nio-8880-exec-3] INFO  c.e.springhillel.aop.LoggingAspect - public java.util.List com.example.springhillel.service.UserServiceImpl.getAll() method started working.
+""2021-03-16 20:12:06 [http-nio-8880-exec-3] INFO  c.e.springhillel.aop.LoggingAspect - public java.util.List com.example.springhillel.repository.JdbcUserRepositoryImpl.getAll() method started working.
+""2021-03-16 20:12:06 [http-nio-8880-exec-3] INFO  c.e.s.r.JdbcUserRepositoryImpl - User information received
+""2021-03-16 20:12:06 [http-nio-8880-exec-3] INFO  c.e.springhillel.aop.LoggingAspect - User(id=4, firstName=Ira, lastName=Gibson, email=dfgdf, userRole=null)
+""2021-03-16 20:12:06 [http-nio-8880-exec-3] INFO  c.e.springhillel.aop.LoggingAspect - User(id=5, firstName=Ira, lastName=Gibson, email=dfgdf, userRole=null)
+""2021-03-16 20:12:06 [http-nio-8880-exec-3] INFO  c.e.springhillel.aop.LoggingAspect - User(id=7, firstName=Roy2, lastName=gib2, email= hello2, userRole=null)
+""2021-03-16 20:12:06 [http-nio-8880-exec-3] INFO  c.e.springhillel.aop.LoggingAspect - User(id=9, firstName=Roy, lastName=Gibson, email=email1@gmail.com, userRole=null)
+""2021-03-16 20:12:06 [http-nio-8880-exec-3] INFO  c.e.springhillel.aop.LoggingAspect - User(id=10, firstName=Dima, lastName=Smirnov, email=email2@gmail.com, userRole=null)
+""2021-03-16 20:12:06 [http-nio-8880-exec-3] INFO  c.e.springhillel.aop.LoggingAspect - User(id=11, firstName=Igor, lastName=Serov, email=email3@gmail.com, userRole=null)
+""2021-03-16 20:12:06 [http-nio-8880-exec-3] INFO  c.e.springhillel.aop.LoggingAspect - Method public java.util.List com.example.springhillel.repository.JdbcUserRepositoryImpl.getAll() finished. time - 19
+""2021-03-16 20:12:06 [http-nio-8880-exec-3] INFO  c.e.springhillel.aop.LoggingAspect - Method public java.util.List com.example.springhillel.service.UserServiceImpl.getAll() finished. time - 21
+""2021-03-16 20:12:06 [http-nio-8880-exec-3] INFO  c.e.springhillel.aop.LoggingAspect - Method public java.util.List com.example.springhillel.api.UserController.getAllUser() finished. time - 33
+""2021-03-16 20:18:13 [main] INFO  c.e.s.SpringHillelApplication - Starting SpringHillelApplication using Java 13.0.2 on DESKTOP-PI8E00V with PID 7600 (C:\Users\aandr\IdeaProjects\spring-hillel\target\classes started by aandr in C:\Users\aandr\IdeaProjects\spring-hillel)
+""2021-03-16 20:18:13 [main] INFO  c.e.s.SpringHillelApplication - No active profile set, falling back to default profiles: default
+""2021-03-16 20:18:14 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+""2021-03-16 20:18:14 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 18 ms. Found 0 JPA repository interfaces.
+""2021-03-16 20:18:15 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8880 (http)
+""2021-03-16 20:18:15 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+""2021-03-16 20:18:15 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.43]
+""2021-03-16 20:18:15 [main] INFO  o.a.c.c.C.[.[.[/bug-tracker] - Initializing Spring embedded WebApplicationContext
+""2021-03-16 20:18:15 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1200 ms
+""2021-03-16 20:18:15 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+""2021-03-16 20:18:15 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+""2021-03-16 20:18:15 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+""2021-03-16 20:18:15 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.4.28.Final
+""2021-03-16 20:18:15 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+""2021-03-16 20:18:15 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+""2021-03-16 20:18:15 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+""2021-03-16 20:18:15 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+""2021-03-16 20:18:16 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+""2021-03-16 20:18:16 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+""2021-03-16 20:18:16 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8880 (http) with context path '/bug-tracker'
+""2021-03-16 20:18:16 [main] INFO  c.e.s.SpringHillelApplication - Started SpringHillelApplication in 2.958 seconds (JVM running for 3.909)
+""2021-03-16 20:24:36 [http-nio-8880-exec-1] INFO  o.a.c.c.C.[.[.[/bug-tracker] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+""2021-03-16 20:24:36 [http-nio-8880-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+""2021-03-16 20:24:36 [http-nio-8880-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+""2021-03-16 20:24:36 [http-nio-8880-exec-1] INFO  c.e.springhillel.aop.LoggingAspect - public java.util.List com.example.springhillel.api.UserController.getAllUser() method started working.
+""2021-03-16 20:24:36 [http-nio-8880-exec-1] INFO  c.e.springhillel.aop.LoggingAspect - public java.util.List com.example.springhillel.service.UserServiceImpl.getAll() method started working.
+""2021-03-16 20:24:36 [http-nio-8880-exec-1] INFO  c.e.springhillel.aop.LoggingAspect - public java.util.List com.example.springhillel.repository.JdbcUserRepositoryImpl.getAll() method started working.
+""2021-03-16 20:24:36 [http-nio-8880-exec-1] INFO  c.e.s.r.JdbcUserRepositoryImpl - User information received
+""2021-03-16 20:24:36 [http-nio-8880-exec-1] INFO  c.e.springhillel.aop.LoggingAspect - User(id=4, firstName=Ira, lastName=Gibson, email=dfgdf, userRole=null)
+""2021-03-16 20:24:36 [http-nio-8880-exec-1] INFO  c.e.springhillel.aop.LoggingAspect - User(id=5, firstName=Ira, lastName=Gibson, email=dfgdf, userRole=null)
+""2021-03-16 20:24:36 [http-nio-8880-exec-1] INFO  c.e.springhillel.aop.LoggingAspect - User(id=7, firstName=Roy2, lastName=gib2, email= hello2, userRole=null)
+""2021-03-16 20:24:36 [http-nio-8880-exec-1] INFO  c.e.springhillel.aop.LoggingAspect - User(id=9, firstName=Roy, lastName=Gibson, email=email1@gmail.com, userRole=null)
+""2021-03-16 20:24:36 [http-nio-8880-exec-1] INFO  c.e.springhillel.aop.LoggingAspect - User(id=10, firstName=Dima, lastName=Smirnov, email=email2@gmail.com, userRole=null)
+""2021-03-16 20:24:36 [http-nio-8880-exec-1] INFO  c.e.springhillel.aop.LoggingAspect - User(id=11, firstName=Igor, lastName=Serov, email=email3@gmail.com, userRole=null)
+""2021-03-16 20:24:36 [http-nio-8880-exec-1] INFO  c.e.springhillel.aop.LoggingAspect - Method public java.util.List com.example.springhillel.repository.JdbcUserRepositoryImpl.getAll() finished. Operating time - 21 ms.
+""2021-03-16 20:24:36 [http-nio-8880-exec-1] INFO  c.e.springhillel.aop.LoggingAspect - Method public java.util.List com.example.springhillel.service.UserServiceImpl.getAll() finished. Operating time - 26 ms.
+""2021-03-16 20:24:36 [http-nio-8880-exec-1] INFO  c.e.springhillel.aop.LoggingAspect - Method public java.util.List com.example.springhillel.api.UserController.getAllUser() finished. Operating time - 34 ms.
+"
