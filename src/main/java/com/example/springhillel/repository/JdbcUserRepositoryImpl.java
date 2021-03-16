@@ -1,7 +1,6 @@
 package com.example.springhillel.repository;
 
 import com.example.springhillel.model.*;
-import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
@@ -11,7 +10,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
 
-@Slf4j
+
 @Repository
 public class JdbcUserRepositoryImpl implements UserRepository {
 
@@ -31,7 +30,6 @@ public class JdbcUserRepositoryImpl implements UserRepository {
             }
         });
 
-            log.info("User information received");
         return strLst;
     }
 
@@ -40,7 +38,6 @@ public class JdbcUserRepositoryImpl implements UserRepository {
             jdbcTemplate.update("INSERT INTO user (first_name, last_name, email) VALUES (?, ?, ?)",
                     user.getFirstName(), user.getLastName(), user.getEmail());
 
-            log.info("User " + user.getFirstName() + " " + user.getLastName() + " added");
     }
 
     @Override
@@ -48,7 +45,7 @@ public class JdbcUserRepositoryImpl implements UserRepository {
 
         jdbcTemplate.update("DELETE FROM user WHERE id = ?", id);
 
-        log.info("User " + id + " deleted");
+
     }
 
     @Override
@@ -61,9 +58,8 @@ public class JdbcUserRepositoryImpl implements UserRepository {
 
         if (userList.size()==1){
             return userList.get(0);
-        }else {
-            log.info("User is not found");
         }
+
         return new User();
     }
 

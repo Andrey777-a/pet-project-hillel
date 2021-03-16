@@ -1439,4 +1439,522 @@ Caused by: java.lang.IllegalStateException: StandardEngine[Tomcat].StandardHost[
 ""2021-03-16 20:24:36 [http-nio-8880-exec-1] INFO  c.e.springhillel.aop.LoggingAspect - Method public java.util.List com.example.springhillel.repository.JdbcUserRepositoryImpl.getAll() finished. Operating time - 21 ms.
 ""2021-03-16 20:24:36 [http-nio-8880-exec-1] INFO  c.e.springhillel.aop.LoggingAspect - Method public java.util.List com.example.springhillel.service.UserServiceImpl.getAll() finished. Operating time - 26 ms.
 ""2021-03-16 20:24:36 [http-nio-8880-exec-1] INFO  c.e.springhillel.aop.LoggingAspect - Method public java.util.List com.example.springhillel.api.UserController.getAllUser() finished. Operating time - 34 ms.
+""2021-03-16 20:50:10 [main] INFO  c.e.s.SpringHillelApplication - Starting SpringHillelApplication using Java 13.0.2 on DESKTOP-PI8E00V with PID 8632 (C:\Users\aandr\IdeaProjects\spring-hillel\target\classes started by aandr in C:\Users\aandr\IdeaProjects\spring-hillel)
+""2021-03-16 20:50:10 [main] INFO  c.e.s.SpringHillelApplication - No active profile set, falling back to default profiles: default
+""2021-03-16 20:50:10 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+""2021-03-16 20:50:10 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 19 ms. Found 0 JPA repository interfaces.
+""2021-03-16 20:50:10 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'projectingArgumentResolverBeanPostProcessor' defined in class path resource [org/springframework/data/web/config/ProjectingArgumentResolverRegistrar.class]: BeanPostProcessor before instantiation of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration': BeanPostProcessor before instantiation of bean failed; nested exception is java.lang.IllegalArgumentException: ProceedingJoinPoint is only supported for around advice
+""2021-03-16 20:50:10 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+""2021-03-16 20:50:10 [main] ERROR o.s.boot.SpringApplication - Application run failed
+"org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'projectingArgumentResolverBeanPostProcessor' defined in class path resource [org/springframework/data/web/config/ProjectingArgumentResolverRegistrar.class]: BeanPostProcessor before instantiation of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration': BeanPostProcessor before instantiation of bean failed; nested exception is java.lang.IllegalArgumentException: ProceedingJoinPoint is only supported for around advice
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:519)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:213)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.registerBeanPostProcessors(PostProcessorRegistrationDelegate.java:270)
+	at org.springframework.context.support.AbstractApplicationContext.registerBeanPostProcessors(AbstractApplicationContext.java:761)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:566)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:144)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:767)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:426)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:326)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1311)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1300)
+	at com.example.springhillel.SpringHillelApplication.main(SpringHillelApplication.java:13)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration': BeanPostProcessor before instantiation of bean failed; nested exception is java.lang.IllegalArgumentException: ProceedingJoinPoint is only supported for around advice
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:519)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:410)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1334)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1177)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:564)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:213)
+	at org.springframework.aop.framework.autoproxy.BeanFactoryAdvisorRetrievalHelper.findAdvisorBeans(BeanFactoryAdvisorRetrievalHelper.java:91)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findCandidateAdvisors(AbstractAdvisorAutoProxyCreator.java:111)
+	at org.springframework.aop.aspectj.annotation.AnnotationAwareAspectJAutoProxyCreator.findCandidateAdvisors(AnnotationAwareAspectJAutoProxyCreator.java:92)
+	at org.springframework.aop.aspectj.autoproxy.AspectJAwareAdvisorAutoProxyCreator.shouldSkip(AspectJAwareAdvisorAutoProxyCreator.java:101)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.postProcessBeforeInstantiation(AbstractAutoProxyCreator.java:251)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInstantiation(AbstractAutowireCapableBeanFactory.java:1142)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.resolveBeforeInstantiation(AbstractAutowireCapableBeanFactory.java:1117)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:513)
+	... 15 common frames omitted
+Caused by: java.lang.IllegalArgumentException: ProceedingJoinPoint is only supported for around advice
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.maybeBindProceedingJoinPoint(AbstractAspectJAdvice.java:405)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.calculateArgumentBindings(AbstractAspectJAdvice.java:379)
+	at org.springframework.aop.aspectj.annotation.ReflectiveAspectJAdvisorFactory.getAdvice(ReflectiveAspectJAdvisorFactory.java:309)
+	at org.springframework.aop.aspectj.annotation.InstantiationModelAwarePointcutAdvisorImpl.instantiateAdvice(InstantiationModelAwarePointcutAdvisorImpl.java:149)
+	at org.springframework.aop.aspectj.annotation.InstantiationModelAwarePointcutAdvisorImpl.<init>(InstantiationModelAwarePointcutAdvisorImpl.java:113)
+	at org.springframework.aop.aspectj.annotation.ReflectiveAspectJAdvisorFactory.getAdvisor(ReflectiveAspectJAdvisorFactory.java:213)
+	at org.springframework.aop.aspectj.annotation.ReflectiveAspectJAdvisorFactory.getAdvisors(ReflectiveAspectJAdvisorFactory.java:144)
+	at org.springframework.aop.aspectj.annotation.BeanFactoryAspectJAdvisorsBuilder.buildAspectJAdvisors(BeanFactoryAspectJAdvisorsBuilder.java:110)
+	at org.springframework.aop.aspectj.annotation.AnnotationAwareAspectJAutoProxyCreator.findCandidateAdvisors(AnnotationAwareAspectJAutoProxyCreator.java:95)
+	at org.springframework.aop.aspectj.autoproxy.AspectJAwareAdvisorAutoProxyCreator.shouldSkip(AspectJAwareAdvisorAutoProxyCreator.java:101)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.postProcessBeforeInstantiation(AbstractAutoProxyCreator.java:251)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInstantiation(AbstractAutowireCapableBeanFactory.java:1142)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.resolveBeforeInstantiation(AbstractAutowireCapableBeanFactory.java:1117)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:513)
+	... 36 common frames omitted
+"2021-03-16 20:50:47 [main] INFO  c.e.s.SpringHillelApplication - Starting SpringHillelApplication using Java 13.0.2 on DESKTOP-PI8E00V with PID 9004 (C:\Users\aandr\IdeaProjects\spring-hillel\target\classes started by aandr in C:\Users\aandr\IdeaProjects\spring-hillel)
+""2021-03-16 20:50:47 [main] INFO  c.e.s.SpringHillelApplication - No active profile set, falling back to default profiles: default
+""2021-03-16 20:50:47 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+""2021-03-16 20:50:48 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 18 ms. Found 0 JPA repository interfaces.
+""2021-03-16 20:50:48 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'projectingArgumentResolverBeanPostProcessor' defined in class path resource [org/springframework/data/web/config/ProjectingArgumentResolverRegistrar.class]: BeanPostProcessor before instantiation of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration': BeanPostProcessor before instantiation of bean failed; nested exception is java.lang.IllegalArgumentException: ProceedingJoinPoint is only supported for around advice
+""2021-03-16 20:50:48 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+""2021-03-16 20:50:48 [main] ERROR o.s.boot.SpringApplication - Application run failed
+"org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'projectingArgumentResolverBeanPostProcessor' defined in class path resource [org/springframework/data/web/config/ProjectingArgumentResolverRegistrar.class]: BeanPostProcessor before instantiation of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration': BeanPostProcessor before instantiation of bean failed; nested exception is java.lang.IllegalArgumentException: ProceedingJoinPoint is only supported for around advice
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:519)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:213)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.registerBeanPostProcessors(PostProcessorRegistrationDelegate.java:270)
+	at org.springframework.context.support.AbstractApplicationContext.registerBeanPostProcessors(AbstractApplicationContext.java:761)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:566)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:144)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:767)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:426)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:326)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1311)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1300)
+	at com.example.springhillel.SpringHillelApplication.main(SpringHillelApplication.java:13)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration': BeanPostProcessor before instantiation of bean failed; nested exception is java.lang.IllegalArgumentException: ProceedingJoinPoint is only supported for around advice
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:519)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:410)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1334)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1177)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:564)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:213)
+	at org.springframework.aop.framework.autoproxy.BeanFactoryAdvisorRetrievalHelper.findAdvisorBeans(BeanFactoryAdvisorRetrievalHelper.java:91)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findCandidateAdvisors(AbstractAdvisorAutoProxyCreator.java:111)
+	at org.springframework.aop.aspectj.annotation.AnnotationAwareAspectJAutoProxyCreator.findCandidateAdvisors(AnnotationAwareAspectJAutoProxyCreator.java:92)
+	at org.springframework.aop.aspectj.autoproxy.AspectJAwareAdvisorAutoProxyCreator.shouldSkip(AspectJAwareAdvisorAutoProxyCreator.java:101)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.postProcessBeforeInstantiation(AbstractAutoProxyCreator.java:251)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInstantiation(AbstractAutowireCapableBeanFactory.java:1142)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.resolveBeforeInstantiation(AbstractAutowireCapableBeanFactory.java:1117)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:513)
+	... 15 common frames omitted
+Caused by: java.lang.IllegalArgumentException: ProceedingJoinPoint is only supported for around advice
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.maybeBindProceedingJoinPoint(AbstractAspectJAdvice.java:405)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.calculateArgumentBindings(AbstractAspectJAdvice.java:379)
+	at org.springframework.aop.aspectj.annotation.ReflectiveAspectJAdvisorFactory.getAdvice(ReflectiveAspectJAdvisorFactory.java:309)
+	at org.springframework.aop.aspectj.annotation.InstantiationModelAwarePointcutAdvisorImpl.instantiateAdvice(InstantiationModelAwarePointcutAdvisorImpl.java:149)
+	at org.springframework.aop.aspectj.annotation.InstantiationModelAwarePointcutAdvisorImpl.<init>(InstantiationModelAwarePointcutAdvisorImpl.java:113)
+	at org.springframework.aop.aspectj.annotation.ReflectiveAspectJAdvisorFactory.getAdvisor(ReflectiveAspectJAdvisorFactory.java:213)
+	at org.springframework.aop.aspectj.annotation.ReflectiveAspectJAdvisorFactory.getAdvisors(ReflectiveAspectJAdvisorFactory.java:144)
+	at org.springframework.aop.aspectj.annotation.BeanFactoryAspectJAdvisorsBuilder.buildAspectJAdvisors(BeanFactoryAspectJAdvisorsBuilder.java:110)
+	at org.springframework.aop.aspectj.annotation.AnnotationAwareAspectJAutoProxyCreator.findCandidateAdvisors(AnnotationAwareAspectJAutoProxyCreator.java:95)
+	at org.springframework.aop.aspectj.autoproxy.AspectJAwareAdvisorAutoProxyCreator.shouldSkip(AspectJAwareAdvisorAutoProxyCreator.java:101)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.postProcessBeforeInstantiation(AbstractAutoProxyCreator.java:251)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInstantiation(AbstractAutowireCapableBeanFactory.java:1142)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.resolveBeforeInstantiation(AbstractAutowireCapableBeanFactory.java:1117)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:513)
+	... 36 common frames omitted
+"2021-03-16 20:51:40 [main] INFO  c.e.s.SpringHillelApplication - Starting SpringHillelApplication using Java 13.0.2 on DESKTOP-PI8E00V with PID 10360 (C:\Users\aandr\IdeaProjects\spring-hillel\target\classes started by aandr in C:\Users\aandr\IdeaProjects\spring-hillel)
+""2021-03-16 20:51:40 [main] INFO  c.e.s.SpringHillelApplication - No active profile set, falling back to default profiles: default
+""2021-03-16 20:51:41 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+""2021-03-16 20:51:41 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 19 ms. Found 0 JPA repository interfaces.
+""2021-03-16 20:51:42 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8880 (http)
+""2021-03-16 20:51:42 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+""2021-03-16 20:51:42 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.43]
+""2021-03-16 20:51:42 [main] INFO  o.a.c.c.C.[.[.[/bug-tracker] - Initializing Spring embedded WebApplicationContext
+""2021-03-16 20:51:42 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1254 ms
+""2021-03-16 20:51:42 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+""2021-03-16 20:51:42 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+""2021-03-16 20:51:42 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+""2021-03-16 20:51:42 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.4.28.Final
+""2021-03-16 20:51:42 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+""2021-03-16 20:51:42 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+""2021-03-16 20:51:43 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+""2021-03-16 20:51:43 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+""2021-03-16 20:51:43 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+""2021-03-16 20:51:43 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+""2021-03-16 20:51:43 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8880 (http) with context path '/bug-tracker'
+""2021-03-16 20:51:43 [main] INFO  c.e.s.SpringHillelApplication - Started SpringHillelApplication in 3.128 seconds (JVM running for 4.044)
+""2021-03-16 20:55:03 [http-nio-8880-exec-2] INFO  o.a.c.c.C.[.[.[/bug-tracker] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+""2021-03-16 20:55:03 [http-nio-8880-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+""2021-03-16 20:55:03 [http-nio-8880-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+""2021-03-16 20:55:03 [http-nio-8880-exec-2] INFO  c.e.springhillel.aop.LoggingAspect - public void com.example.springhillel.api.UserController.insertUser(com.example.springhillel.model.User) method started working.
+""2021-03-16 20:55:03 [http-nio-8880-exec-2] INFO  c.e.springhillel.aop.LoggingAspect - public void com.example.springhillel.service.UserServiceImpl.create(com.example.springhillel.model.User) method started working.
+""2021-03-16 20:55:03 [http-nio-8880-exec-2] INFO  c.e.springhillel.aop.LoggingAspect - public void com.example.springhillel.repository.JdbcUserRepositoryImpl.create(com.example.springhillel.model.User) method started working.
+""2021-03-16 20:55:03 [http-nio-8880-exec-2] INFO  c.e.springhillel.aop.LoggingAspect - User(id=0, firstName=Robert, lastName=Edkins, email=email@email.com, userRole=null) - parameter method create
+""2021-03-16 20:55:03 [http-nio-8880-exec-2] INFO  c.e.s.r.JdbcUserRepositoryImpl - User Robert Edkins added
+""2021-03-16 20:55:03 [http-nio-8880-exec-2] INFO  c.e.springhillel.aop.LoggingAspect - Method public void com.example.springhillel.repository.JdbcUserRepositoryImpl.create(com.example.springhillel.model.User) finished. Operating time - 34 ms.
+""2021-03-16 20:55:03 [http-nio-8880-exec-2] INFO  c.e.springhillel.aop.LoggingAspect - Method public void com.example.springhillel.service.UserServiceImpl.create(com.example.springhillel.model.User) finished. Operating time - 37 ms.
+""2021-03-16 20:55:03 [http-nio-8880-exec-2] INFO  c.e.springhillel.aop.LoggingAspect - Method public void com.example.springhillel.api.UserController.insertUser(com.example.springhillel.model.User) finished. Operating time - 45 ms.
+""2021-03-16 21:03:05 [main] INFO  c.e.s.SpringHillelApplication - Starting SpringHillelApplication using Java 13.0.2 on DESKTOP-PI8E00V with PID 4112 (C:\Users\aandr\IdeaProjects\spring-hillel\target\classes started by aandr in C:\Users\aandr\IdeaProjects\spring-hillel)
+""2021-03-16 21:03:05 [main] INFO  c.e.s.SpringHillelApplication - No active profile set, falling back to default profiles: default
+""2021-03-16 21:03:06 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+""2021-03-16 21:03:06 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 19 ms. Found 0 JPA repository interfaces.
+""2021-03-16 21:03:06 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8880 (http)
+""2021-03-16 21:03:06 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+""2021-03-16 21:03:06 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.43]
+""2021-03-16 21:03:06 [main] INFO  o.a.c.c.C.[.[.[/bug-tracker] - Initializing Spring embedded WebApplicationContext
+""2021-03-16 21:03:06 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1344 ms
+""2021-03-16 21:03:06 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+""2021-03-16 21:03:06 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+""2021-03-16 21:03:07 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+""2021-03-16 21:03:07 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.4.28.Final
+""2021-03-16 21:03:07 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+""2021-03-16 21:03:07 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+""2021-03-16 21:03:07 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+""2021-03-16 21:03:07 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+""2021-03-16 21:03:07 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+""2021-03-16 21:03:07 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+""2021-03-16 21:03:08 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8880 (http) with context path '/bug-tracker'
+""2021-03-16 21:03:08 [main] INFO  c.e.s.SpringHillelApplication - Started SpringHillelApplication in 3.305 seconds (JVM running for 4.278)
+""2021-03-16 21:03:10 [http-nio-8880-exec-2] INFO  o.a.c.c.C.[.[.[/bug-tracker] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+""2021-03-16 21:03:10 [http-nio-8880-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+""2021-03-16 21:03:10 [http-nio-8880-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+""2021-03-16 21:03:11 [http-nio-8880-exec-2] INFO  c.e.springhillel.aop.LoggingAspect - public void com.example.springhillel.api.UserController.insertUser(com.example.springhillel.model.User) method started working.
+""2021-03-16 21:03:11 [http-nio-8880-exec-2] INFO  c.e.springhillel.aop.LoggingAspect - public void com.example.springhillel.service.UserServiceImpl.create(com.example.springhillel.model.User) method started working.
+""2021-03-16 21:03:11 [http-nio-8880-exec-2] INFO  c.e.springhillel.aop.LoggingAspect - public void com.example.springhillel.repository.JdbcUserRepositoryImpl.create(com.example.springhillel.model.User) method started working.
+""2021-03-16 21:03:11 [http-nio-8880-exec-2] INFO  c.e.springhillel.aop.LoggingAspect - User parameter User(id=0, firstName=Robert, lastName=Edkins, email=email@email.com, userRole=null) - added. create
+""2021-03-16 21:03:11 [http-nio-8880-exec-2] INFO  c.e.s.r.JdbcUserRepositoryImpl - User Robert Edkins added
+""2021-03-16 21:03:11 [http-nio-8880-exec-2] INFO  c.e.springhillel.aop.LoggingAspect - Method public void com.example.springhillel.repository.JdbcUserRepositoryImpl.create(com.example.springhillel.model.User) finished. Operating time - 41 ms.
+""2021-03-16 21:03:11 [http-nio-8880-exec-2] INFO  c.e.springhillel.aop.LoggingAspect - Method public void com.example.springhillel.service.UserServiceImpl.create(com.example.springhillel.model.User) finished. Operating time - 45 ms.
+""2021-03-16 21:03:11 [http-nio-8880-exec-2] INFO  c.e.springhillel.aop.LoggingAspect - Method public void com.example.springhillel.api.UserController.insertUser(com.example.springhillel.model.User) finished. Operating time - 50 ms.
+""2021-03-16 21:14:35 [main] INFO  c.e.s.SpringHillelApplication - Starting SpringHillelApplication using Java 13.0.2 on DESKTOP-PI8E00V with PID 7236 (C:\Users\aandr\IdeaProjects\spring-hillel\target\classes started by aandr in C:\Users\aandr\IdeaProjects\spring-hillel)
+""2021-03-16 21:14:35 [main] INFO  c.e.s.SpringHillelApplication - No active profile set, falling back to default profiles: default
+""2021-03-16 21:14:36 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+""2021-03-16 21:14:36 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 19 ms. Found 0 JPA repository interfaces.
+""2021-03-16 21:14:36 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8880 (http)
+""2021-03-16 21:14:36 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+""2021-03-16 21:14:36 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.43]
+""2021-03-16 21:14:36 [main] INFO  o.a.c.c.C.[.[.[/bug-tracker] - Initializing Spring embedded WebApplicationContext
+""2021-03-16 21:14:36 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1273 ms
+""2021-03-16 21:14:36 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+""2021-03-16 21:14:36 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+""2021-03-16 21:14:36 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+""2021-03-16 21:14:37 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.4.28.Final
+""2021-03-16 21:14:37 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+""2021-03-16 21:14:37 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+""2021-03-16 21:14:37 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+""2021-03-16 21:14:37 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+""2021-03-16 21:14:37 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+""2021-03-16 21:14:37 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+""2021-03-16 21:14:38 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8880 (http) with context path '/bug-tracker'
+""2021-03-16 21:14:38 [main] INFO  c.e.s.SpringHillelApplication - Started SpringHillelApplication in 3.107 seconds (JVM running for 4.015)
+""2021-03-16 21:14:48 [http-nio-8880-exec-2] INFO  o.a.c.c.C.[.[.[/bug-tracker] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+""2021-03-16 21:14:48 [http-nio-8880-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+""2021-03-16 21:14:48 [http-nio-8880-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+""2021-03-16 21:14:48 [http-nio-8880-exec-2] INFO  c.e.springhillel.aop.LoggingAspect - public void com.example.springhillel.api.UserController.insertUser(com.example.springhillel.model.User) method started working.
+""2021-03-16 21:14:48 [http-nio-8880-exec-2] INFO  c.e.springhillel.aop.LoggingAspect - public void com.example.springhillel.service.UserServiceImpl.create(com.example.springhillel.model.User) method started working.
+""2021-03-16 21:14:48 [http-nio-8880-exec-2] INFO  c.e.springhillel.aop.LoggingAspect - public void com.example.springhillel.repository.JdbcUserRepositoryImpl.create(com.example.springhillel.model.User) method started working.
+""2021-03-16 21:14:48 [http-nio-8880-exec-2] INFO  c.e.springhillel.aop.LoggingAspect - User parameter User(id=0, firstName=Robert2, lastName=Edkins, email=email@email.com, userRole=null) - added.
+""2021-03-16 21:14:48 [http-nio-8880-exec-2] INFO  c.e.springhillel.aop.LoggingAspect - Method public void com.example.springhillel.repository.JdbcUserRepositoryImpl.create(com.example.springhillel.model.User) finished. Operating time - 45 ms.
+""2021-03-16 21:14:48 [http-nio-8880-exec-2] INFO  c.e.springhillel.aop.LoggingAspect - Method public void com.example.springhillel.service.UserServiceImpl.create(com.example.springhillel.model.User) finished. Operating time - 49 ms.
+""2021-03-16 21:14:48 [http-nio-8880-exec-2] INFO  c.e.springhillel.aop.LoggingAspect - Method public void com.example.springhillel.api.UserController.insertUser(com.example.springhillel.model.User) finished. Operating time - 61 ms.
+""2021-03-16 21:20:49 [main] INFO  c.e.s.SpringHillelApplication - Starting SpringHillelApplication using Java 13.0.2 on DESKTOP-PI8E00V with PID 11740 (C:\Users\aandr\IdeaProjects\spring-hillel\target\classes started by aandr in C:\Users\aandr\IdeaProjects\spring-hillel)
+""2021-03-16 21:20:49 [main] INFO  c.e.s.SpringHillelApplication - No active profile set, falling back to default profiles: default
+""2021-03-16 21:20:50 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+""2021-03-16 21:20:50 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 19 ms. Found 0 JPA repository interfaces.
+""2021-03-16 21:20:50 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8880 (http)
+""2021-03-16 21:20:50 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+""2021-03-16 21:20:50 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.43]
+""2021-03-16 21:20:51 [main] INFO  o.a.c.c.C.[.[.[/bug-tracker] - Initializing Spring embedded WebApplicationContext
+""2021-03-16 21:20:51 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1295 ms
+""2021-03-16 21:20:51 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+""2021-03-16 21:20:51 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+""2021-03-16 21:20:51 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+""2021-03-16 21:20:51 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.4.28.Final
+""2021-03-16 21:20:51 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+""2021-03-16 21:20:51 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+""2021-03-16 21:20:51 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+""2021-03-16 21:20:51 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+""2021-03-16 21:20:51 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+""2021-03-16 21:20:52 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+""2021-03-16 21:20:52 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8880 (http) with context path '/bug-tracker'
+""2021-03-16 21:20:52 [main] INFO  c.e.s.SpringHillelApplication - Started SpringHillelApplication in 3.196 seconds (JVM running for 4.161)
+""2021-03-16 21:20:57 [http-nio-8880-exec-1] INFO  o.a.c.c.C.[.[.[/bug-tracker] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+""2021-03-16 21:20:57 [http-nio-8880-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+""2021-03-16 21:20:57 [http-nio-8880-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+""2021-03-16 21:20:57 [http-nio-8880-exec-1] INFO  c.e.springhillel.aop.LoggingAspect - public void com.example.springhillel.api.UserController.insertUser(com.example.springhillel.model.User) method started working.
+""2021-03-16 21:20:57 [http-nio-8880-exec-1] INFO  c.e.springhillel.aop.LoggingAspect - public void com.example.springhillel.service.UserServiceImpl.create(com.example.springhillel.model.User) method started working.
+""2021-03-16 21:20:57 [http-nio-8880-exec-1] INFO  c.e.springhillel.aop.LoggingAspect - public void com.example.springhillel.repository.JdbcUserRepositoryImpl.create(com.example.springhillel.model.User) method started working.
+""2021-03-16 21:20:57 [http-nio-8880-exec-1] INFO  c.e.springhillel.aop.LoggingAspect - User parameter User(id=0, firstName=Robert2, lastName=Edkins, email=email@email.com, userRole=null) - added.
+""2021-03-16 21:20:57 [http-nio-8880-exec-1] INFO  c.e.springhillel.aop.LoggingAspect - User parameter User(id=0, firstName=Robert2, lastName=Edkins, email=email@email.com, userRole=null) - added. after
+""2021-03-16 21:20:57 [http-nio-8880-exec-1] INFO  c.e.springhillel.aop.LoggingAspect - Method public void com.example.springhillel.repository.JdbcUserRepositoryImpl.create(com.example.springhillel.model.User) finished. Operating time - 41 ms.
+""2021-03-16 21:20:57 [http-nio-8880-exec-1] INFO  c.e.springhillel.aop.LoggingAspect - Method public void com.example.springhillel.service.UserServiceImpl.create(com.example.springhillel.model.User) finished. Operating time - 44 ms.
+""2021-03-16 21:20:57 [http-nio-8880-exec-1] INFO  c.e.springhillel.aop.LoggingAspect - Method public void com.example.springhillel.api.UserController.insertUser(com.example.springhillel.model.User) finished. Operating time - 56 ms.
+""2021-03-16 21:21:28 [http-nio-8880-exec-4] INFO  c.e.springhillel.aop.LoggingAspect - public void com.example.springhillel.api.TaskController.createTask(com.example.springhillel.model.TaskAttribute) method started working.
+""2021-03-16 21:21:28 [http-nio-8880-exec-4] INFO  c.e.springhillel.aop.LoggingAspect - public void com.example.springhillel.service.TaskServiceImpl.createTask(com.example.springhillel.model.TaskAttribute) method started working.
+""2021-03-16 21:21:28 [http-nio-8880-exec-4] INFO  c.e.springhillel.aop.LoggingAspect - public void com.example.springhillel.repository.JdbcTaskRepositoryImpl.createTask(com.example.springhillel.model.TaskAttribute) method started working.
+""2021-03-16 21:21:28 [http-nio-8880-exec-4] INFO  c.e.springhillel.aop.LoggingAspect - Task name task - added.
+""2021-03-16 21:21:28 [http-nio-8880-exec-4] INFO  c.e.springhillel.aop.LoggingAspect - Task name task - added. after
+""2021-03-16 21:21:28 [http-nio-8880-exec-4] INFO  c.e.springhillel.aop.LoggingAspect - Method public void com.example.springhillel.repository.JdbcTaskRepositoryImpl.createTask(com.example.springhillel.model.TaskAttribute) finished. Operating time - 28 ms.
+""2021-03-16 21:21:28 [http-nio-8880-exec-4] INFO  c.e.springhillel.aop.LoggingAspect - Method public void com.example.springhillel.service.TaskServiceImpl.createTask(com.example.springhillel.model.TaskAttribute) finished. Operating time - 30 ms.
+""2021-03-16 21:21:28 [http-nio-8880-exec-4] INFO  c.e.springhillel.aop.LoggingAspect - Method public void com.example.springhillel.api.TaskController.createTask(com.example.springhillel.model.TaskAttribute) finished. Operating time - 33 ms.
+""2021-03-16 21:22:06 [main] INFO  c.e.s.SpringHillelApplication - Starting SpringHillelApplication using Java 13.0.2 on DESKTOP-PI8E00V with PID 15996 (C:\Users\aandr\IdeaProjects\spring-hillel\target\classes started by aandr in C:\Users\aandr\IdeaProjects\spring-hillel)
+""2021-03-16 21:22:06 [main] INFO  c.e.s.SpringHillelApplication - No active profile set, falling back to default profiles: default
+""2021-03-16 21:22:06 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+""2021-03-16 21:22:06 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 26 ms. Found 0 JPA repository interfaces.
+""2021-03-16 21:22:07 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8880 (http)
+""2021-03-16 21:22:07 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+""2021-03-16 21:22:07 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.43]
+""2021-03-16 21:22:07 [main] INFO  o.a.c.c.C.[.[.[/bug-tracker] - Initializing Spring embedded WebApplicationContext
+""2021-03-16 21:22:07 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1231 ms
+""2021-03-16 21:22:07 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+""2021-03-16 21:22:07 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+""2021-03-16 21:22:07 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+""2021-03-16 21:22:07 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.4.28.Final
+""2021-03-16 21:22:07 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+""2021-03-16 21:22:08 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+""2021-03-16 21:22:08 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+""2021-03-16 21:22:08 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+""2021-03-16 21:22:08 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+""2021-03-16 21:22:08 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+""2021-03-16 21:22:08 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8880 (http) with context path '/bug-tracker'
+""2021-03-16 21:22:08 [main] INFO  c.e.s.SpringHillelApplication - Started SpringHillelApplication in 3.045 seconds (JVM running for 3.927)
+""2021-03-16 21:22:13 [http-nio-8880-exec-1] INFO  o.a.c.c.C.[.[.[/bug-tracker] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+""2021-03-16 21:22:13 [http-nio-8880-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+""2021-03-16 21:22:13 [http-nio-8880-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+""2021-03-16 21:22:14 [http-nio-8880-exec-1] INFO  c.e.springhillel.aop.LoggingAspect - public void com.example.springhillel.api.UserController.insertUser(com.example.springhillel.model.User) method started working.
+""2021-03-16 21:22:14 [http-nio-8880-exec-1] INFO  c.e.springhillel.aop.LoggingAspect - public void com.example.springhillel.service.UserServiceImpl.create(com.example.springhillel.model.User) method started working.
+""2021-03-16 21:22:14 [http-nio-8880-exec-1] INFO  c.e.springhillel.aop.LoggingAspect - public void com.example.springhillel.repository.JdbcUserRepositoryImpl.create(com.example.springhillel.model.User) method started working.
+""2021-03-16 21:22:14 [http-nio-8880-exec-1] INFO  c.e.springhillel.aop.LoggingAspect - User parameter User(id=0, firstName=Robert2, lastName=Edkins, email=email@email.com, userRole=null) - added.
+""2021-03-16 21:22:14 [http-nio-8880-exec-1] INFO  c.e.springhillel.aop.LoggingAspect - User parameter User(id=0, firstName=Robert2, lastName=Edkins, email=email@email.com, userRole=null) - added. after
+""2021-03-16 21:22:14 [http-nio-8880-exec-1] INFO  c.e.springhillel.aop.LoggingAspect - Method public void com.example.springhillel.repository.JdbcUserRepositoryImpl.create(com.example.springhillel.model.User) finished. Operating time - 37 ms.
+""2021-03-16 21:22:14 [http-nio-8880-exec-1] INFO  c.e.springhillel.aop.LoggingAspect - Method public void com.example.springhillel.service.UserServiceImpl.create(com.example.springhillel.model.User) finished. Operating time - 45 ms.
+""2021-03-16 21:22:14 [http-nio-8880-exec-1] INFO  c.e.springhillel.aop.LoggingAspect - Method public void com.example.springhillel.api.UserController.insertUser(com.example.springhillel.model.User) finished. Operating time - 51 ms.
+""2021-03-16 21:27:44 [main] INFO  c.e.s.SpringHillelApplication - Starting SpringHillelApplication using Java 13.0.2 on DESKTOP-PI8E00V with PID 8076 (C:\Users\aandr\IdeaProjects\spring-hillel\target\classes started by aandr in C:\Users\aandr\IdeaProjects\spring-hillel)
+""2021-03-16 21:27:44 [main] INFO  c.e.s.SpringHillelApplication - No active profile set, falling back to default profiles: default
+""2021-03-16 21:27:45 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+""2021-03-16 21:27:45 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 17 ms. Found 0 JPA repository interfaces.
+""2021-03-16 21:27:45 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8880 (http)
+""2021-03-16 21:27:45 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+""2021-03-16 21:27:45 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.43]
+""2021-03-16 21:27:45 [main] INFO  o.a.c.c.C.[.[.[/bug-tracker] - Initializing Spring embedded WebApplicationContext
+""2021-03-16 21:27:45 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1301 ms
+""2021-03-16 21:27:45 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+""2021-03-16 21:27:46 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+""2021-03-16 21:27:46 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+""2021-03-16 21:27:46 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.4.28.Final
+""2021-03-16 21:27:46 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+""2021-03-16 21:27:46 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+""2021-03-16 21:27:46 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+""2021-03-16 21:27:46 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+""2021-03-16 21:27:46 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+""2021-03-16 21:27:46 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+""2021-03-16 21:27:47 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8880 (http) with context path '/bug-tracker'
+""2021-03-16 21:27:47 [main] INFO  c.e.s.SpringHillelApplication - Started SpringHillelApplication in 3.183 seconds (JVM running for 4.159)
+""2021-03-16 21:27:50 [http-nio-8880-exec-3] INFO  o.a.c.c.C.[.[.[/bug-tracker] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+""2021-03-16 21:27:50 [http-nio-8880-exec-3] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+""2021-03-16 21:27:50 [http-nio-8880-exec-3] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+""2021-03-16 21:27:51 [http-nio-8880-exec-3] INFO  c.e.springhillel.aop.LoggingAspect - public void com.example.springhillel.api.UserController.insertUser(com.example.springhillel.model.User) method started working.
+""2021-03-16 21:27:51 [http-nio-8880-exec-3] INFO  c.e.springhillel.aop.LoggingAspect - public void com.example.springhillel.service.UserServiceImpl.create(com.example.springhillel.model.User) method started working.
+""2021-03-16 21:27:51 [http-nio-8880-exec-3] INFO  c.e.springhillel.aop.LoggingAspect - public void com.example.springhillel.repository.JdbcUserRepositoryImpl.create(com.example.springhillel.model.User) method started working.
+""2021-03-16 21:27:51 [http-nio-8880-exec-3] INFO  c.e.springhillel.aop.LoggingAspect - Before method param
+""2021-03-16 21:27:51 [http-nio-8880-exec-3] INFO  c.e.springhillel.aop.LoggingAspect - User parameter User(id=0, firstName=Robert2, lastName=Edkins, email=email@email.com, userRole=null)
+""2021-03-16 21:27:51 [http-nio-8880-exec-3] INFO  c.e.springhillel.aop.LoggingAspect - After method param
+""2021-03-16 21:27:51 [http-nio-8880-exec-3] INFO  c.e.springhillel.aop.LoggingAspect - User parameter User(id=0, firstName=Robert2, lastName=Edkins, email=email@email.com, userRole=null) - added.
+""2021-03-16 21:27:51 [http-nio-8880-exec-3] INFO  c.e.springhillel.aop.LoggingAspect - Method public void com.example.springhillel.repository.JdbcUserRepositoryImpl.create(com.example.springhillel.model.User) finished. Operating time - 40 ms.
+""2021-03-16 21:27:51 [http-nio-8880-exec-3] INFO  c.e.springhillel.aop.LoggingAspect - Method public void com.example.springhillel.service.UserServiceImpl.create(com.example.springhillel.model.User) finished. Operating time - 43 ms.
+""2021-03-16 21:27:51 [http-nio-8880-exec-3] INFO  c.e.springhillel.aop.LoggingAspect - Method public void com.example.springhillel.api.UserController.insertUser(com.example.springhillel.model.User) finished. Operating time - 52 ms.
+""2021-03-16 21:28:17 [http-nio-8880-exec-6] INFO  c.e.springhillel.aop.LoggingAspect - public void com.example.springhillel.api.TaskController.createTask(com.example.springhillel.model.TaskAttribute) method started working.
+""2021-03-16 21:28:17 [http-nio-8880-exec-6] INFO  c.e.springhillel.aop.LoggingAspect - public void com.example.springhillel.service.TaskServiceImpl.createTask(com.example.springhillel.model.TaskAttribute) method started working.
+""2021-03-16 21:28:17 [http-nio-8880-exec-6] INFO  c.e.springhillel.aop.LoggingAspect - public void com.example.springhillel.repository.JdbcTaskRepositoryImpl.createTask(com.example.springhillel.model.TaskAttribute) method started working.
+""2021-03-16 21:28:17 [http-nio-8880-exec-6] INFO  c.e.springhillel.aop.LoggingAspect - Before method param
+""2021-03-16 21:28:17 [http-nio-8880-exec-6] INFO  c.e.springhillel.aop.LoggingAspect - Task name task
+""2021-03-16 21:28:17 [http-nio-8880-exec-6] INFO  c.e.springhillel.aop.LoggingAspect - After method param
+""2021-03-16 21:28:17 [http-nio-8880-exec-6] INFO  c.e.springhillel.aop.LoggingAspect - Task name task - added.
+""2021-03-16 21:28:17 [http-nio-8880-exec-6] INFO  c.e.springhillel.aop.LoggingAspect - Method public void com.example.springhillel.repository.JdbcTaskRepositoryImpl.createTask(com.example.springhillel.model.TaskAttribute) finished. Operating time - 26 ms.
+""2021-03-16 21:28:17 [http-nio-8880-exec-6] INFO  c.e.springhillel.aop.LoggingAspect - Method public void com.example.springhillel.service.TaskServiceImpl.createTask(com.example.springhillel.model.TaskAttribute) finished. Operating time - 29 ms.
+""2021-03-16 21:28:17 [http-nio-8880-exec-6] INFO  c.e.springhillel.aop.LoggingAspect - Method public void com.example.springhillel.api.TaskController.createTask(com.example.springhillel.model.TaskAttribute) finished. Operating time - 34 ms.
+""2021-03-16 21:29:30 [http-nio-8880-exec-2] INFO  c.e.springhillel.aop.LoggingAspect - public java.util.List com.example.springhillel.api.UserController.getAllUser() method started working.
+""2021-03-16 21:29:30 [http-nio-8880-exec-2] INFO  c.e.springhillel.aop.LoggingAspect - public java.util.List com.example.springhillel.service.UserServiceImpl.getAll() method started working.
+""2021-03-16 21:29:30 [http-nio-8880-exec-2] INFO  c.e.springhillel.aop.LoggingAspect - public java.util.List com.example.springhillel.repository.JdbcUserRepositoryImpl.getAll() method started working.
+""2021-03-16 21:29:30 [http-nio-8880-exec-2] INFO  c.e.springhillel.aop.LoggingAspect - After method param
+""2021-03-16 21:29:30 [http-nio-8880-exec-2] INFO  c.e.springhillel.aop.LoggingAspect - User(id=4, firstName=Ira, lastName=Gibson, email=dfgdf, userRole=null)
+""2021-03-16 21:29:30 [http-nio-8880-exec-2] INFO  c.e.springhillel.aop.LoggingAspect - User(id=5, firstName=Ira, lastName=Gibson, email=dfgdf, userRole=null)
+""2021-03-16 21:29:30 [http-nio-8880-exec-2] INFO  c.e.springhillel.aop.LoggingAspect - User(id=7, firstName=Roy2, lastName=gib2, email= hello2, userRole=null)
+""2021-03-16 21:29:30 [http-nio-8880-exec-2] INFO  c.e.springhillel.aop.LoggingAspect - User(id=9, firstName=Roy, lastName=Gibson, email=email1@gmail.com, userRole=null)
+""2021-03-16 21:29:30 [http-nio-8880-exec-2] INFO  c.e.springhillel.aop.LoggingAspect - User(id=10, firstName=Dima, lastName=Smirnov, email=email2@gmail.com, userRole=null)
+""2021-03-16 21:29:30 [http-nio-8880-exec-2] INFO  c.e.springhillel.aop.LoggingAspect - User(id=11, firstName=Igor, lastName=Serov, email=email3@gmail.com, userRole=null)
+""2021-03-16 21:29:30 [http-nio-8880-exec-2] INFO  c.e.springhillel.aop.LoggingAspect - User(id=12, firstName=Robert, lastName=Edkins, email=email@email.com, userRole=null)
+""2021-03-16 21:29:30 [http-nio-8880-exec-2] INFO  c.e.springhillel.aop.LoggingAspect - User(id=13, firstName=Robert, lastName=Edkins, email=email@email.com, userRole=null)
+""2021-03-16 21:29:30 [http-nio-8880-exec-2] INFO  c.e.springhillel.aop.LoggingAspect - User(id=14, firstName=Robert2, lastName=Edkins, email=email@email.com, userRole=null)
+""2021-03-16 21:29:30 [http-nio-8880-exec-2] INFO  c.e.springhillel.aop.LoggingAspect - User(id=15, firstName=Robert2, lastName=Edkins, email=email@email.com, userRole=null)
+""2021-03-16 21:29:30 [http-nio-8880-exec-2] INFO  c.e.springhillel.aop.LoggingAspect - User(id=16, firstName=Robert2, lastName=Edkins, email=email@email.com, userRole=null)
+""2021-03-16 21:29:30 [http-nio-8880-exec-2] INFO  c.e.springhillel.aop.LoggingAspect - User(id=17, firstName=Robert2, lastName=Edkins, email=email@email.com, userRole=null)
+""2021-03-16 21:29:30 [http-nio-8880-exec-2] INFO  c.e.springhillel.aop.LoggingAspect - Method public java.util.List com.example.springhillel.repository.JdbcUserRepositoryImpl.getAll() finished. Operating time - 10 ms.
+""2021-03-16 21:29:30 [http-nio-8880-exec-2] INFO  c.e.springhillel.aop.LoggingAspect - Method public java.util.List com.example.springhillel.service.UserServiceImpl.getAll() finished. Operating time - 11 ms.
+""2021-03-16 21:29:30 [http-nio-8880-exec-2] INFO  c.e.springhillel.aop.LoggingAspect - Method public java.util.List com.example.springhillel.api.UserController.getAllUser() finished. Operating time - 12 ms.
+""2021-03-16 21:30:11 [http-nio-8880-exec-8] INFO  c.e.springhillel.aop.LoggingAspect - public void com.example.springhillel.api.RoleController.addRoleUser(com.example.springhillel.model.UserRoleClass) method started working.
+""2021-03-16 21:30:11 [http-nio-8880-exec-8] INFO  c.e.springhillel.aop.LoggingAspect - public void com.example.springhillel.service.RoleServiceImpl.roleAssignment(com.example.springhillel.model.UserRoleClass) method started working.
+""2021-03-16 21:30:11 [http-nio-8880-exec-8] INFO  c.e.springhillel.aop.LoggingAspect - public void com.example.springhillel.repository.JdbcRoleRepositoryImpl.roleAssignment(com.example.springhillel.model.UserRoleClass) method started working.
+""2021-03-16 21:30:11 [http-nio-8880-exec-8] INFO  c.e.springhillel.aop.LoggingAspect - Before method param
+""2021-03-16 21:30:11 [http-nio-8880-exec-8] INFO  c.e.springhillel.aop.LoggingAspect - Role ADMIN of adding to user User(id=7, firstName=null, lastName=null, email=null, userRole=null)
+""2021-03-16 21:30:11 [http-nio-8880-exec-8] INFO  c.e.springhillel.aop.LoggingAspect - After method param
+""2021-03-16 21:30:11 [http-nio-8880-exec-8] INFO  c.e.springhillel.aop.LoggingAspect - Role ADMIN added to user User(id=7, firstName=null, lastName=null, email=null, userRole=null)
+""2021-03-16 21:30:11 [http-nio-8880-exec-8] INFO  c.e.springhillel.aop.LoggingAspect - Method public void com.example.springhillel.repository.JdbcRoleRepositoryImpl.roleAssignment(com.example.springhillel.model.UserRoleClass) finished. Operating time - 15 ms.
+""2021-03-16 21:30:11 [http-nio-8880-exec-8] INFO  c.e.springhillel.aop.LoggingAspect - Method public void com.example.springhillel.service.RoleServiceImpl.roleAssignment(com.example.springhillel.model.UserRoleClass) finished. Operating time - 17 ms.
+""2021-03-16 21:30:11 [http-nio-8880-exec-8] INFO  c.e.springhillel.aop.LoggingAspect - Method public void com.example.springhillel.api.RoleController.addRoleUser(com.example.springhillel.model.UserRoleClass) finished. Operating time - 19 ms.
+""2021-03-16 21:30:49 [main] INFO  c.e.s.SpringHillelApplication - Starting SpringHillelApplication using Java 13.0.2 on DESKTOP-PI8E00V with PID 12876 (C:\Users\aandr\IdeaProjects\spring-hillel\target\classes started by aandr in C:\Users\aandr\IdeaProjects\spring-hillel)
+""2021-03-16 21:30:49 [main] INFO  c.e.s.SpringHillelApplication - No active profile set, falling back to default profiles: default
+""2021-03-16 21:30:49 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+""2021-03-16 21:30:49 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 19 ms. Found 0 JPA repository interfaces.
+""2021-03-16 21:30:50 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8880 (http)
+""2021-03-16 21:30:50 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+""2021-03-16 21:30:50 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.43]
+""2021-03-16 21:30:50 [main] INFO  o.a.c.c.C.[.[.[/bug-tracker] - Initializing Spring embedded WebApplicationContext
+""2021-03-16 21:30:50 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1238 ms
+""2021-03-16 21:30:50 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+""2021-03-16 21:30:50 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+""2021-03-16 21:30:50 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+""2021-03-16 21:30:50 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.4.28.Final
+""2021-03-16 21:30:50 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+""2021-03-16 21:30:50 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+""2021-03-16 21:30:50 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+""2021-03-16 21:30:50 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+""2021-03-16 21:30:51 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+""2021-03-16 21:30:51 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+""2021-03-16 21:30:51 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8880 (http) with context path '/bug-tracker'
+""2021-03-16 21:30:51 [main] INFO  c.e.s.SpringHillelApplication - Started SpringHillelApplication in 3.027 seconds (JVM running for 3.938)
+""2021-03-16 21:30:54 [http-nio-8880-exec-1] INFO  o.a.c.c.C.[.[.[/bug-tracker] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+""2021-03-16 21:30:54 [http-nio-8880-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+""2021-03-16 21:30:54 [http-nio-8880-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+""2021-03-16 21:30:54 [http-nio-8880-exec-1] INFO  c.e.springhillel.aop.LoggingAspect - public void com.example.springhillel.api.RoleController.addRoleUser(com.example.springhillel.model.UserRoleClass) method started working.
+""2021-03-16 21:30:54 [http-nio-8880-exec-1] INFO  c.e.springhillel.aop.LoggingAspect - public void com.example.springhillel.service.RoleServiceImpl.roleAssignment(com.example.springhillel.model.UserRoleClass) method started working.
+""2021-03-16 21:30:54 [http-nio-8880-exec-1] INFO  c.e.springhillel.aop.LoggingAspect - public void com.example.springhillel.repository.JdbcRoleRepositoryImpl.roleAssignment(com.example.springhillel.model.UserRoleClass) method started working.
+""2021-03-16 21:30:54 [http-nio-8880-exec-1] INFO  c.e.springhillel.aop.LoggingAspect - Role ADMIN of adding to user 7
+""2021-03-16 21:30:54 [http-nio-8880-exec-1] INFO  c.e.springhillel.aop.LoggingAspect - Role ADMIN added to user User(id=7, firstName=null, lastName=null, email=null, userRole=null)
+""2021-03-16 21:30:54 [http-nio-8880-exec-1] INFO  c.e.springhillel.aop.LoggingAspect - Method public void com.example.springhillel.repository.JdbcRoleRepositoryImpl.roleAssignment(com.example.springhillel.model.UserRoleClass) finished. Operating time - 57 ms.
+""2021-03-16 21:30:54 [http-nio-8880-exec-1] INFO  c.e.springhillel.aop.LoggingAspect - Method public void com.example.springhillel.service.RoleServiceImpl.roleAssignment(com.example.springhillel.model.UserRoleClass) finished. Operating time - 59 ms.
+""2021-03-16 21:30:54 [http-nio-8880-exec-1] INFO  c.e.springhillel.aop.LoggingAspect - Method public void com.example.springhillel.api.RoleController.addRoleUser(com.example.springhillel.model.UserRoleClass) finished. Operating time - 68 ms.
+""2021-03-16 21:31:24 [main] INFO  c.e.s.SpringHillelApplication - Starting SpringHillelApplication using Java 13.0.2 on DESKTOP-PI8E00V with PID 7808 (C:\Users\aandr\IdeaProjects\spring-hillel\target\classes started by aandr in C:\Users\aandr\IdeaProjects\spring-hillel)
+""2021-03-16 21:31:24 [main] INFO  c.e.s.SpringHillelApplication - No active profile set, falling back to default profiles: default
+""2021-03-16 21:31:25 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+""2021-03-16 21:31:25 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 18 ms. Found 0 JPA repository interfaces.
+""2021-03-16 21:31:25 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8880 (http)
+""2021-03-16 21:31:25 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+""2021-03-16 21:31:25 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.43]
+""2021-03-16 21:31:25 [main] INFO  o.a.c.c.C.[.[.[/bug-tracker] - Initializing Spring embedded WebApplicationContext
+""2021-03-16 21:31:25 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1253 ms
+""2021-03-16 21:31:26 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+""2021-03-16 21:31:26 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+""2021-03-16 21:31:26 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+""2021-03-16 21:31:26 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.4.28.Final
+""2021-03-16 21:31:26 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+""2021-03-16 21:31:26 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+""2021-03-16 21:31:26 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+""2021-03-16 21:31:26 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+""2021-03-16 21:31:26 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+""2021-03-16 21:31:26 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+""2021-03-16 21:31:27 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8880 (http) with context path '/bug-tracker'
+""2021-03-16 21:31:27 [main] INFO  c.e.s.SpringHillelApplication - Started SpringHillelApplication in 3.102 seconds (JVM running for 4.007)
+""2021-03-16 21:31:28 [http-nio-8880-exec-3] INFO  o.a.c.c.C.[.[.[/bug-tracker] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+""2021-03-16 21:31:28 [http-nio-8880-exec-3] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+""2021-03-16 21:31:28 [http-nio-8880-exec-3] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+""2021-03-16 21:31:28 [http-nio-8880-exec-3] INFO  c.e.springhillel.aop.LoggingAspect - public void com.example.springhillel.api.RoleController.addRoleUser(com.example.springhillel.model.UserRoleClass) method started working.
+""2021-03-16 21:31:28 [http-nio-8880-exec-3] INFO  c.e.springhillel.aop.LoggingAspect - public void com.example.springhillel.service.RoleServiceImpl.roleAssignment(com.example.springhillel.model.UserRoleClass) method started working.
+""2021-03-16 21:31:28 [http-nio-8880-exec-3] INFO  c.e.springhillel.aop.LoggingAspect - public void com.example.springhillel.repository.JdbcRoleRepositoryImpl.roleAssignment(com.example.springhillel.model.UserRoleClass) method started working.
+""2021-03-16 21:31:28 [http-nio-8880-exec-3] INFO  c.e.springhillel.aop.LoggingAspect - Role ADMIN of adding to user null
+""2021-03-16 21:31:28 [http-nio-8880-exec-3] INFO  c.e.springhillel.aop.LoggingAspect - Role ADMIN added to user User(id=7, firstName=null, lastName=null, email=null, userRole=null)
+""2021-03-16 21:31:28 [http-nio-8880-exec-3] INFO  c.e.springhillel.aop.LoggingAspect - Method public void com.example.springhillel.repository.JdbcRoleRepositoryImpl.roleAssignment(com.example.springhillel.model.UserRoleClass) finished. Operating time - 48 ms.
+""2021-03-16 21:31:28 [http-nio-8880-exec-3] INFO  c.e.springhillel.aop.LoggingAspect - Method public void com.example.springhillel.service.RoleServiceImpl.roleAssignment(com.example.springhillel.model.UserRoleClass) finished. Operating time - 52 ms.
+""2021-03-16 21:31:28 [http-nio-8880-exec-3] INFO  c.e.springhillel.aop.LoggingAspect - Method public void com.example.springhillel.api.RoleController.addRoleUser(com.example.springhillel.model.UserRoleClass) finished. Operating time - 58 ms.
+""2021-03-16 21:32:04 [http-nio-8880-exec-2] INFO  c.e.springhillel.aop.LoggingAspect - public void com.example.springhillel.api.UserController.deleteUser(int) method started working.
+""2021-03-16 21:32:04 [http-nio-8880-exec-2] INFO  c.e.springhillel.aop.LoggingAspect - public void com.example.springhillel.service.UserServiceImpl.deleted(int) method started working.
+""2021-03-16 21:32:04 [http-nio-8880-exec-2] INFO  c.e.springhillel.aop.LoggingAspect - public com.example.springhillel.model.User com.example.springhillel.repository.JdbcUserRepositoryImpl.findUserById(int) method started working.
+""2021-03-16 21:32:04 [http-nio-8880-exec-2] INFO  c.e.springhillel.aop.LoggingAspect - Method public com.example.springhillel.model.User com.example.springhillel.repository.JdbcUserRepositoryImpl.findUserById(int) finished. Operating time - 9 ms.
+""2021-03-16 21:32:04 [http-nio-8880-exec-2] INFO  c.e.springhillel.aop.LoggingAspect - public void com.example.springhillel.repository.JdbcUserRepositoryImpl.deleted(int) method started working.
+""2021-03-16 21:32:04 [http-nio-8880-exec-2] INFO  c.e.springhillel.aop.LoggingAspect - Method public void com.example.springhillel.repository.JdbcUserRepositoryImpl.deleted(int) finished. Operating time - 10 ms.
+""2021-03-16 21:32:04 [http-nio-8880-exec-2] INFO  c.e.springhillel.aop.LoggingAspect - Method public void com.example.springhillel.service.UserServiceImpl.deleted(int) finished. Operating time - 22 ms.
+""2021-03-16 21:32:04 [http-nio-8880-exec-2] INFO  c.e.springhillel.aop.LoggingAspect - Method public void com.example.springhillel.api.UserController.deleteUser(int) finished. Operating time - 24 ms.
+""2021-03-16 21:33:14 [main] INFO  c.e.s.SpringHillelApplication - Starting SpringHillelApplication using Java 13.0.2 on DESKTOP-PI8E00V with PID 4996 (C:\Users\aandr\IdeaProjects\spring-hillel\target\classes started by aandr in C:\Users\aandr\IdeaProjects\spring-hillel)
+""2021-03-16 21:33:14 [main] INFO  c.e.s.SpringHillelApplication - No active profile set, falling back to default profiles: default
+""2021-03-16 21:33:15 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+""2021-03-16 21:33:15 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 20 ms. Found 0 JPA repository interfaces.
+""2021-03-16 21:33:15 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8880 (http)
+""2021-03-16 21:33:15 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+""2021-03-16 21:33:15 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.43]
+""2021-03-16 21:33:15 [main] INFO  o.a.c.c.C.[.[.[/bug-tracker] - Initializing Spring embedded WebApplicationContext
+""2021-03-16 21:33:15 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1369 ms
+""2021-03-16 21:33:15 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+""2021-03-16 21:33:16 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+""2021-03-16 21:33:16 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+""2021-03-16 21:33:16 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.4.28.Final
+""2021-03-16 21:33:16 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+""2021-03-16 21:33:16 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+""2021-03-16 21:33:16 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+""2021-03-16 21:33:16 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+""2021-03-16 21:33:16 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+""2021-03-16 21:33:17 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+""2021-03-16 21:33:17 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8880 (http) with context path '/bug-tracker'
+""2021-03-16 21:33:17 [main] INFO  c.e.s.SpringHillelApplication - Started SpringHillelApplication in 3.541 seconds (JVM running for 4.484)
+""2021-03-16 21:33:26 [http-nio-8880-exec-4] INFO  o.a.c.c.C.[.[.[/bug-tracker] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+""2021-03-16 21:33:26 [http-nio-8880-exec-4] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+""2021-03-16 21:33:26 [http-nio-8880-exec-4] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+""2021-03-16 21:33:26 [http-nio-8880-exec-4] INFO  c.e.springhillel.aop.LoggingAspect - public void com.example.springhillel.api.UserController.deleteUser(int) method started working.
+""2021-03-16 21:33:26 [http-nio-8880-exec-4] INFO  c.e.springhillel.aop.LoggingAspect - public void com.example.springhillel.service.UserServiceImpl.deleted(int) method started working.
+""2021-03-16 21:33:26 [http-nio-8880-exec-4] INFO  c.e.springhillel.aop.LoggingAspect - public com.example.springhillel.model.User com.example.springhillel.repository.JdbcUserRepositoryImpl.findUserById(int) method started working.
+""2021-03-16 21:33:26 [http-nio-8880-exec-4] INFO  c.e.springhillel.aop.LoggingAspect - Method public com.example.springhillel.model.User com.example.springhillel.repository.JdbcUserRepositoryImpl.findUserById(int) finished. Operating time - 24 ms.
+""2021-03-16 21:33:26 [http-nio-8880-exec-4] INFO  c.e.springhillel.aop.LoggingAspect - Method public void com.example.springhillel.service.UserServiceImpl.deleted(int) finished. Operating time - 28 ms.
+""2021-03-16 21:33:26 [http-nio-8880-exec-4] INFO  c.e.springhillel.aop.LoggingAspect - Method public void com.example.springhillel.api.UserController.deleteUser(int) finished. Operating time - 33 ms.
+""2021-03-16 21:33:39 [http-nio-8880-exec-6] INFO  c.e.springhillel.aop.LoggingAspect - public void com.example.springhillel.api.UserController.deleteUser(int) method started working.
+""2021-03-16 21:33:39 [http-nio-8880-exec-6] INFO  c.e.springhillel.aop.LoggingAspect - public void com.example.springhillel.service.UserServiceImpl.deleted(int) method started working.
+""2021-03-16 21:33:39 [http-nio-8880-exec-6] INFO  c.e.springhillel.aop.LoggingAspect - public com.example.springhillel.model.User com.example.springhillel.repository.JdbcUserRepositoryImpl.findUserById(int) method started working.
+""2021-03-16 21:33:39 [http-nio-8880-exec-6] INFO  c.e.springhillel.aop.LoggingAspect - Method public com.example.springhillel.model.User com.example.springhillel.repository.JdbcUserRepositoryImpl.findUserById(int) finished. Operating time - 6 ms.
+""2021-03-16 21:33:39 [http-nio-8880-exec-6] INFO  c.e.springhillel.aop.LoggingAspect - public void com.example.springhillel.repository.JdbcUserRepositoryImpl.deleted(int) method started working.
+""2021-03-16 21:33:39 [http-nio-8880-exec-6] INFO  c.e.springhillel.aop.LoggingAspect - Method public void com.example.springhillel.repository.JdbcUserRepositoryImpl.deleted(int) finished. Operating time - 14 ms.
+""2021-03-16 21:33:39 [http-nio-8880-exec-6] INFO  c.e.springhillel.aop.LoggingAspect - Method public void com.example.springhillel.service.UserServiceImpl.deleted(int) finished. Operating time - 23 ms.
+""2021-03-16 21:33:39 [http-nio-8880-exec-6] INFO  c.e.springhillel.aop.LoggingAspect - Method public void com.example.springhillel.api.UserController.deleteUser(int) finished. Operating time - 23 ms.
+""2021-03-16 21:35:50 [main] INFO  c.e.s.SpringHillelApplication - Starting SpringHillelApplication using Java 13.0.2 on DESKTOP-PI8E00V with PID 5564 (C:\Users\aandr\IdeaProjects\spring-hillel\target\classes started by aandr in C:\Users\aandr\IdeaProjects\spring-hillel)
+""2021-03-16 21:35:50 [main] INFO  c.e.s.SpringHillelApplication - No active profile set, falling back to default profiles: default
+""2021-03-16 21:35:50 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+""2021-03-16 21:35:50 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 19 ms. Found 0 JPA repository interfaces.
+""2021-03-16 21:35:51 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8880 (http)
+""2021-03-16 21:35:51 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+""2021-03-16 21:35:51 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.43]
+""2021-03-16 21:35:51 [main] INFO  o.a.c.c.C.[.[.[/bug-tracker] - Initializing Spring embedded WebApplicationContext
+""2021-03-16 21:35:51 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1213 ms
+""2021-03-16 21:35:51 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+""2021-03-16 21:35:51 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+""2021-03-16 21:35:51 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+""2021-03-16 21:35:51 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.4.28.Final
+""2021-03-16 21:35:52 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+""2021-03-16 21:35:52 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+""2021-03-16 21:35:52 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+""2021-03-16 21:35:52 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+""2021-03-16 21:35:52 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+""2021-03-16 21:35:52 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+""2021-03-16 21:35:52 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8880 (http) with context path '/bug-tracker'
+""2021-03-16 21:35:52 [main] INFO  c.e.s.SpringHillelApplication - Started SpringHillelApplication in 2.986 seconds (JVM running for 3.888)
+""2021-03-16 21:35:58 [http-nio-8880-exec-1] INFO  o.a.c.c.C.[.[.[/bug-tracker] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+""2021-03-16 21:35:58 [http-nio-8880-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+""2021-03-16 21:35:58 [http-nio-8880-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+""2021-03-16 21:35:58 [http-nio-8880-exec-1] INFO  c.e.springhillel.aop.LoggingAspect - public void com.example.springhillel.api.UserController.deleteUser(int) method started working.
+""2021-03-16 21:35:58 [http-nio-8880-exec-1] INFO  c.e.springhillel.aop.LoggingAspect - public void com.example.springhillel.service.UserServiceImpl.deleted(int) method started working.
+""2021-03-16 21:35:58 [http-nio-8880-exec-1] INFO  c.e.springhillel.aop.LoggingAspect - public com.example.springhillel.model.User com.example.springhillel.repository.JdbcUserRepositoryImpl.findUserById(int) method started working.
+""2021-03-16 21:35:58 [http-nio-8880-exec-1] INFO  c.e.springhillel.aop.LoggingAspect - Method public com.example.springhillel.model.User com.example.springhillel.repository.JdbcUserRepositoryImpl.findUserById(int) finished. Operating time - 22 ms.
+""2021-03-16 21:35:58 [http-nio-8880-exec-1] INFO  c.e.springhillel.aop.LoggingAspect - Method public void com.example.springhillel.service.UserServiceImpl.deleted(int) finished. Operating time - 26 ms.
+""2021-03-16 21:35:58 [http-nio-8880-exec-1] INFO  c.e.springhillel.aop.LoggingAspect - Method public void com.example.springhillel.api.UserController.deleteUser(int) finished. Operating time - 33 ms.
+""2021-03-16 21:37:02 [http-nio-8880-exec-3] INFO  c.e.springhillel.aop.LoggingAspect - public java.util.List com.example.springhillel.api.TaskController.getTaskUser(int) method started working.
+""2021-03-16 21:37:02 [http-nio-8880-exec-3] INFO  c.e.springhillel.aop.LoggingAspect - public java.util.List com.example.springhillel.service.TaskServiceImpl.getTaskUser(int) method started working.
+""2021-03-16 21:37:02 [http-nio-8880-exec-3] INFO  c.e.springhillel.aop.LoggingAspect - public java.util.List com.example.springhillel.repository.JdbcTaskRepositoryImpl.getTaskUser(int) method started working.
+""2021-03-16 21:37:02 [http-nio-8880-exec-3] INFO  c.e.springhillel.aop.LoggingAspect - Method public java.util.List com.example.springhillel.repository.JdbcTaskRepositoryImpl.getTaskUser(int) finished. Operating time - 26 ms.
+""2021-03-16 21:37:02 [http-nio-8880-exec-3] INFO  c.e.springhillel.aop.LoggingAspect - Method public java.util.List com.example.springhillel.service.TaskServiceImpl.getTaskUser(int) finished. Operating time - 32 ms.
+""2021-03-16 21:37:02 [http-nio-8880-exec-3] INFO  c.e.springhillel.aop.LoggingAspect - Method public java.util.List com.example.springhillel.api.TaskController.getTaskUser(int) finished. Operating time - 37 ms.
 "
