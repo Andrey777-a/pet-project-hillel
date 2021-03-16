@@ -68,7 +68,21 @@ public class LoggingAspect {
 
         for (Object obj: arg){
 
-            if(obj instanceof User ) {
+            if (obj instanceof Integer){
+                switch (joinPoint.getSignature().getName()) {
+                    case "deleted":
+                        log.info("User " + ((Integer) obj).intValue() + " - deleted.");
+                        break;
+                    case "findUserById":
+                        log.info("parameter " + ((Integer) obj).intValue() + " to search for user");
+                        break;
+                    case "getTaskUser":
+                        log.info(((Integer) obj).intValue() + " user tasks - unloaded.");
+                        break;
+                }
+            }
+
+            else if(obj instanceof User ) {
 
                 if(joinPoint.getSignature().getName().equals("create")){
                     log.info("User parameter " + obj.toString() + " - added.");
