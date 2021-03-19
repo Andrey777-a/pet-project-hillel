@@ -1,8 +1,10 @@
 package com.example.springhillel.model;
 
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
+@NoArgsConstructor
 public class User {
 
     private int id;
@@ -15,8 +17,6 @@ public class User {
 
     private UserRole userRole;
 
-    public User() {
-    }
 
     public User(int id) {
         this.id = id;

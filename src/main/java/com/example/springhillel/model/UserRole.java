@@ -1,6 +1,5 @@
 package com.example.springhillel.model;
 
-import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 

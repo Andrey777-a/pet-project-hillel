@@ -1,0 +1,63 @@
+"2021-03-17 00:18:25 [main] INFO  c.e.s.SpringHillelApplication - Starting SpringHillelApplication using Java 13.0.2 on DESKTOP-PI8E00V with PID 1732 (C:\Users\aandr\IdeaProjects\spring-hillel\target\classes started by aandr in C:\Users\aandr\IdeaProjects\spring-hillel)
+""2021-03-17 00:18:25 [main] INFO  c.e.s.SpringHillelApplication - No active profile set, falling back to default profiles: default
+""2021-03-17 00:18:26 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+""2021-03-17 00:18:26 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 24 ms. Found 0 JPA repository interfaces.
+""2021-03-17 00:18:26 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8880 (http)
+""2021-03-17 00:18:26 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+""2021-03-17 00:18:26 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.43]
+""2021-03-17 00:18:26 [main] INFO  o.a.c.c.C.[.[.[/bug-tracker] - Initializing Spring embedded WebApplicationContext
+""2021-03-17 00:18:26 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1551 ms
+""2021-03-17 00:18:27 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+""2021-03-17 00:18:27 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+""2021-03-17 00:18:27 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+""2021-03-17 00:18:27 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.4.28.Final
+""2021-03-17 00:18:27 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+""2021-03-17 00:18:27 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+""2021-03-17 00:18:27 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+""2021-03-17 00:18:27 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+""2021-03-17 00:18:28 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+""2021-03-17 00:18:28 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+""2021-03-17 00:18:28 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8880 (http) with context path '/bug-tracker'
+""2021-03-17 00:18:28 [main] INFO  c.e.s.SpringHillelApplication - Started SpringHillelApplication in 3.876 seconds (JVM running for 4.904)
+""2021-03-17 00:18:44 [http-nio-8880-exec-1] INFO  o.a.c.c.C.[.[.[/bug-tracker] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+""2021-03-17 00:18:44 [http-nio-8880-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+""2021-03-17 00:18:44 [http-nio-8880-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+""2021-03-17 00:18:44 [http-nio-8880-exec-1] INFO  c.e.springhillel.aop.LoggingAspect - public java.util.List com.example.springhillel.api.TaskController.getTaskUser(int) method started working.
+""2021-03-17 00:18:44 [http-nio-8880-exec-1] INFO  c.e.springhillel.aop.LoggingAspect - public java.util.List com.example.springhillel.service.TaskServiceImpl.getTaskUser(int) method started working.
+""2021-03-17 00:18:44 [http-nio-8880-exec-1] INFO  c.e.springhillel.aop.LoggingAspect - public java.util.List com.example.springhillel.repository.JdbcTaskRepositoryImpl.getTaskUser(int) method started working.
+""2021-03-17 00:18:44 [http-nio-8880-exec-1] INFO  c.e.springhillel.aop.LoggingAspect - 5user tasks - unloaded.
+""2021-03-17 00:18:44 [http-nio-8880-exec-1] INFO  c.e.springhillel.aop.LoggingAspect - Method public java.util.List com.example.springhillel.repository.JdbcTaskRepositoryImpl.getTaskUser(int) finished. Operating time - 20 ms.
+""2021-03-17 00:18:44 [http-nio-8880-exec-1] INFO  c.e.springhillel.aop.LoggingAspect - Method public java.util.List com.example.springhillel.service.TaskServiceImpl.getTaskUser(int) finished. Operating time - 43 ms.
+""2021-03-17 00:18:44 [http-nio-8880-exec-1] INFO  c.e.springhillel.aop.LoggingAspect - Method public java.util.List com.example.springhillel.api.TaskController.getTaskUser(int) finished. Operating time - 49 ms.
+""2021-03-17 00:19:02 [http-nio-8880-exec-5] INFO  c.e.springhillel.aop.LoggingAspect - public void com.example.springhillel.api.UserController.deleteUser(int) method started working.
+""2021-03-17 00:19:02 [http-nio-8880-exec-5] INFO  c.e.springhillel.aop.LoggingAspect - public void com.example.springhillel.service.UserServiceImpl.deleted(int) method started working.
+""2021-03-17 00:19:02 [http-nio-8880-exec-5] INFO  c.e.springhillel.aop.LoggingAspect - public com.example.springhillel.model.User com.example.springhillel.repository.JdbcUserRepositoryImpl.findUserById(int) method started working.
+""2021-03-17 00:19:02 [http-nio-8880-exec-5] INFO  c.e.springhillel.aop.LoggingAspect - parameter 11 to search for user
+""2021-03-17 00:19:02 [http-nio-8880-exec-5] INFO  c.e.springhillel.aop.LoggingAspect - Method public com.example.springhillel.model.User com.example.springhillel.repository.JdbcUserRepositoryImpl.findUserById(int) finished. Operating time - 9 ms.
+""2021-03-17 00:19:02 [http-nio-8880-exec-5] INFO  c.e.springhillel.aop.LoggingAspect - Method public void com.example.springhillel.service.UserServiceImpl.deleted(int) finished. Operating time - 14 ms.
+""2021-03-17 00:19:02 [http-nio-8880-exec-5] INFO  c.e.springhillel.aop.LoggingAspect - Method public void com.example.springhillel.api.UserController.deleteUser(int) finished. Operating time - 19 ms.
+""2021-03-17 00:19:37 [http-nio-8880-exec-2] INFO  c.e.springhillel.aop.LoggingAspect - public void com.example.springhillel.api.UserController.deleteUser(int) method started working.
+""2021-03-17 00:19:37 [http-nio-8880-exec-2] INFO  c.e.springhillel.aop.LoggingAspect - public void com.example.springhillel.service.UserServiceImpl.deleted(int) method started working.
+""2021-03-17 00:19:37 [http-nio-8880-exec-2] INFO  c.e.springhillel.aop.LoggingAspect - public com.example.springhillel.model.User com.example.springhillel.repository.JdbcUserRepositoryImpl.findUserById(int) method started working.
+""2021-03-17 00:19:37 [http-nio-8880-exec-2] INFO  c.e.springhillel.aop.LoggingAspect - parameter 11 to search for user
+""2021-03-17 00:19:37 [http-nio-8880-exec-2] INFO  c.e.springhillel.aop.LoggingAspect - Method public com.example.springhillel.model.User com.example.springhillel.repository.JdbcUserRepositoryImpl.findUserById(int) finished. Operating time - 4 ms.
+""2021-03-17 00:19:37 [http-nio-8880-exec-2] INFO  c.e.springhillel.aop.LoggingAspect - Method public void com.example.springhillel.service.UserServiceImpl.deleted(int) finished. Operating time - 4 ms.
+""2021-03-17 00:19:37 [http-nio-8880-exec-2] INFO  c.e.springhillel.aop.LoggingAspect - Method public void com.example.springhillel.api.UserController.deleteUser(int) finished. Operating time - 4 ms.
+""2021-03-17 00:19:55 [http-nio-8880-exec-3] INFO  c.e.springhillel.aop.LoggingAspect - public void com.example.springhillel.api.UserController.deleteUser(int) method started working.
+""2021-03-17 00:19:55 [http-nio-8880-exec-3] INFO  c.e.springhillel.aop.LoggingAspect - public void com.example.springhillel.service.UserServiceImpl.deleted(int) method started working.
+""2021-03-17 00:19:55 [http-nio-8880-exec-3] INFO  c.e.springhillel.aop.LoggingAspect - public com.example.springhillel.model.User com.example.springhillel.repository.JdbcUserRepositoryImpl.findUserById(int) method started working.
+""2021-03-17 00:19:55 [http-nio-8880-exec-3] INFO  c.e.springhillel.aop.LoggingAspect - parameter 12 to search for user
+""2021-03-17 00:19:55 [http-nio-8880-exec-3] INFO  c.e.springhillel.aop.LoggingAspect - Method public com.example.springhillel.model.User com.example.springhillel.repository.JdbcUserRepositoryImpl.findUserById(int) finished. Operating time - 5 ms.
+""2021-03-17 00:19:55 [http-nio-8880-exec-3] INFO  c.e.springhillel.aop.LoggingAspect - public void com.example.springhillel.repository.JdbcUserRepositoryImpl.deleted(int) method started working.
+""2021-03-17 00:19:56 [http-nio-8880-exec-3] INFO  c.e.springhillel.aop.LoggingAspect - User 12 - deleted.
+""2021-03-17 00:19:56 [http-nio-8880-exec-3] INFO  c.e.springhillel.aop.LoggingAspect - Method public void com.example.springhillel.repository.JdbcUserRepositoryImpl.deleted(int) finished. Operating time - 15 ms.
+""2021-03-17 00:19:56 [http-nio-8880-exec-3] INFO  c.e.springhillel.aop.LoggingAspect - Method public void com.example.springhillel.service.UserServiceImpl.deleted(int) finished. Operating time - 20 ms.
+""2021-03-17 00:19:56 [http-nio-8880-exec-3] INFO  c.e.springhillel.aop.LoggingAspect - Method public void com.example.springhillel.api.UserController.deleteUser(int) finished. Operating time - 20 ms.
+""2021-03-17 00:20:03 [http-nio-8880-exec-9] INFO  c.e.springhillel.aop.LoggingAspect - public void com.example.springhillel.api.UserController.deleteUser(int) method started working.
+""2021-03-17 00:20:03 [http-nio-8880-exec-9] INFO  c.e.springhillel.aop.LoggingAspect - public void com.example.springhillel.service.UserServiceImpl.deleted(int) method started working.
+""2021-03-17 00:20:03 [http-nio-8880-exec-9] INFO  c.e.springhillel.aop.LoggingAspect - public com.example.springhillel.model.User com.example.springhillel.repository.JdbcUserRepositoryImpl.findUserById(int) method started working.
+""2021-03-17 00:20:03 [http-nio-8880-exec-9] INFO  c.e.springhillel.aop.LoggingAspect - parameter 12 to search for user
+""2021-03-17 00:20:03 [http-nio-8880-exec-9] INFO  c.e.springhillel.aop.LoggingAspect - Method public com.example.springhillel.model.User com.example.springhillel.repository.JdbcUserRepositoryImpl.findUserById(int) finished. Operating time - 4 ms.
+""2021-03-17 00:20:03 [http-nio-8880-exec-9] INFO  c.e.springhillel.aop.LoggingAspect - Method public void com.example.springhillel.service.UserServiceImpl.deleted(int) finished. Operating time - 5 ms.
+""2021-03-17 00:20:03 [http-nio-8880-exec-9] INFO  c.e.springhillel.aop.LoggingAspect - Method public void com.example.springhillel.api.UserController.deleteUser(int) finished. Operating time - 7 ms.
+"

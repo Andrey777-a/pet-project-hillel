@@ -1,34 +1,36 @@
 package com.example.springhillel.api;
 
 import com.example.springhillel.model.TaskAttribute;
-import com.example.springhillel.repository.TaskRepository;
+import com.example.springhillel.service.TaskService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 public class TaskController {
 
     @Autowired
-    TaskRepository taskRepository;
+    private TaskService taskService;
 
     @PostMapping("/createTask")
     public void createTask(@RequestBody TaskAttribute taskAttribute) {
 
-        taskRepository.createTask(taskAttribute);
+        taskService.createTask(taskAttribute);
 
     }
 
     @PutMapping("/updateTask")
     public void updateTask(@RequestBody TaskAttribute taskAttribute) {
 
-        taskRepository.updateTask(taskAttribute);
+        taskService.updateTask(taskAttribute);
 
     }
 
     @GetMapping("/getTaskUser/{id}")
-    public void getTaskUser(@PathVariable int id) {
+    public List<TaskAttribute> getTaskUser(@PathVariable int id) {
 
-        taskRepository.getTaskUser(id);
+        return taskService.getTaskUser(id);
 
     }
 

@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
+
 @Repository
 public class JdbcRoleRepositoryImpl implements RoleRepository{
 
@@ -20,5 +21,6 @@ public class JdbcRoleRepositoryImpl implements RoleRepository{
     @Override
     public void deleteRole(int id) {
         jdbcTemplate.update("DELETE FROM user_role WHERE id = ?", id);
+
     }
 }

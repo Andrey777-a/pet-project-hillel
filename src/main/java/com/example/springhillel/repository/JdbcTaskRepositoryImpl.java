@@ -13,6 +13,7 @@ import java.sql.SQLException;
 import java.time.LocalDateTime;
 import java.util.List;
 
+
 @Repository
 public class JdbcTaskRepositoryImpl implements TaskRepository{
 
@@ -26,6 +27,7 @@ public class JdbcTaskRepositoryImpl implements TaskRepository{
                 taskAttribute.getName(), taskAttribute.getDescription(), taskAttribute.getAssignee(),
                 taskAttribute.getStatus().getAssign(), taskAttribute.getPriority(), taskAttribute.getTimeSpent(),
                 taskAttribute.getTimeEstimated(), LocalDateTime.now(), taskAttribute.getTypeTask().getType());
+
     }
 
     @Override
@@ -33,6 +35,7 @@ public class JdbcTaskRepositoryImpl implements TaskRepository{
         jdbcTemplate.update("UPDATE task_user SET description = ?, status = ?, priority = ?, time_spent = ? " +
                         "where id = ?", taskAttribute.getDescription(), taskAttribute.getStatus().getAssign(), taskAttribute.getPriority(),
                 taskAttribute.getTimeSpent(), taskAttribute.getId());
+
     }
 
     @Override
@@ -42,8 +45,8 @@ public class JdbcTaskRepositoryImpl implements TaskRepository{
                 new RowMapper<TaskAttribute>() {
                     @Override
                     public TaskAttribute mapRow(ResultSet rs, int i) throws SQLException {
-                        return new TaskAttribute(rs.getString("name"), rs.getString("description"),
-                                rs.getInt("assignee"), StatusTask.valueOf(rs.getString("status")), rs.getInt("priority"),
+                        return new TaskAttribute(rs.getInt("id"),rs.getString("name"),
+                                rs.getString("description"), rs.getInt("assignee"), StatusTask.valueOf(rs.getString("status")), rs.getInt("priority"),
                                 rs.getDouble("time_spent"),
                                 LocalDateTime.of(rs.getDate("time_estimated").toLocalDate(), rs.getTime("time_estimated").toLocalTime()),
                                 LocalDateTime.of(rs.getDate("created_on_date").toLocalDate(), rs.getTime("created_on_date").toLocalTime()),
