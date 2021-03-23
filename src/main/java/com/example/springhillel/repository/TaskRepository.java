@@ -1,6 +1,6 @@
 package com.example.springhillel.repository;
 
-import com.example.springhillel.model.TaskAttribute;
+import com.example.springhillel.model.entity.TaskAttribute;
 
 import java.util.List;
 
