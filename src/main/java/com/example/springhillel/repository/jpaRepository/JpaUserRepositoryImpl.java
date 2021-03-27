@@ -8,7 +8,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import javax.persistence.EntityManager;
-import javax.persistence.Query;
 import javax.persistence.TypedQuery;
 import java.util.List;
 
@@ -48,11 +47,11 @@ public class JpaUserRepositoryImpl implements UserRepository {
     }
 
     @Override
-    public User findUserById(int userId) {
-        String query = "SELECT u FROM User u where id = :userId";
-        Query managerQuery = entityManager.createQuery(query);
-        managerQuery.setParameter("userId", userId);
-        return (User) managerQuery.getSingleResult();
+    public User findUserById(long userId) {
+
+        User user = entityManager.find(User.class, userId);
+
+        return user;
     }
 
 }

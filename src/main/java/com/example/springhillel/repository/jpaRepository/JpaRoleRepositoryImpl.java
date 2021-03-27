@@ -34,16 +34,11 @@ public class JpaRoleRepositoryImpl implements RoleRepository {
 
         Role role = entityManager.find(Role.class, roleId);
         User user = entityManager.find(User.class, userId);
-        User user1 = new User(user.getFirstName(), user.getLastName(), user.getPassword(),
-                user.getEmail(), role);
 
-        entityManager.persist(user1);
+        user.setRole(role);
 
+        entityManager.persist(user);
 
-       /* entityManager.createNativeQuery("UPDATE user set role_id = ? where id = ?")
-                .setParameter(1, userId)
-                .setParameter(2, roleId)
-                .executeUpdate();*/
     }
 
     @Override

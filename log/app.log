@@ -7582,4 +7582,206 @@ Caused by: java.sql.SQLSyntaxErrorException: Key column 'assignee' doesn't exist
 ""2021-03-27 16:42:48 [http-nio-8880-exec-3] INFO  c.e.springhillel.aop.LoggingAspect - Method public void com.example.springhillel.repository.jpaRepository.JpaRoleRepositoryImpl.roleAssignment(long,long) finished. Operating time - 65 ms.
 ""2021-03-27 16:42:48 [http-nio-8880-exec-3] INFO  c.e.springhillel.aop.LoggingAspect - Method public void com.example.springhillel.service.jpaService.JpaRoleServiceImpl.roleAssignment(long,long) finished. Operating time - 69 ms.
 ""2021-03-27 16:42:48 [http-nio-8880-exec-3] INFO  c.e.springhillel.aop.LoggingAspect - Method public void com.example.springhillel.api.JpaController.JpaRoleController.addRoleUser(int,int) finished. Operating time - 111 ms.
+""2021-03-27 17:07:32 [main] INFO  c.e.s.SpringHillelApplication - Starting SpringHillelApplication using Java 13.0.2 on DESKTOP-PI8E00V with PID 20824 (C:\Users\aandr\IdeaProjects\spring-hillel\target\classes started by aandr in C:\Users\aandr\IdeaProjects\spring-hillel)
+""2021-03-27 17:07:32 [main] INFO  c.e.s.SpringHillelApplication - No active profile set, falling back to default profiles: default
+""2021-03-27 17:07:33 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+""2021-03-27 17:07:33 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 29 ms. Found 0 JPA repository interfaces.
+""2021-03-27 17:07:34 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8880 (http)
+""2021-03-27 17:07:34 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+""2021-03-27 17:07:34 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.43]
+""2021-03-27 17:07:34 [main] INFO  o.a.c.c.C.[.[.[/bug-tracker] - Initializing Spring embedded WebApplicationContext
+""2021-03-27 17:07:34 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1629 ms
+""2021-03-27 17:07:34 [main] INFO  o.f.c.i.license.VersionPrinter - Flyway Community Edition 6.5.6 by Redgate
+""2021-03-27 17:07:34 [main] INFO  o.f.c.i.database.DatabaseFactory - Database: jdbc:mysql://localhost:3306/homeDB (MySQL 8.0)
+""2021-03-27 17:07:34 [main] INFO  o.f.core.internal.command.DbMigrate - Current version of schema `homeDB`: 1.1
+""2021-03-27 17:07:34 [main] INFO  o.f.core.internal.command.DbMigrate - Schema `homeDB` is up to date. No migration necessary.
+""2021-03-27 17:07:34 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+""2021-03-27 17:07:34 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+""2021-03-27 17:07:34 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+""2021-03-27 17:07:34 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.4.28.Final
+""2021-03-27 17:07:35 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+""2021-03-27 17:07:35 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+""2021-03-27 17:07:35 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+""2021-03-27 17:07:35 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+""2021-03-27 17:07:35 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+""2021-03-27 17:07:35 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+""2021-03-27 17:07:36 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8880 (http) with context path '/bug-tracker'
+""2021-03-27 17:07:36 [main] INFO  c.e.s.SpringHillelApplication - Started SpringHillelApplication in 4.514 seconds (JVM running for 5.697)
+""2021-03-27 17:07:44 [http-nio-8880-exec-1] INFO  o.a.c.c.C.[.[.[/bug-tracker] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+""2021-03-27 17:07:44 [http-nio-8880-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+""2021-03-27 17:07:44 [http-nio-8880-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+""2021-03-27 17:07:44 [http-nio-8880-exec-1] INFO  c.e.springhillel.aop.LoggingAspect - public void com.example.springhillel.api.JpaController.JpaRoleController.addRoleUser(int,int) method started working.
+""2021-03-27 17:07:44 [http-nio-8880-exec-1] INFO  c.e.springhillel.aop.LoggingAspect - public void com.example.springhillel.service.jpaService.JpaRoleServiceImpl.roleAssignment(long,long) method started working.
+""2021-03-27 17:07:44 [http-nio-8880-exec-1] INFO  c.e.springhillel.aop.LoggingAspect - public void com.example.springhillel.repository.jpaRepository.JpaRoleRepositoryImpl.roleAssignment(long,long) method started working.
+""2021-03-27 17:07:44 [http-nio-8880-exec-1] INFO  c.e.springhillel.aop.LoggingAspect - Method public void com.example.springhillel.repository.jpaRepository.JpaRoleRepositoryImpl.roleAssignment(long,long) finished. Operating time - 72 ms.
+""2021-03-27 17:07:44 [http-nio-8880-exec-1] INFO  c.e.springhillel.aop.LoggingAspect - Method public void com.example.springhillel.service.jpaService.JpaRoleServiceImpl.roleAssignment(long,long) finished. Operating time - 76 ms.
+""2021-03-27 17:07:44 [http-nio-8880-exec-1] INFO  c.e.springhillel.aop.LoggingAspect - Method public void com.example.springhillel.api.JpaController.JpaRoleController.addRoleUser(int,int) finished. Operating time - 123 ms.
+""2021-03-27 17:08:18 [main] INFO  c.e.s.SpringHillelApplication - Starting SpringHillelApplication using Java 13.0.2 on DESKTOP-PI8E00V with PID 23928 (C:\Users\aandr\IdeaProjects\spring-hillel\target\classes started by aandr in C:\Users\aandr\IdeaProjects\spring-hillel)
+""2021-03-27 17:08:18 [main] INFO  c.e.s.SpringHillelApplication - No active profile set, falling back to default profiles: default
+""2021-03-27 17:08:19 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+""2021-03-27 17:08:19 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 31 ms. Found 0 JPA repository interfaces.
+""2021-03-27 17:08:20 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8880 (http)
+""2021-03-27 17:08:20 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+""2021-03-27 17:08:20 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.43]
+""2021-03-27 17:08:20 [main] INFO  o.a.c.c.C.[.[.[/bug-tracker] - Initializing Spring embedded WebApplicationContext
+""2021-03-27 17:08:20 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1471 ms
+""2021-03-27 17:08:20 [main] INFO  o.f.c.i.license.VersionPrinter - Flyway Community Edition 6.5.6 by Redgate
+""2021-03-27 17:08:20 [main] INFO  o.f.c.i.database.DatabaseFactory - Database: jdbc:mysql://localhost:3306/homeDB (MySQL 8.0)
+""2021-03-27 17:08:20 [main] INFO  o.f.core.internal.command.DbMigrate - Current version of schema `homeDB`: 1.1
+""2021-03-27 17:08:20 [main] INFO  o.f.core.internal.command.DbMigrate - Schema `homeDB` is up to date. No migration necessary.
+""2021-03-27 17:08:20 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+""2021-03-27 17:08:20 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+""2021-03-27 17:08:20 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+""2021-03-27 17:08:20 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.4.28.Final
+""2021-03-27 17:08:21 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+""2021-03-27 17:08:21 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+""2021-03-27 17:08:21 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+""2021-03-27 17:08:21 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+""2021-03-27 17:08:22 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+""2021-03-27 17:08:22 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+""2021-03-27 17:08:22 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8880 (http) with context path '/bug-tracker'
+""2021-03-27 17:08:22 [main] INFO  c.e.s.SpringHillelApplication - Started SpringHillelApplication in 4.692 seconds (JVM running for 5.722)
+""2021-03-27 17:08:24 [http-nio-8880-exec-1] INFO  o.a.c.c.C.[.[.[/bug-tracker] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+""2021-03-27 17:08:24 [http-nio-8880-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+""2021-03-27 17:08:24 [http-nio-8880-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+""2021-03-27 17:08:24 [http-nio-8880-exec-1] INFO  c.e.springhillel.aop.LoggingAspect - public void com.example.springhillel.api.JpaController.JpaRoleController.addRoleUser(int,int) method started working.
+""2021-03-27 17:08:24 [http-nio-8880-exec-1] INFO  c.e.springhillel.aop.LoggingAspect - public void com.example.springhillel.service.jpaService.JpaRoleServiceImpl.roleAssignment(long,long) method started working.
+""2021-03-27 17:08:24 [http-nio-8880-exec-1] INFO  c.e.springhillel.aop.LoggingAspect - public void com.example.springhillel.repository.jpaRepository.JpaRoleRepositoryImpl.roleAssignment(long,long) method started working.
+""2021-03-27 17:08:24 [http-nio-8880-exec-1] INFO  c.e.springhillel.aop.LoggingAspect - Method public void com.example.springhillel.repository.jpaRepository.JpaRoleRepositoryImpl.roleAssignment(long,long) finished. Operating time - 67 ms.
+""2021-03-27 17:08:24 [http-nio-8880-exec-1] INFO  c.e.springhillel.aop.LoggingAspect - Method public void com.example.springhillel.service.jpaService.JpaRoleServiceImpl.roleAssignment(long,long) finished. Operating time - 73 ms.
+""2021-03-27 17:08:24 [http-nio-8880-exec-1] INFO  c.e.springhillel.aop.LoggingAspect - Method public void com.example.springhillel.api.JpaController.JpaRoleController.addRoleUser(int,int) finished. Operating time - 124 ms.
+""2021-03-27 17:17:10 [main] INFO  c.e.s.SpringHillelApplication - Starting SpringHillelApplication using Java 13.0.2 on DESKTOP-PI8E00V with PID 20924 (C:\Users\aandr\IdeaProjects\spring-hillel\target\classes started by aandr in C:\Users\aandr\IdeaProjects\spring-hillel)
+""2021-03-27 17:17:10 [main] INFO  c.e.s.SpringHillelApplication - No active profile set, falling back to default profiles: default
+""2021-03-27 17:17:11 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+""2021-03-27 17:17:11 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 28 ms. Found 0 JPA repository interfaces.
+""2021-03-27 17:17:11 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8880 (http)
+""2021-03-27 17:17:11 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+""2021-03-27 17:17:11 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.43]
+""2021-03-27 17:17:11 [main] INFO  o.a.c.c.C.[.[.[/bug-tracker] - Initializing Spring embedded WebApplicationContext
+""2021-03-27 17:17:11 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1447 ms
+""2021-03-27 17:17:12 [main] INFO  o.f.c.i.license.VersionPrinter - Flyway Community Edition 6.5.6 by Redgate
+""2021-03-27 17:17:12 [main] INFO  o.f.c.i.database.DatabaseFactory - Database: jdbc:mysql://localhost:3306/homeDB (MySQL 8.0)
+""2021-03-27 17:17:12 [main] INFO  o.f.core.internal.command.DbMigrate - Current version of schema `homeDB`: 1.1
+""2021-03-27 17:17:12 [main] INFO  o.f.core.internal.command.DbMigrate - Schema `homeDB` is up to date. No migration necessary.
+""2021-03-27 17:17:12 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+""2021-03-27 17:17:12 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+""2021-03-27 17:17:12 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+""2021-03-27 17:17:12 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.4.28.Final
+""2021-03-27 17:17:12 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+""2021-03-27 17:17:12 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+""2021-03-27 17:17:13 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+""2021-03-27 17:17:13 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+""2021-03-27 17:17:13 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+""2021-03-27 17:17:13 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+""2021-03-27 17:17:13 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8880 (http) with context path '/bug-tracker'
+""2021-03-27 17:17:13 [main] INFO  c.e.s.SpringHillelApplication - Started SpringHillelApplication in 3.939 seconds (JVM running for 5.026)
+""2021-03-27 17:17:17 [http-nio-8880-exec-2] INFO  o.a.c.c.C.[.[.[/bug-tracker] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+""2021-03-27 17:17:17 [http-nio-8880-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+""2021-03-27 17:17:17 [http-nio-8880-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+""2021-03-27 17:17:17 [http-nio-8880-exec-2] INFO  c.e.springhillel.aop.LoggingAspect - public void com.example.springhillel.api.JpaController.JpaRoleController.addRoleUser(int,int) method started working.
+""2021-03-27 17:17:17 [http-nio-8880-exec-2] INFO  c.e.springhillel.aop.LoggingAspect - public void com.example.springhillel.service.jpaService.JpaRoleServiceImpl.roleAssignment(long,long) method started working.
+""2021-03-27 17:17:17 [http-nio-8880-exec-2] INFO  c.e.springhillel.aop.LoggingAspect - public void com.example.springhillel.repository.jpaRepository.JpaRoleRepositoryImpl.roleAssignment(long,long) method started working.
+""2021-03-27 17:17:17 [http-nio-8880-exec-2] INFO  c.e.springhillel.aop.LoggingAspect - Method public void com.example.springhillel.repository.jpaRepository.JpaRoleRepositoryImpl.roleAssignment(long,long) finished. Operating time - 55 ms.
+""2021-03-27 17:17:17 [http-nio-8880-exec-2] INFO  c.e.springhillel.aop.LoggingAspect - Method public void com.example.springhillel.service.jpaService.JpaRoleServiceImpl.roleAssignment(long,long) finished. Operating time - 61 ms.
+""2021-03-27 17:17:17 [http-nio-8880-exec-2] INFO  c.e.springhillel.aop.LoggingAspect - Method public void com.example.springhillel.api.JpaController.JpaRoleController.addRoleUser(int,int) finished. Operating time - 109 ms.
+""2021-03-27 17:18:02 [main] INFO  c.e.s.SpringHillelApplication - Starting SpringHillelApplication using Java 13.0.2 on DESKTOP-PI8E00V with PID 23748 (C:\Users\aandr\IdeaProjects\spring-hillel\target\classes started by aandr in C:\Users\aandr\IdeaProjects\spring-hillel)
+""2021-03-27 17:18:02 [main] INFO  c.e.s.SpringHillelApplication - No active profile set, falling back to default profiles: default
+""2021-03-27 17:18:03 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+""2021-03-27 17:18:03 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 29 ms. Found 0 JPA repository interfaces.
+""2021-03-27 17:18:04 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8880 (http)
+""2021-03-27 17:18:04 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+""2021-03-27 17:18:04 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.43]
+""2021-03-27 17:18:04 [main] INFO  o.a.c.c.C.[.[.[/bug-tracker] - Initializing Spring embedded WebApplicationContext
+""2021-03-27 17:18:04 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1493 ms
+""2021-03-27 17:18:04 [main] INFO  o.f.c.i.license.VersionPrinter - Flyway Community Edition 6.5.6 by Redgate
+""2021-03-27 17:18:04 [main] INFO  o.f.c.i.database.DatabaseFactory - Database: jdbc:mysql://localhost:3306/homeDB (MySQL 8.0)
+""2021-03-27 17:18:04 [main] INFO  o.f.core.internal.command.DbMigrate - Current version of schema `homeDB`: 1.1
+""2021-03-27 17:18:04 [main] INFO  o.f.core.internal.command.DbMigrate - Schema `homeDB` is up to date. No migration necessary.
+""2021-03-27 17:18:04 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+""2021-03-27 17:18:04 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+""2021-03-27 17:18:05 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+""2021-03-27 17:18:05 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.4.28.Final
+""2021-03-27 17:18:05 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+""2021-03-27 17:18:05 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+""2021-03-27 17:18:05 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+""2021-03-27 17:18:05 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+""2021-03-27 17:18:05 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+""2021-03-27 17:18:06 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+""2021-03-27 17:18:06 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8880 (http) with context path '/bug-tracker'
+""2021-03-27 17:18:06 [main] INFO  c.e.s.SpringHillelApplication - Started SpringHillelApplication in 3.967 seconds (JVM running for 4.991)
+""2021-03-27 17:18:09 [http-nio-8880-exec-1] INFO  o.a.c.c.C.[.[.[/bug-tracker] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+""2021-03-27 17:18:09 [http-nio-8880-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+""2021-03-27 17:18:09 [http-nio-8880-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+""2021-03-27 17:18:09 [http-nio-8880-exec-1] INFO  c.e.springhillel.aop.LoggingAspect - public void com.example.springhillel.api.JpaController.JpaRoleController.addRoleUser(int,int) method started working.
+""2021-03-27 17:18:09 [http-nio-8880-exec-1] INFO  c.e.springhillel.aop.LoggingAspect - public void com.example.springhillel.service.jpaService.JpaRoleServiceImpl.roleAssignment(long,long) method started working.
+""2021-03-27 17:18:09 [http-nio-8880-exec-1] INFO  c.e.springhillel.aop.LoggingAspect - public void com.example.springhillel.repository.jpaRepository.JpaRoleRepositoryImpl.roleAssignment(long,long) method started working.
+""2021-03-27 17:18:09 [http-nio-8880-exec-1] INFO  c.e.springhillel.aop.LoggingAspect - Method public void com.example.springhillel.repository.jpaRepository.JpaRoleRepositoryImpl.roleAssignment(long,long) finished. Operating time - 54 ms.
+""2021-03-27 17:18:09 [http-nio-8880-exec-1] INFO  c.e.springhillel.aop.LoggingAspect - Method public void com.example.springhillel.service.jpaService.JpaRoleServiceImpl.roleAssignment(long,long) finished. Operating time - 59 ms.
+""2021-03-27 17:18:09 [http-nio-8880-exec-1] INFO  c.e.springhillel.aop.LoggingAspect - Method public void com.example.springhillel.api.JpaController.JpaRoleController.addRoleUser(int,int) finished. Operating time - 107 ms.
+""2021-03-27 17:21:12 [main] INFO  c.e.s.SpringHillelApplication - Starting SpringHillelApplication using Java 13.0.2 on DESKTOP-PI8E00V with PID 19328 (C:\Users\aandr\IdeaProjects\spring-hillel\target\classes started by aandr in C:\Users\aandr\IdeaProjects\spring-hillel)
+""2021-03-27 17:21:12 [main] INFO  c.e.s.SpringHillelApplication - No active profile set, falling back to default profiles: default
+""2021-03-27 17:21:13 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+""2021-03-27 17:21:13 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 28 ms. Found 0 JPA repository interfaces.
+""2021-03-27 17:21:13 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8880 (http)
+""2021-03-27 17:21:13 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+""2021-03-27 17:21:13 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.43]
+""2021-03-27 17:21:13 [main] INFO  o.a.c.c.C.[.[.[/bug-tracker] - Initializing Spring embedded WebApplicationContext
+""2021-03-27 17:21:13 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1606 ms
+""2021-03-27 17:21:13 [main] INFO  o.f.c.i.license.VersionPrinter - Flyway Community Edition 6.5.6 by Redgate
+""2021-03-27 17:21:14 [main] INFO  o.f.c.i.database.DatabaseFactory - Database: jdbc:mysql://localhost:3306/homeDB (MySQL 8.0)
+""2021-03-27 17:21:14 [main] INFO  o.f.core.internal.command.DbMigrate - Current version of schema `homeDB`: 1.1
+""2021-03-27 17:21:14 [main] INFO  o.f.core.internal.command.DbMigrate - Schema `homeDB` is up to date. No migration necessary.
+""2021-03-27 17:21:14 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+""2021-03-27 17:21:14 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+""2021-03-27 17:21:14 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+""2021-03-27 17:21:14 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.4.28.Final
+""2021-03-27 17:21:14 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+""2021-03-27 17:21:14 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+""2021-03-27 17:21:15 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+""2021-03-27 17:21:15 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+""2021-03-27 17:21:15 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+""2021-03-27 17:21:15 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+""2021-03-27 17:21:15 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8880 (http) with context path '/bug-tracker'
+""2021-03-27 17:21:15 [main] INFO  c.e.s.SpringHillelApplication - Started SpringHillelApplication in 4.196 seconds (JVM running for 5.431)
+""2021-03-27 17:24:56 [main] INFO  c.e.s.SpringHillelApplication - Starting SpringHillelApplication using Java 13.0.2 on DESKTOP-PI8E00V with PID 20084 (C:\Users\aandr\IdeaProjects\spring-hillel\target\classes started by aandr in C:\Users\aandr\IdeaProjects\spring-hillel)
+""2021-03-27 17:24:56 [main] INFO  c.e.s.SpringHillelApplication - No active profile set, falling back to default profiles: default
+""2021-03-27 17:24:57 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+""2021-03-27 17:24:57 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 28 ms. Found 0 JPA repository interfaces.
+""2021-03-27 17:24:57 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8880 (http)
+""2021-03-27 17:24:57 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+""2021-03-27 17:24:57 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.43]
+""2021-03-27 17:24:57 [main] INFO  o.a.c.c.C.[.[.[/bug-tracker] - Initializing Spring embedded WebApplicationContext
+""2021-03-27 17:24:57 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1511 ms
+""2021-03-27 17:24:58 [main] INFO  o.f.c.i.license.VersionPrinter - Flyway Community Edition 6.5.6 by Redgate
+""2021-03-27 17:24:58 [main] INFO  o.f.c.i.database.DatabaseFactory - Database: jdbc:mysql://localhost:3306/homeDB (MySQL 8.0)
+""2021-03-27 17:24:58 [main] INFO  o.f.core.internal.command.DbMigrate - Current version of schema `homeDB`: 1.1
+""2021-03-27 17:24:58 [main] INFO  o.f.core.internal.command.DbMigrate - Schema `homeDB` is up to date. No migration necessary.
+""2021-03-27 17:24:58 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+""2021-03-27 17:24:58 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+""2021-03-27 17:24:58 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+""2021-03-27 17:24:58 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.4.28.Final
+""2021-03-27 17:24:58 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+""2021-03-27 17:24:58 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+""2021-03-27 17:24:59 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+""2021-03-27 17:24:59 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+""2021-03-27 17:24:59 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+""2021-03-27 17:24:59 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+""2021-03-27 17:24:59 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8880 (http) with context path '/bug-tracker'
+""2021-03-27 17:24:59 [main] INFO  c.e.s.SpringHillelApplication - Started SpringHillelApplication in 3.963 seconds (JVM running for 5.014)
+""2021-03-27 17:25:07 [http-nio-8880-exec-1] INFO  o.a.c.c.C.[.[.[/bug-tracker] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+""2021-03-27 17:25:07 [http-nio-8880-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+""2021-03-27 17:25:07 [http-nio-8880-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+""2021-03-27 17:25:07 [http-nio-8880-exec-1] INFO  c.e.springhillel.aop.LoggingAspect - public java.util.List com.example.springhillel.api.JpaController.JpaTaskController.getTaskUser(int) method started working.
+""2021-03-27 17:25:07 [http-nio-8880-exec-1] INFO  c.e.springhillel.aop.LoggingAspect - public java.util.List com.example.springhillel.service.jpaService.JpaTaskServiceImpl.getTaskUser(int) method started working.
+""2021-03-27 17:25:07 [http-nio-8880-exec-1] INFO  c.e.springhillel.aop.LoggingAspect - public java.util.List com.example.springhillel.repository.jpaRepository.JpaTaskRepositoryImpl.getTaskUser(int) method started working.
+""2021-03-27 17:25:07 [http-nio-8880-exec-1] INFO  c.e.springhillel.aop.LoggingAspect - 1 user tasks - unloaded.
+""2021-03-27 17:25:07 [http-nio-8880-exec-1] INFO  c.e.springhillel.aop.LoggingAspect - Method public java.util.List com.example.springhillel.repository.jpaRepository.JpaTaskRepositoryImpl.getTaskUser(int) finished. Operating time - 162 ms.
+""2021-03-27 17:25:07 [http-nio-8880-exec-1] INFO  c.e.springhillel.aop.LoggingAspect - Method public java.util.List com.example.springhillel.service.jpaService.JpaTaskServiceImpl.getTaskUser(int) finished. Operating time - 167 ms.
+""2021-03-27 17:25:07 [http-nio-8880-exec-1] INFO  c.e.springhillel.aop.LoggingAspect - Method public java.util.List com.example.springhillel.api.JpaController.JpaTaskController.getTaskUser(int) finished. Operating time - 194 ms.
+""2021-03-27 17:25:12 [http-nio-8880-exec-3] INFO  c.e.springhillel.aop.LoggingAspect - public com.example.springhillel.model.entity.User com.example.springhillel.api.JpaController.JpaUserController.getUser(long) method started working.
+""2021-03-27 17:25:12 [http-nio-8880-exec-3] INFO  c.e.springhillel.aop.LoggingAspect - public com.example.springhillel.model.entity.User com.example.springhillel.service.jpaService.JpaUserServiceImpl.getUser(long) method started working.
+""2021-03-27 17:25:12 [http-nio-8880-exec-3] INFO  c.e.springhillel.aop.LoggingAspect - public com.example.springhillel.model.entity.User com.example.springhillel.repository.jpaRepository.JpaUserRepositoryImpl.findUserById(long) method started working.
+""2021-03-27 17:25:12 [http-nio-8880-exec-3] INFO  c.e.springhillel.aop.LoggingAspect - Method public com.example.springhillel.model.entity.User com.example.springhillel.repository.jpaRepository.JpaUserRepositoryImpl.findUserById(long) finished. Operating time - 7 ms.
+""2021-03-27 17:25:12 [http-nio-8880-exec-3] INFO  c.e.springhillel.aop.LoggingAspect - Method public com.example.springhillel.model.entity.User com.example.springhillel.service.jpaService.JpaUserServiceImpl.getUser(long) finished. Operating time - 10 ms.
+""2021-03-27 17:25:12 [http-nio-8880-exec-3] INFO  c.e.springhillel.aop.LoggingAspect - Method public com.example.springhillel.model.entity.User com.example.springhillel.api.JpaController.JpaUserController.getUser(long) finished. Operating time - 20 ms.
 "

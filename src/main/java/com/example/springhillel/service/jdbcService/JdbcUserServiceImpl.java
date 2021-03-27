@@ -39,4 +39,9 @@ public class JdbcUserServiceImpl implements UserService {
         }
     }
 
+    @Override
+    public User getUser(long id) {
+        return null;
+    }
+
 }

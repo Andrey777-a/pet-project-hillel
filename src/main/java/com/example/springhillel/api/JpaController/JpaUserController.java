@@ -24,6 +24,13 @@ public class JpaUserController {
 
     }
 
+    @GetMapping("/getUser/{id}")
+    public User getUser(@PathVariable long id) {
+
+        return userService.getUser(id);
+
+    }
+
     @PostMapping("/insertUser")
     public void insertUser(@RequestBody UserDTO user) {
 

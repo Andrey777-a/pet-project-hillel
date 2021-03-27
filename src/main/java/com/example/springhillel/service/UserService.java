@@ -10,5 +10,6 @@ public interface UserService {
     List<User> getAll();
     void create(UserDTO user);
     void deleted(int id);
+    User getUser(long id);
 
 }

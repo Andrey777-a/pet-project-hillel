@@ -37,4 +37,10 @@ public class JpaUserServiceImpl implements UserService {
         jpaRepository.deleted(id);
     }
 
+    @Override
+    @Transactional
+    public User getUser(long id) {
+        return jpaRepository.findUserById(id);
+    }
+
 }

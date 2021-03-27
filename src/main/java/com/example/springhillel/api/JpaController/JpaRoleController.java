@@ -23,7 +23,7 @@ public class JpaRoleController {
 
     }
 
-    @PatchMapping("/addRoleUser/{userId}/{roleId}")
+    @PostMapping("/addRoleUser/{userId}/{roleId}")
     public void addRoleUser(@PathVariable int userId, @PathVariable int roleId) {
 
         roleService.roleAssignment(userId, roleId);
