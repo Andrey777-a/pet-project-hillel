@@ -7784,4 +7784,55 @@ Caused by: java.sql.SQLSyntaxErrorException: Key column 'assignee' doesn't exist
 ""2021-03-27 17:25:12 [http-nio-8880-exec-3] INFO  c.e.springhillel.aop.LoggingAspect - Method public com.example.springhillel.model.entity.User com.example.springhillel.repository.jpaRepository.JpaUserRepositoryImpl.findUserById(long) finished. Operating time - 7 ms.
 ""2021-03-27 17:25:12 [http-nio-8880-exec-3] INFO  c.e.springhillel.aop.LoggingAspect - Method public com.example.springhillel.model.entity.User com.example.springhillel.service.jpaService.JpaUserServiceImpl.getUser(long) finished. Operating time - 10 ms.
 ""2021-03-27 17:25:12 [http-nio-8880-exec-3] INFO  c.e.springhillel.aop.LoggingAspect - Method public com.example.springhillel.model.entity.User com.example.springhillel.api.JpaController.JpaUserController.getUser(long) finished. Operating time - 20 ms.
+""2021-03-27 17:50:42 [main] INFO  c.e.s.SpringHillelApplication - Starting SpringHillelApplication using Java 13.0.2 on DESKTOP-PI8E00V with PID 24304 (C:\Users\aandr\IdeaProjects\spring-hillel\target\classes started by aandr in C:\Users\aandr\IdeaProjects\spring-hillel)
+""2021-03-27 17:50:42 [main] INFO  c.e.s.SpringHillelApplication - No active profile set, falling back to default profiles: default
+""2021-03-27 17:50:43 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+""2021-03-27 17:50:43 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 28 ms. Found 0 JPA repository interfaces.
+""2021-03-27 17:50:44 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8880 (http)
+""2021-03-27 17:50:44 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+""2021-03-27 17:50:44 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.43]
+""2021-03-27 17:50:44 [main] INFO  o.a.c.c.C.[.[.[/bug-tracker] - Initializing Spring embedded WebApplicationContext
+""2021-03-27 17:50:44 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1716 ms
+""2021-03-27 17:50:44 [main] INFO  o.f.c.i.license.VersionPrinter - Flyway Community Edition 6.5.6 by Redgate
+""2021-03-27 17:50:44 [main] INFO  o.f.c.i.database.DatabaseFactory - Database: jdbc:mysql://localhost:3306/homeDB (MySQL 8.0)
+""2021-03-27 17:50:44 [main] INFO  o.f.core.internal.command.DbMigrate - Current version of schema `homeDB`: 1.1
+""2021-03-27 17:50:44 [main] INFO  o.f.core.internal.command.DbMigrate - Schema `homeDB` is up to date. No migration necessary.
+""2021-03-27 17:50:44 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+""2021-03-27 17:50:44 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+""2021-03-27 17:50:44 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+""2021-03-27 17:50:44 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.4.28.Final
+""2021-03-27 17:50:45 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+""2021-03-27 17:50:45 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+""2021-03-27 17:50:45 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+""2021-03-27 17:50:45 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+""2021-03-27 17:50:45 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+""2021-03-27 17:50:45 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+""2021-03-27 17:50:46 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8880 (http) with context path '/bug-tracker'
+""2021-03-27 17:50:46 [main] INFO  c.e.s.SpringHillelApplication - Started SpringHillelApplication in 4.19 seconds (JVM running for 5.234)
+""2021-03-27 17:50:51 [http-nio-8880-exec-2] INFO  o.a.c.c.C.[.[.[/bug-tracker] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+""2021-03-27 17:50:51 [http-nio-8880-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+""2021-03-27 17:50:51 [http-nio-8880-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+""2021-03-27 17:50:51 [http-nio-8880-exec-2] INFO  c.e.springhillel.aop.LoggingAspect - public java.util.List com.example.springhillel.api.JpaController.JpaUserController.getAllUser() method started working.
+""2021-03-27 17:50:51 [http-nio-8880-exec-2] INFO  c.e.springhillel.aop.LoggingAspect - public java.util.List com.example.springhillel.service.jpaService.JpaUserServiceImpl.getAll() method started working.
+""2021-03-27 17:50:51 [http-nio-8880-exec-2] INFO  c.e.springhillel.aop.LoggingAspect - public java.util.List com.example.springhillel.repository.jpaRepository.JpaUserRepositoryImpl.getAll() method started working.
+""2021-03-27 17:50:52 [http-nio-8880-exec-2] INFO  c.e.springhillel.aop.LoggingAspect - User(id=1, firstName=Roy, lastName=Gibson, password=pass, email=email1, role=Role(id=2, name=ROLE_ANALYST, actionPoints=[ActionPoint(id=1, name=VIEW_TICKET), ActionPoint(id=4, name=EDIT_USER)]))
+""2021-03-27 17:50:52 [http-nio-8880-exec-2] INFO  c.e.springhillel.aop.LoggingAspect - User(id=2, firstName=Dima, lastName=Ivanov, password=pass, email=email2, role=Role(id=1, name=ROLE_ADMIN, actionPoints=[ActionPoint(id=5, name=DELETE_USER), ActionPoint(id=2, name=ADD_USER), ActionPoint(id=3, name=ADD_TICKET)]))
+""2021-03-27 17:50:52 [http-nio-8880-exec-2] INFO  c.e.springhillel.aop.LoggingAspect - User(id=3, firstName=Ira, lastName=Smirnova, password=pass, email=email3, role=Role(id=2, name=ROLE_ANALYST, actionPoints=[ActionPoint(id=1, name=VIEW_TICKET), ActionPoint(id=4, name=EDIT_USER)]))
+""2021-03-27 17:50:52 [http-nio-8880-exec-2] INFO  c.e.springhillel.aop.LoggingAspect - User(id=4, firstName=Robert2, lastName=Edkins, password=hello, email=email@email.com, role=Role(id=2, name=ROLE_ANALYST, actionPoints=[ActionPoint(id=1, name=VIEW_TICKET), ActionPoint(id=4, name=EDIT_USER)]))
+""2021-03-27 17:50:52 [http-nio-8880-exec-2] INFO  c.e.springhillel.aop.LoggingAspect - User(id=5, firstName=Robert2, lastName=Edkins, password=hello, email=email@email.com, role=Role(id=1, name=ROLE_ADMIN, actionPoints=[ActionPoint(id=5, name=DELETE_USER), ActionPoint(id=2, name=ADD_USER), ActionPoint(id=3, name=ADD_TICKET)]))
+""2021-03-27 17:50:52 [http-nio-8880-exec-2] INFO  c.e.springhillel.aop.LoggingAspect - User(id=6, firstName=Robert2, lastName=Edkins, password=hello, email=email@email.com, role=Role(id=2, name=ROLE_ANALYST, actionPoints=[ActionPoint(id=1, name=VIEW_TICKET), ActionPoint(id=4, name=EDIT_USER)]))
+""2021-03-27 17:50:52 [http-nio-8880-exec-2] INFO  c.e.springhillel.aop.LoggingAspect - User(id=7, firstName=Robert2, lastName=Edkins, password=hello, email=email@email.com, role=Role(id=2, name=ROLE_ANALYST, actionPoints=[ActionPoint(id=1, name=VIEW_TICKET), ActionPoint(id=4, name=EDIT_USER)]))
+""2021-03-27 17:50:52 [http-nio-8880-exec-2] INFO  c.e.springhillel.aop.LoggingAspect - User(id=8, firstName=Robert2, lastName=Edkins, password=hello, email=email@email.com, role=Role(id=1, name=ROLE_ADMIN, actionPoints=[ActionPoint(id=5, name=DELETE_USER), ActionPoint(id=2, name=ADD_USER), ActionPoint(id=3, name=ADD_TICKET)]))
+""2021-03-27 17:50:52 [http-nio-8880-exec-2] INFO  c.e.springhillel.aop.LoggingAspect - User(id=9, firstName=Robert2, lastName=Edkins, password=hello, email=email@email.com, role=Role(id=1, name=ROLE_ADMIN, actionPoints=[ActionPoint(id=5, name=DELETE_USER), ActionPoint(id=2, name=ADD_USER), ActionPoint(id=3, name=ADD_TICKET)]))
+""2021-03-27 17:50:52 [http-nio-8880-exec-2] INFO  c.e.springhillel.aop.LoggingAspect - User(id=10, firstName=Robert2, lastName=Edkins, password=hello, email=email@email.com, role=Role(id=1, name=ROLE_ADMIN, actionPoints=[ActionPoint(id=5, name=DELETE_USER), ActionPoint(id=2, name=ADD_USER), ActionPoint(id=3, name=ADD_TICKET)]))
+""2021-03-27 17:50:52 [http-nio-8880-exec-2] INFO  c.e.springhillel.aop.LoggingAspect - User(id=11, firstName=Robert2, lastName=Edkins, password=hello, email=email@email.com, role=Role(id=1, name=ROLE_ADMIN, actionPoints=[ActionPoint(id=5, name=DELETE_USER), ActionPoint(id=2, name=ADD_USER), ActionPoint(id=3, name=ADD_TICKET)]))
+""2021-03-27 17:50:52 [http-nio-8880-exec-2] INFO  c.e.springhillel.aop.LoggingAspect - Method public java.util.List com.example.springhillel.repository.jpaRepository.JpaUserRepositoryImpl.getAll() finished. Operating time - 133 ms.
+""2021-03-27 17:50:52 [http-nio-8880-exec-2] INFO  c.e.springhillel.aop.LoggingAspect - Method public java.util.List com.example.springhillel.service.jpaService.JpaUserServiceImpl.getAll() finished. Operating time - 137 ms.
+""2021-03-27 17:50:52 [http-nio-8880-exec-2] INFO  c.e.springhillel.aop.LoggingAspect - Method public java.util.List com.example.springhillel.api.JpaController.JpaUserController.getAllUser() finished. Operating time - 164 ms.
+""2021-03-27 17:52:36 [http-nio-8880-exec-5] INFO  c.e.springhillel.aop.LoggingAspect - public java.util.List com.example.springhillel.api.JpaController.JpaRoleController.getRolePoint() method started working.
+""2021-03-27 17:52:36 [http-nio-8880-exec-5] INFO  c.e.springhillel.aop.LoggingAspect - public java.util.List com.example.springhillel.service.jpaService.JpaRoleServiceImpl.getActionPointRole() method started working.
+""2021-03-27 17:52:36 [http-nio-8880-exec-5] INFO  c.e.springhillel.aop.LoggingAspect - public java.util.List com.example.springhillel.repository.jpaRepository.JpaRoleRepositoryImpl.getActionPointRole() method started working.
+""2021-03-27 17:52:36 [http-nio-8880-exec-5] INFO  c.e.springhillel.aop.LoggingAspect - Method public java.util.List com.example.springhillel.repository.jpaRepository.JpaRoleRepositoryImpl.getActionPointRole() finished. Operating time - 15 ms.
+""2021-03-27 17:52:36 [http-nio-8880-exec-5] INFO  c.e.springhillel.aop.LoggingAspect - Method public java.util.List com.example.springhillel.service.jpaService.JpaRoleServiceImpl.getActionPointRole() finished. Operating time - 20 ms.
+""2021-03-27 17:52:36 [http-nio-8880-exec-5] INFO  c.e.springhillel.aop.LoggingAspect - Method public java.util.List com.example.springhillel.api.JpaController.JpaRoleController.getRolePoint() finished. Operating time - 44 ms.
 "

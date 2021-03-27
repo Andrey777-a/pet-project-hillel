@@ -19,7 +19,7 @@ public class JpaUserRepositoryImpl implements UserRepository {
 
     @Override
     public List<User> getAll() {
-        TypedQuery<User> userList = entityManager.createQuery("from User", User.class);
+        TypedQuery<User> userList = entityManager.createQuery("select u from User u", User.class);
             for (User user: userList.getResultList()){
                 System.out.println(user.toString());
             }

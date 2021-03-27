@@ -53,7 +53,7 @@ public class JpaRoleRepositoryImpl implements RoleRepository {
     @Override
     public List<Role> getActionPointRole() {
 
-        TypedQuery<Role> actionPointTypedQuery = entityManager.createQuery("from Role", Role.class);
+        TypedQuery<Role> actionPointTypedQuery = entityManager.createQuery("select r from Role r", Role.class);
 
         return actionPointTypedQuery.getResultList();
     }
