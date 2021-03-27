@@ -20,7 +20,7 @@ public class JdbcActionPointController {
         actionPointService.createActionPoint(actionPoint);
     }
 
-    @DeleteMapping("/deleteActionPont/{@PathVariable id}")
+    @DeleteMapping("/deleteActionPont/{id}")
     public void deleteActionPoint(@PathVariable long id){
         actionPointService.deleteActionPoint(id);
     }
