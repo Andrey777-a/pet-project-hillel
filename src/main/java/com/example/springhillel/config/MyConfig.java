@@ -21,7 +21,6 @@ public class MyConfig {
 
         jpaTaskRepository.createTask(taskAttribute);*/
 
-
 //        jpaService.getAll();
 //    }
 
