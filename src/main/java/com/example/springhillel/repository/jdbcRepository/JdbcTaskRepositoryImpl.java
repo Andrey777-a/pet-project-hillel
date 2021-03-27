@@ -1,5 +1,6 @@
 package com.example.springhillel.repository.jdbcRepository;
 
+import com.example.springhillel.model.dto.TaskAttributeDTO;
 import com.example.springhillel.model.entity.TaskAttribute;
 import com.example.springhillel.repository.TaskRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,8 +21,8 @@ public class JdbcTaskRepositoryImpl implements TaskRepository {
     private JdbcTemplate jdbcTemplate;
 
     @Override
-    public void createTask(TaskAttribute taskAttribute) {
-        jdbcTemplate.update("insert into task_user (name, description, assignee, status, priority, time_spent, " +
+    public void createTask(TaskAttributeDTO taskAttribute) {
+        jdbcTemplate.update("insert into task_user (name, description, user_id, status, priority, time_spent, " +
                         "time_estimated, created_on_date, type) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)",
                 taskAttribute.getName(), taskAttribute.getDescription(), taskAttribute.getAssignee(),
                 taskAttribute.getStatus(), taskAttribute.getPriority(), taskAttribute.getTimeSpent(),
@@ -45,7 +46,7 @@ public class JdbcTaskRepositoryImpl implements TaskRepository {
                     @Override
                     public TaskAttribute mapRow(ResultSet rs, int i) throws SQLException {
                         return new TaskAttribute(rs.getInt("id"),rs.getString("name"),
-                                rs.getString("description"), rs.getInt("assignee"),
+                                rs.getString("description"), null/*rs.getInt("assignee")*/,
                                 rs.getInt("status"), rs.getInt("priority"),
                                 rs.getDouble("time_spent"),
                                 LocalDateTime.of(rs.getDate("time_estimated").toLocalDate(), rs.getTime("time_estimated").toLocalTime()),

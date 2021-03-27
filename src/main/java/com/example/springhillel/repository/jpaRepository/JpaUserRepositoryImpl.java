@@ -1,6 +1,7 @@
 package com.example.springhillel.repository.jpaRepository;
 
 import com.example.springhillel.model.dto.UserDTO;
+import com.example.springhillel.model.entity.Role;
 import com.example.springhillel.model.entity.User;
 import com.example.springhillel.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,17 +28,15 @@ public class JpaUserRepositoryImpl implements UserRepository {
     }
 
     @Override
-    public void create(UserDTO user) {
+    public void create(UserDTO userDTO) {
+
+        Role role = entityManager.find(Role.class, userDTO.getRoleId());
+
+        User user = new User(userDTO.getFirstName(), userDTO.getLastName(), userDTO.getPassword(),
+                        userDTO.getEmail(), role);
 
         entityManager.persist(user);
-       /* entityManager.createNativeQuery("INSERT INTO user (first_name, last_name, email, password, role_id) VALUES (?,?,?,?,?)")
-                .setParameter(1, user.getFirstName())
-                .setParameter(2, user.getLastName())
-                .setParameter(3, user.getEmail())
-                .setParameter(4, user.getPassword())
-                .setParameter(5, user.getRoleId())
-                .executeUpdate();*/
-            }
+    }
 
     @Override
     public void deleted(int userId) {

@@ -1,5 +1,6 @@
 package com.example.springhillel.service.jpaService;
 
+import com.example.springhillel.model.dto.TaskAttributeDTO;
 import com.example.springhillel.model.entity.TaskAttribute;
 import com.example.springhillel.repository.TaskRepository;
 import com.example.springhillel.service.TaskService;
@@ -19,7 +20,7 @@ public class JpaTaskServiceImpl implements TaskService {
 
     @Override
     @Transactional
-    public void createTask(TaskAttribute taskAttribute) {
+    public void createTask(TaskAttributeDTO taskAttribute) {
         jpaRepository.createTask(taskAttribute);
     }
 

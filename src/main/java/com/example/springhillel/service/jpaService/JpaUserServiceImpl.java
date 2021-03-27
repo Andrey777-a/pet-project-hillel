@@ -20,7 +20,7 @@ public class JpaUserServiceImpl implements UserService {
     private UserRepository jpaRepository;
 
     @Override
-    @Transactional
+    @Transactional(readOnly = true)
     public List<User> getAll() {
         return jpaRepository.getAll();
     }

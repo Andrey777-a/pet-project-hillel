@@ -1,6 +1,8 @@
 package com.example.springhillel.repository.jpaRepository;
 
+import com.example.springhillel.model.dto.TaskAttributeDTO;
 import com.example.springhillel.model.entity.TaskAttribute;
+import com.example.springhillel.model.entity.User;
 import com.example.springhillel.repository.TaskRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -16,7 +18,13 @@ public class JpaTaskRepositoryImpl implements TaskRepository {
     private EntityManager entityManager;
 
     @Override
-    public void createTask(TaskAttribute taskAttribute) {
+    public void createTask(TaskAttributeDTO taskAttributeDTO) {
+
+        User user = entityManager.find(User.class, taskAttributeDTO.getAssignee());
+
+        TaskAttribute taskAttribute = new TaskAttribute(taskAttributeDTO.getName(), taskAttributeDTO.getDescription(),
+                user, taskAttributeDTO.getStatus(), taskAttributeDTO.getPriority(), taskAttributeDTO.getTimeSpent(),
+                taskAttributeDTO.getTimeEstimated(), taskAttributeDTO.getCreatedOnDate(), taskAttributeDTO.getTypeTask());
 
         entityManager.persist(taskAttribute);
 
@@ -27,7 +35,7 @@ public class JpaTaskRepositoryImpl implements TaskRepository {
 
         entityManager.persist(taskAttribute);
 
-            }
+    }
 
     @Override
     public List<TaskAttribute> getTaskUser(int user) {

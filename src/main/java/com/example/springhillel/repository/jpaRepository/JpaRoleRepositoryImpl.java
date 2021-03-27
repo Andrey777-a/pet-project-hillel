@@ -1,6 +1,7 @@
 package com.example.springhillel.repository.jpaRepository;
 
 import com.example.springhillel.model.entity.Role;
+import com.example.springhillel.model.entity.User;
 import com.example.springhillel.repository.RoleRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -29,13 +30,20 @@ public class JpaRoleRepositoryImpl implements RoleRepository {
     }
 
     @Override
-    public void roleAssignment(int userId, int roleId) {
+    public void roleAssignment(long userId, long roleId) {
+
+        Role role = entityManager.find(Role.class, roleId);
+        User user = entityManager.find(User.class, userId);
+        User user1 = new User(user.getFirstName(), user.getLastName(), user.getPassword(),
+                user.getEmail(), role);
+
+        entityManager.persist(user1);
 
 
-        entityManager.createNativeQuery("UPDATE user set role_id = ? where id = ?")
+       /* entityManager.createNativeQuery("UPDATE user set role_id = ? where id = ?")
                 .setParameter(1, userId)
                 .setParameter(2, roleId)
-                .executeUpdate();
+                .executeUpdate();*/
     }
 
     @Override

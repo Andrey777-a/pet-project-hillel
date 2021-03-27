@@ -20,10 +20,10 @@ public class ActionPoint {
     @Id
     @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    long id;
+    private long id;
 
     @Column(name = "name")
-    String name;
+    private String name;
 
     @ManyToMany(mappedBy = "actionPoints")
     @ToString.Exclude

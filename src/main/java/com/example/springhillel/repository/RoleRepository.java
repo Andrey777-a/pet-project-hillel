@@ -7,7 +7,7 @@ import java.util.List;
 public interface RoleRepository {
 
     void createRole(Role role);
-    void roleAssignment(int userId, int roleId);
+    void roleAssignment(long userId, long roleId);
     void addActionPontToRole(int roleId, int actionId);
     void deleteRole(int id);
     List<Role> getActionPointRole();

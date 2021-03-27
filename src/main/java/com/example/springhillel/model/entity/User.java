@@ -38,6 +38,11 @@ public class User {
         this.id = id;
     }
 
+    public User(long id, Role role) {
+        this.id = id;
+        this.role = role;
+    }
+
     public User(String firstName, String lastName, String password, String email) {
         this.firstName = firstName;
         this.lastName = lastName;
@@ -45,5 +50,11 @@ public class User {
         this.email = email;
     }
 
-
+    public User(String firstName, String lastName, String password, String email, Role role) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.password = password;
+        this.email = email;
+        this.role = role;
+    }
 }

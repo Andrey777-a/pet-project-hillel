@@ -25,7 +25,7 @@ public class JdbcRoleServiceImpl implements RoleService {
 
     @Override
     @Transactional
-    public void roleAssignment(int userId, int roleId) {
+    public void roleAssignment(long userId, long roleId) {
         roleRepository.roleAssignment(userId, roleId);
     }
 

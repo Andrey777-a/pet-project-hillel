@@ -1,5 +1,6 @@
 package com.example.springhillel.api.JdbcController;
 
+import com.example.springhillel.model.dto.TaskAttributeDTO;
 import com.example.springhillel.model.entity.TaskAttribute;
 import com.example.springhillel.service.TaskService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,7 +18,7 @@ public class JdbcTaskController {
     private TaskService taskService;
 
     @PostMapping("/createTask")
-    public void createTask(@RequestBody TaskAttribute taskAttribute) {
+    public void createTask(@RequestBody TaskAttributeDTO taskAttribute) {
 
         taskService.createTask(taskAttribute);
 

@@ -22,7 +22,7 @@ public class JdbcRoleRepositoryImpl implements RoleRepository {
     }
 
     @Override
-    public void roleAssignment(int userId, int roleId) {
+    public void roleAssignment(long userId, long roleId) {
         jdbcTemplate.update("UPDATE user set role_id = ? where id = ?",
                 userId, roleId);
     }
