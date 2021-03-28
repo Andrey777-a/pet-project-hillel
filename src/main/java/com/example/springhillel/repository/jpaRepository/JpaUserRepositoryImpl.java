@@ -5,6 +5,7 @@ import com.example.springhillel.model.entity.Role;
 import com.example.springhillel.model.entity.User;
 import com.example.springhillel.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.jpa.repository.EntityGraph;
 import org.springframework.stereotype.Repository;
 
 import javax.persistence.EntityManager;
@@ -17,6 +18,7 @@ public class JpaUserRepositoryImpl implements UserRepository {
     @Autowired
     private EntityManager entityManager;
 
+    @EntityGraph(value = "graph.User", type = EntityGraph.EntityGraphType.LOAD)
     @Override
     public List<User> getAll() {
         TypedQuery<User> userList = entityManager.createQuery("select u from User u", User.class);

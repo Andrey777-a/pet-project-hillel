@@ -25,10 +25,10 @@ public class ActionPoint {
     @Column(name = "name")
     private String name;
 
-    @ManyToMany(mappedBy = "actionPoints")
+    /*@ManyToMany(mappedBy = "actionPoints")
     @ToString.Exclude
     @JsonIgnore
-    private List<Role> roles;
+    private List<Role> roles;*/
 
     public ActionPoint(String name) {
         this.name = name;
