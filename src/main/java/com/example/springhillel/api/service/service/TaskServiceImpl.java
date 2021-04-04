@@ -20,6 +20,11 @@ public class TaskServiceImpl implements TaskService {
     private TaskRepository jpaRepository;
 
     @Override
+    public List<TaskAttribute> getAllTask() {
+        return jpaRepository.getAllTask();
+    }
+
+    @Override
     @Transactional
     public void createTask(TaskAttributeDTO taskAttribute) {
         jpaRepository.createTask(taskAttribute);

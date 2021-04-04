@@ -20,6 +20,13 @@ public class JpaTaskRepositoryImpl implements TaskRepository {
     private EntityManager entityManager;
 
     @Override
+    public List<TaskAttribute> getAllTask() {
+        TypedQuery<TaskAttribute> taskAttribute = entityManager.createQuery("select u from TaskAttribute u", TaskAttribute.class);
+
+        return taskAttribute.getResultList();
+    }
+
+    @Override
     public void createTask(TaskAttributeDTO taskAttributeDTO) {
 
         User user = entityManager.find(User.class, taskAttributeDTO.getAssignee());

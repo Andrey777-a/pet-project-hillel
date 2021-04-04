@@ -21,6 +21,11 @@ public class JdbcTaskRepositoryImpl implements TaskRepository {
     private JdbcTemplate jdbcTemplate;
 
     @Override
+    public List<TaskAttribute> getAllTask() {
+        return null;
+    }
+
+    @Override
     public void createTask(TaskAttributeDTO taskAttribute) {
         jdbcTemplate.update("insert into task_user (name, description, user_id, status, priority, time_spent, " +
                         "time_estimated, created_on_date, type) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)",

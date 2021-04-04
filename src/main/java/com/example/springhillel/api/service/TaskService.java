@@ -7,6 +7,7 @@ import java.util.List;
 
 public interface TaskService {
 
+    List<TaskAttribute> getAllTask();
     void createTask(TaskAttributeDTO taskAttribute);
     void updateTask(TaskAttribute taskAttribute);
     List<TaskAttribute> getTaskUser(int user);

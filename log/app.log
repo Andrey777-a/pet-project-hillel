@@ -3460,4 +3460,44 @@ com.example.springhillel.api.controller.TaskController#getTask(int) mapped.
 ""2021-04-04 14:48:21 [http-nio-8880-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
 ""2021-04-04 14:48:21 [main] INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
 ""2021-04-04 14:48:21 [main] INFO  c.e.s.SpringHillelApplication - Started SpringHillelApplication in 4.842 seconds (JVM running for 5.851)
+""2021-04-04 15:00:28 [main] INFO  c.e.s.SpringHillelApplication - Starting SpringHillelApplication using Java 13.0.2 on DESKTOP-PI8E00V with PID 25444 (C:\Users\aandr\IdeaProjects\spring-hillel\target\classes started by aandr in C:\Users\aandr\IdeaProjects\spring-hillel)
+""2021-04-04 15:00:28 [main] INFO  c.e.s.SpringHillelApplication - No active profile set, falling back to default profiles: default
+""2021-04-04 15:00:29 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+""2021-04-04 15:00:29 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 26 ms. Found 0 JPA repository interfaces.
+""2021-04-04 15:00:29 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8880 (http)
+""2021-04-04 15:00:29 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+""2021-04-04 15:00:29 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.43]
+""2021-04-04 15:00:30 [main] INFO  o.a.c.c.C.[.[.[/bug-tracker] - Initializing Spring embedded WebApplicationContext
+""2021-04-04 15:00:30 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1767 ms
+""2021-04-04 15:00:30 [main] INFO  o.f.c.i.license.VersionPrinter - Flyway Community Edition 6.5.6 by Redgate
+""2021-04-04 15:00:30 [main] INFO  o.f.c.i.database.DatabaseFactory - Database: jdbc:mysql://localhost:3306/homeDB (MySQL 8.0)
+""2021-04-04 15:00:30 [main] INFO  o.f.core.internal.command.DbMigrate - Current version of schema `homeDB`: 1.1
+""2021-04-04 15:00:30 [main] INFO  o.f.core.internal.command.DbMigrate - Schema `homeDB` is up to date. No migration necessary.
+""2021-04-04 15:00:30 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+""2021-04-04 15:00:30 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+""2021-04-04 15:00:30 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+""2021-04-04 15:00:30 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.4.28.Final
+""2021-04-04 15:00:30 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+""2021-04-04 15:00:30 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+""2021-04-04 15:00:31 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+""2021-04-04 15:00:31 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+""2021-04-04 15:00:31 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+""2021-04-04 15:00:31 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+""2021-04-04 15:00:31 [main] INFO  c.e.springhillel.aop.LoggingAspect - public springfox.documentation.spring.web.plugins.Docket com.example.springhillel.config.SwaggerConfiguration.apiDocket() method started working.
+""2021-04-04 15:00:31 [main] INFO  c.e.springhillel.aop.LoggingAspect - Method public springfox.documentation.spring.web.plugins.Docket com.example.springhillel.config.SwaggerConfiguration.apiDocket() finished. Operating time - 9 ms.
+""2021-04-04 15:00:31 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+""2021-04-04 15:00:32 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8880 (http) with context path '/bug-tracker'
+""2021-04-04 15:00:32 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+""2021-04-04 15:00:32 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+""2021-04-04 15:00:32 [main] INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+""2021-04-04 15:00:32 [main] INFO  c.e.s.SpringHillelApplication - Started SpringHillelApplication in 4.667 seconds (JVM running for 5.62)
+""2021-04-04 15:00:37 [http-nio-8880-exec-3] INFO  o.a.c.c.C.[.[.[/bug-tracker] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+""2021-04-04 15:00:37 [http-nio-8880-exec-3] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+""2021-04-04 15:00:37 [http-nio-8880-exec-3] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+""2021-04-04 15:00:37 [http-nio-8880-exec-3] INFO  c.e.springhillel.aop.LoggingAspect - public java.util.List com.example.springhillel.api.controller.TaskController.getAllTask() method started working.
+""2021-04-04 15:00:37 [http-nio-8880-exec-3] INFO  c.e.springhillel.aop.LoggingAspect - public java.util.List com.example.springhillel.api.service.service.TaskServiceImpl.getAllTask() method started working.
+""2021-04-04 15:00:37 [http-nio-8880-exec-3] INFO  c.e.springhillel.aop.LoggingAspect - public java.util.List com.example.springhillel.repository.jpaRepository.JpaTaskRepositoryImpl.getAllTask() method started working.
+""2021-04-04 15:00:38 [http-nio-8880-exec-3] INFO  c.e.springhillel.aop.LoggingAspect - Method public java.util.List com.example.springhillel.repository.jpaRepository.JpaTaskRepositoryImpl.getAllTask() finished. Operating time - 137 ms.
+""2021-04-04 15:00:38 [http-nio-8880-exec-3] INFO  c.e.springhillel.aop.LoggingAspect - Method public java.util.List com.example.springhillel.api.service.service.TaskServiceImpl.getAllTask() finished. Operating time - 142 ms.
+""2021-04-04 15:00:38 [http-nio-8880-exec-3] INFO  c.e.springhillel.aop.LoggingAspect - Method public java.util.List com.example.springhillel.api.controller.TaskController.getAllTask() finished. Operating time - 144 ms.
 "

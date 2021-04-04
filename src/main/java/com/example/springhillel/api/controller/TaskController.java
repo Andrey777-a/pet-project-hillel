@@ -17,6 +17,11 @@ public class TaskController {
     @Autowired
     private TaskService taskService;
 
+    @GetMapping
+    public List<TaskAttribute> getAllTask(){
+        return taskService.getAllTask();
+    }
+
     @PostMapping
     public void createTask(@RequestBody TaskAttributeDTO taskAttribute) {
 
