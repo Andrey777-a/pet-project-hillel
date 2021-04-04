@@ -1,6 +1,5 @@
 package com.example.springhillel.config;
 
-import com.example.springhillel.beanpostprocessor.BeanPostProcessorImpl;
 import com.example.springhillel.model.entity.TaskAttribute;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.config.BeanPostProcessor;
@@ -14,11 +13,6 @@ import java.time.LocalDateTime;
 @ComponentScan(basePackages = "com.example.springhillel")
 @EnableTransactionManagement
 public class MyConfig {
-
-    @Bean
-    public BeanPostProcessor beanPostProcessor(){
-        return new BeanPostProcessorImpl();
-    }
 
    /*
 

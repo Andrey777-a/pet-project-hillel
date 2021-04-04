@@ -42,7 +42,7 @@ public class JpaRoleRepositoryImpl implements RoleRepository {
     }
 
     @Override
-    public void deleteRole(int id) {
+    public void deleteRole(long id) {
 
         Role role = entityManager.find(Role.class, id);
 

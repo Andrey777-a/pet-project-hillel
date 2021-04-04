@@ -1,4 +1,4 @@
-package com.example.springhillel.service;
+package com.example.springhillel.api.service;
 
 import com.example.springhillel.model.dto.TaskAttributeDTO;
 import com.example.springhillel.model.entity.TaskAttribute;
@@ -10,5 +10,7 @@ public interface TaskService {
     void createTask(TaskAttributeDTO taskAttribute);
     void updateTask(TaskAttribute taskAttribute);
     List<TaskAttribute> getTaskUser(int user);
+    TaskAttribute getTask(long id);
+    void deleteTask(long idTask);
 
 }

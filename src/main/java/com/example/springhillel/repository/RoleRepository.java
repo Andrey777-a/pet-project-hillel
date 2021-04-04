@@ -9,6 +9,6 @@ public interface RoleRepository {
     void createRole(Role role);
     void roleAssignment(long userId, long roleId);
     void addActionPontToRole(int roleId, int actionId);
-    void deleteRole(int id);
+    void deleteRole(long id);
     List<Role> getActionPointRole();
 }

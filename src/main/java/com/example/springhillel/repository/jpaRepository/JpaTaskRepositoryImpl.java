@@ -1,7 +1,9 @@
 package com.example.springhillel.repository.jpaRepository;
 
 import com.example.springhillel.model.dto.TaskAttributeDTO;
+import com.example.springhillel.model.entity.StatusTask;
 import com.example.springhillel.model.entity.TaskAttribute;
+import com.example.springhillel.model.entity.TypeTask;
 import com.example.springhillel.model.entity.User;
 import com.example.springhillel.repository.TaskRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,10 +23,12 @@ public class JpaTaskRepositoryImpl implements TaskRepository {
     public void createTask(TaskAttributeDTO taskAttributeDTO) {
 
         User user = entityManager.find(User.class, taskAttributeDTO.getAssignee());
+        StatusTask statusTask = entityManager.find(StatusTask.class, taskAttributeDTO.getStatus());
+        TypeTask typeTask = entityManager.find(TypeTask.class, taskAttributeDTO.getTypeTask());
 
         TaskAttribute taskAttribute = new TaskAttribute(taskAttributeDTO.getName(), taskAttributeDTO.getDescription(),
-                user, taskAttributeDTO.getStatus(), taskAttributeDTO.getPriority(), taskAttributeDTO.getTimeSpent(),
-                taskAttributeDTO.getTimeEstimated(), taskAttributeDTO.getCreatedOnDate(), taskAttributeDTO.getTypeTask());
+                user, statusTask, taskAttributeDTO.getPriority(), taskAttributeDTO.getTimeSpent(),
+                taskAttributeDTO.getTimeEstimated(), taskAttributeDTO.getCreatedOnDate(), typeTask);
 
         entityManager.persist(taskAttribute);
 
@@ -48,4 +52,22 @@ public class JpaTaskRepositoryImpl implements TaskRepository {
 
         return taskAttributeTypedQuery.getResultList();
     }
+
+    @Override
+    public TaskAttribute getTask(long id) {
+
+        return entityManager.find(TaskAttribute.class, id);
+    }
+
+    @Override
+    public void deleteTask(long idTask) {
+
+        TaskAttribute taskAttribute = entityManager.find(TaskAttribute.class, idTask);
+        StatusTask statusTask = entityManager.find(StatusTask.class, 5L);
+
+        taskAttribute.setStatus(statusTask);
+
+        entityManager.persist(taskAttribute);
+    }
+
 }

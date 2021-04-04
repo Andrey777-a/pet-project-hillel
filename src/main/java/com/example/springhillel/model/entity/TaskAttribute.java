@@ -29,8 +29,9 @@ public class TaskAttribute {
     @JoinColumn(name = "user_id", referencedColumnName = "id")
     private User user;
 
-    @Column(name = "status_id")
-    private int status;
+    @ManyToOne(optional = false, cascade = CascadeType.ALL)
+    @JoinColumn(name = "status_id", referencedColumnName = "id")
+    private StatusTask status;
 
     @Column(name = "priority")
     private int priority;
@@ -44,13 +45,14 @@ public class TaskAttribute {
     @Column(name = "created_on_date")
     private LocalDateTime createdOnDate;
 
-    @Column(name = "type_id")
-    private int typeTask;
+    @ManyToOne(optional = false, cascade = CascadeType.ALL)
+    @JoinColumn(name = "type_id", referencedColumnName = "id")
+    private TypeTask typeTask;
 
 
-    public TaskAttribute(String name, String description, User assignee, int status, int priority,
+    public TaskAttribute(String name, String description, User assignee, StatusTask status, int priority,
                          double timeSpent, LocalDateTime timeEstimated, LocalDateTime createdOnDate,
-                         int typeTask) {
+                         TypeTask typeTask) {
         this.name = name;
         this.description = description;
         this.user = assignee;

@@ -74,6 +74,7 @@ insert into status_task(name) values('IN_WORK');
 insert into status_task(name) values('ASSIGN');
 insert into status_task(name) values('DONE');
 insert into status_task(name) values('HOLD');
+insert into status_task(name) values('DELETE');
 
 insert role (name) values ("ROLE_ADMIN");
 insert role (name) values ("ROLE_ANALYST");

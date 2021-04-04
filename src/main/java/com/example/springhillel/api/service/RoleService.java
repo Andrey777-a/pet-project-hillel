@@ -1,4 +1,4 @@
-package com.example.springhillel.service;
+package com.example.springhillel.api.service;
 
 import com.example.springhillel.model.entity.Role;
 
@@ -8,7 +8,7 @@ public interface RoleService {
 
     void createRole(Role role);
     void roleAssignment(long userId, long roleId);
-    void deleteRole(int id);
+    void deleteRole(long id);
     void addActionPontToRole(int roleId, int actionId);
     List<Role> getActionPointRole();
 

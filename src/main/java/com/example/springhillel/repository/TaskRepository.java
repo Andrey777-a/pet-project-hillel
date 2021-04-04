@@ -10,5 +10,7 @@ public interface TaskRepository {
     void createTask(TaskAttributeDTO taskAttribute);
     void updateTask(TaskAttribute taskAttribute);
     List<TaskAttribute> getTaskUser(int user);
+    TaskAttribute getTask(long id);
+    void deleteTask(long idTask);
 
 }

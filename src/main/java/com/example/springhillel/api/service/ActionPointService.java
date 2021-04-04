@@ -1,4 +1,4 @@
-package com.example.springhillel.service;
+package com.example.springhillel.api.service;
 
 import com.example.springhillel.model.entity.ActionPoint;
 

@@ -1,7 +1,7 @@
-package com.example.springhillel.api.JdbcController;
+package com.example.springhillel.api.controller;
 
 import com.example.springhillel.model.entity.Role;
-import com.example.springhillel.service.RoleService;
+import com.example.springhillel.api.service.RoleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.*;
@@ -9,42 +9,42 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/jdbc")
-public class JdbcRoleController {
+@RequestMapping("/role")
+public class RoleController {
 
-    @Qualifier("jdbcRoleServiceImpl")
+    @Qualifier("roleServiceImpl")
     @Autowired
     private RoleService roleService;
 
-    @PostMapping("/createRole")
+    @PostMapping
     public void createRole(@RequestBody Role role) {
 
         roleService.createRole(role);
 
     }
 
-    @PostMapping("/addRoleUser/{userId}/{roleId}")
+    @PostMapping("/{userId}/{roleId}")
     public void addRoleUser(@PathVariable int userId, @PathVariable int roleId) {
 
         roleService.roleAssignment(userId, roleId);
 
     }
 
-    @PostMapping("/addActionPontToRole/{roleId}/{actionId}")
+    @PutMapping("/{roleId}/{actionId}")
     public void addActionPontToRole(@PathVariable int roleId, @PathVariable int actionId) {
 
         roleService.roleAssignment(roleId, actionId);
 
     }
 
-    @DeleteMapping("/deleteUserRole/{id}")
+    @DeleteMapping("/{id}")
     public void deleteUserRole(@PathVariable int id) {
 
         roleService.deleteRole(id);
 
     }
 
-    @GetMapping("/getRolePoint")
+    @GetMapping
     public List<Role> getRolePoint(){
         return roleService.getActionPointRole();
     }

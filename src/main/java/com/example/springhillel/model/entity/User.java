@@ -6,13 +6,29 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 
-@NamedEntityGraph(
-        name = "graph.User",
-        attributeNodes = {
+/*@NamedEntityGraph(
+        name = "graph.User"//,
+        *//*attributeNodes = {
                 @NamedAttributeNode(value = "role")
 
-        }
-)
+        }*//*
+)*/
+/*@NamedEntityGraphs({
+        @NamedEntityGraph(
+                name = "graph.User",
+                attributeNodes = {
+                        @NamedAttributeNode(value = "firstName"*//*, subgraph = "verifierGraph"*//*)
+                }*//*,
+                subgraphs = {
+                        @NamedSubgraph(
+                                name = "verifierGraph",
+                                type = User.class,
+                                attributeNodes = {
+                                        @NamedAttributeNode(value = "id"),
+                                        @NamedAttributeNode(value = "firstName"),
+                                        @NamedAttributeNode(value = "lastName")})}*//*
+                                        )
+})*/
 
 /*@NamedEntityGraph(
         name = "UserRoleActionPoint", attributeNodes = @NamedAttributeNode(value = "role", subgraph = "sub.role")
@@ -47,7 +63,8 @@ public class User {
     @Column(name = "email")
     private String email;
 
-        @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+
+    @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
 //    @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     @JoinColumn(name = "role_id", referencedColumnName = "id")
     private Role role;

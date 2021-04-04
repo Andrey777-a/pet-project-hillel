@@ -34,7 +34,7 @@ public class JdbcRoleRepositoryImpl implements RoleRepository {
     }
 
     @Override
-    public void deleteRole(int id) {
+    public void deleteRole(long id) {
         jdbcTemplate.update("DELETE FROM user_role WHERE id = ?", id);
 
     }

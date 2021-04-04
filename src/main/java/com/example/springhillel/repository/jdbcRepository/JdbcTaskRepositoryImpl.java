@@ -47,11 +47,11 @@ public class JdbcTaskRepositoryImpl implements TaskRepository {
                     public TaskAttribute mapRow(ResultSet rs, int i) throws SQLException {
                         return new TaskAttribute(rs.getInt("id"),rs.getString("name"),
                                 rs.getString("description"), null/*rs.getInt("assignee")*/,
-                                rs.getInt("status"), rs.getInt("priority"),
+                                null/*rs.getInt("status")*/, rs.getInt("priority"),
                                 rs.getDouble("time_spent"),
                                 LocalDateTime.of(rs.getDate("time_estimated").toLocalDate(), rs.getTime("time_estimated").toLocalTime()),
                                 LocalDateTime.of(rs.getDate("created_on_date").toLocalDate(), rs.getTime("created_on_date").toLocalTime()),
-                                rs.getInt("type"));
+                                null/*rs.getInt("type")*/);
                     }
                 });
 
@@ -60,6 +60,16 @@ public class JdbcTaskRepositoryImpl implements TaskRepository {
         }
 
         return strLst;
+    }
+
+    @Override
+    public TaskAttribute getTask(long id) {
+        return null;
+    }
+
+    @Override
+    public void deleteTask(long idTask) {
+
     }
 
 }
