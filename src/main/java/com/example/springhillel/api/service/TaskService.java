@@ -1,11 +1,11 @@
-package com.example.springhillel.repository;
+package com.example.springhillel.api.service;
 
 import com.example.springhillel.model.dto.TaskAttributeDTO;
 import com.example.springhillel.model.entity.TaskAttribute;
 
 import java.util.List;
 
-public interface TaskRepository {
+public interface TaskService {
 
     List<TaskAttribute> getAllTask();
     void createTask(TaskAttributeDTO taskAttribute);

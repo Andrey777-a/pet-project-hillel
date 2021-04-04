@@ -13,6 +13,7 @@ import java.time.LocalDateTime;
 @Entity
 @Table(name = "task_user")
 public class TaskAttribute {
+
     @Id
     @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -24,13 +25,13 @@ public class TaskAttribute {
     @Column(name = "description")
     private String description;
 
-    @Column(name = "assignee")
-    /*@ManyToOne(optional = false, cascade = CascadeType.ALL)
-    @JoinColumn(name = "id")*/
-    private long assignee;
+    @ManyToOne(optional = false, cascade = CascadeType.ALL)
+    @JoinColumn(name = "user_id", referencedColumnName = "id")
+    private User user;
 
-    @Column(name = "status")
-    private int status;
+    @ManyToOne(optional = false, cascade = CascadeType.ALL)
+    @JoinColumn(name = "status_id", referencedColumnName = "id")
+    private StatusTask status;
 
     @Column(name = "priority")
     private int priority;
@@ -44,16 +45,17 @@ public class TaskAttribute {
     @Column(name = "created_on_date")
     private LocalDateTime createdOnDate;
 
-    @Column(name = "type")
-    private int typeTask;
+    @ManyToOne(optional = false, cascade = CascadeType.ALL)
+    @JoinColumn(name = "type_id", referencedColumnName = "id")
+    private TypeTask typeTask;
 
 
-    public TaskAttribute(String name, String description, long assignee, int status, int priority,
+    public TaskAttribute(String name, String description, User assignee, StatusTask status, int priority,
                          double timeSpent, LocalDateTime timeEstimated, LocalDateTime createdOnDate,
-                         int typeTask) {
+                         TypeTask typeTask) {
         this.name = name;
         this.description = description;
-        this.assignee = assignee;
+        this.user = assignee;
         this.status = status;
         this.priority = priority;
         this.timeSpent = timeSpent;

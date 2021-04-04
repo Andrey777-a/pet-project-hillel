@@ -50,11 +50,11 @@ public class JdbcUserRepositoryImpl implements UserRepository {
     }
 
     @Override
-    public User findUserById(int userId){
+    public User findUserById(long userId){
 
 
         List<User> userList =jdbcTemplate.query("select * from user where id = ?",
-                preparedStatement -> preparedStatement.setInt(1, userId),
+                preparedStatement -> preparedStatement.setLong(1, userId),
                 (ResultSet resultSet, int i) -> new User(resultSet.getInt("id")));
 
         if (userList.size()==1){

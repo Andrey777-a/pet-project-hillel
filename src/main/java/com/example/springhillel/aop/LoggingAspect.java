@@ -1,5 +1,6 @@
 package com.example.springhillel.aop;
 
+import com.example.springhillel.exception.NotFoundException;
 import com.example.springhillel.model.entity.TaskAttribute;
 import com.example.springhillel.model.entity.User;
 import lombok.extern.slf4j.Slf4j;
@@ -129,7 +130,7 @@ public class LoggingAspect {
     @AfterThrowing(pointcut = "loggingAllMethod()", throwing = "exception")
     public void infoException(Throwable exception){
 
-        log.error(exception.getMessage());
+        log.error(exception.toString());
 
     }
 }

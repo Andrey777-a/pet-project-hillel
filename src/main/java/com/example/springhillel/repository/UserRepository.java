@@ -10,6 +10,6 @@ public interface UserRepository {
     List<User> getAll();
     void create(UserDTO user);
     void deleted(int id);
-    User findUserById(int userId);
+    User findUserById(long userId);
 
 }

@@ -1,19 +1,25 @@
-package com.example.springhillel.service.jdbcService;
+package com.example.springhillel.api.service.service;
 
+import com.example.springhillel.exception.NotFoundException;
 import com.example.springhillel.model.entity.ActionPoint;
 import com.example.springhillel.repository.ActionPointRepository;
-import com.example.springhillel.service.ActionPointService;
+import com.example.springhillel.api.service.ActionPointService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-@Service
-public class JdbcActionPointServiceImpl implements ActionPointService {
+import javax.persistence.EntityManager;
 
-    @Qualifier("jdbcActionPointRepositoryImpl")
+@Service
+public class ActionPointServiceImpl implements ActionPointService {
+
+    @Qualifier("jpaActionPointRepositoryImpl")
     @Autowired
     private ActionPointRepository jpaRepository;
+
+    @Autowired
+    private EntityManager entityManager;
 
     @Override
     @Transactional
@@ -24,6 +30,19 @@ public class JdbcActionPointServiceImpl implements ActionPointService {
     @Override
     @Transactional
     public void deleteActionPoint(long id) {
+        validActionPoint(id);
+
         jpaRepository.deleteActionPoint(id);
     }
+
+    private void validActionPoint(long id){
+
+        ActionPoint actionPoint = entityManager.find(ActionPoint.class, id);
+
+        if(actionPoint == null){
+            throw new NotFoundException("Action Point not found");
+        }
+
+    }
+
 }

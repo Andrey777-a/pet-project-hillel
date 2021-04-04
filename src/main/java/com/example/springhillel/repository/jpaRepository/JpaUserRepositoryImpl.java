@@ -1,15 +1,19 @@
 package com.example.springhillel.repository.jpaRepository;
 
 import com.example.springhillel.model.dto.UserDTO;
+import com.example.springhillel.model.entity.Role;
 import com.example.springhillel.model.entity.User;
 import com.example.springhillel.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+//import org.springframework.data.jpa.repository.EntityGraph;
 import org.springframework.stereotype.Repository;
 
+import javax.persistence.EntityGraph;
 import javax.persistence.EntityManager;
-import javax.persistence.Query;
 import javax.persistence.TypedQuery;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @Repository
 public class JpaUserRepositoryImpl implements UserRepository {
@@ -17,9 +21,19 @@ public class JpaUserRepositoryImpl implements UserRepository {
     @Autowired
     private EntityManager entityManager;
 
+    /*public User findOne(){
+
+        EntityGraph entityGraph =  entityManager.getEntityGraph("graph.User");
+        Map<String, Object> properties = new HashMap<>();
+        properties.put("javax.persistence.fetchgraph", entityGraph);
+        User user = entityManager.find(User.class, 1L, properties);
+        return user;
+    }*/
+
+//    @EntityGraph(value = "graph.User", type = EntityGraph.EntityGraphType.LOAD)
     @Override
     public List<User> getAll() {
-        TypedQuery<User> userList = entityManager.createQuery("from User", User.class);
+        TypedQuery<User> userList = entityManager.createQuery("select u from User u", User.class);
             for (User user: userList.getResultList()){
                 System.out.println(user.toString());
             }
@@ -27,17 +41,15 @@ public class JpaUserRepositoryImpl implements UserRepository {
     }
 
     @Override
-    public void create(UserDTO user) {
+    public void create(UserDTO userDTO) {
+
+        Role role = entityManager.find(Role.class, userDTO.getRoleId());
+
+        User user = new User(userDTO.getFirstName(), userDTO.getLastName(), userDTO.getPassword(),
+                        userDTO.getEmail(), role);
 
         entityManager.persist(user);
-       /* entityManager.createNativeQuery("INSERT INTO user (first_name, last_name, email, password, role_id) VALUES (?,?,?,?,?)")
-                .setParameter(1, user.getFirstName())
-                .setParameter(2, user.getLastName())
-                .setParameter(3, user.getEmail())
-                .setParameter(4, user.getPassword())
-                .setParameter(5, user.getRoleId())
-                .executeUpdate();*/
-            }
+    }
 
     @Override
     public void deleted(int userId) {
@@ -49,11 +61,9 @@ public class JpaUserRepositoryImpl implements UserRepository {
     }
 
     @Override
-    public User findUserById(int userId) {
-        String query = "SELECT u FROM User u where id = :userId";
-        Query managerQuery = entityManager.createQuery(query);
-        managerQuery.setParameter("userId", userId);
-        return (User) managerQuery.getSingleResult();
+    public User findUserById(long userId) {
+
+        return entityManager.find(User.class, userId);
     }
 
 }

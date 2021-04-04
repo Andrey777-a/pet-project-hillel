@@ -1,21 +1,26 @@
-package com.example.springhillel.service.jpaService;
+package com.example.springhillel.api.service.service;
 
+import com.example.springhillel.exception.NotFoundException;
 import com.example.springhillel.model.entity.Role;
 import com.example.springhillel.repository.RoleRepository;
-import com.example.springhillel.service.RoleService;
+import com.example.springhillel.api.service.RoleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import javax.persistence.EntityManager;
 import java.util.List;
 
 @Service
-public class JpaRoleServiceImpl implements RoleService {
+public class RoleServiceImpl implements RoleService {
 
     @Qualifier("jpaRoleRepositoryImpl")
     @Autowired
     private RoleRepository jpaRepository;
+
+    @Autowired
+    private EntityManager entityManager;
 
     @Override
     @Transactional
@@ -25,7 +30,9 @@ public class JpaRoleServiceImpl implements RoleService {
 
     @Override
     @Transactional
-    public void roleAssignment(int userId, int roleId) {
+    public void roleAssignment(long userId, long roleId) {
+        validRole(roleId);
+
         jpaRepository.roleAssignment(userId, roleId);
     }
 
@@ -37,13 +44,26 @@ public class JpaRoleServiceImpl implements RoleService {
 
     @Override
     @Transactional
-    public void deleteRole(int id) {
+    public void deleteRole(long id) {
+
+        validRole(id);
+
         jpaRepository.deleteRole(id);
     }
 
     @Override
     @Transactional
     public List<Role> getActionPointRole(){
+
         return jpaRepository.getActionPointRole();
     }
+
+    private void validRole(long id){
+        Role role = entityManager.find(Role.class, id);
+
+        if(role == null){
+            throw new NotFoundException("Role not found");
+        }
+    }
+
 }
