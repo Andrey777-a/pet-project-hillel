@@ -1,6 +1,5 @@
 package com.example.springhillel.api.controller;
 
-import com.example.springhillel.exception.NotFoundException;
 import com.example.springhillel.model.dto.UserDTO;
 import com.example.springhillel.model.entity.User;
 import com.example.springhillel.api.service.UserService;
@@ -57,13 +56,6 @@ public class UserController {
     public void deleteUser(@PathVariable int id) {
 
         userService.deleted(id);
-
-    }
-
-    @GetMapping("/test")
-    public void test() {
-
-        throw new NotFoundException("Something not found");
 
     }
 }

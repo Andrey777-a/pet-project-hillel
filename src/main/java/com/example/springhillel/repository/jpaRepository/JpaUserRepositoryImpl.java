@@ -21,14 +21,14 @@ public class JpaUserRepositoryImpl implements UserRepository {
     @Autowired
     private EntityManager entityManager;
 
-    public User findOne(){
+    /*public User findOne(){
 
         EntityGraph entityGraph =  entityManager.getEntityGraph("graph.User");
         Map<String, Object> properties = new HashMap<>();
         properties.put("javax.persistence.fetchgraph", entityGraph);
         User user = entityManager.find(User.class, 1L, properties);
         return user;
-    }
+    }*/
 
 //    @EntityGraph(value = "graph.User", type = EntityGraph.EntityGraphType.LOAD)
     @Override
