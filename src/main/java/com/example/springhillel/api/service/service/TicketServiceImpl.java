@@ -1,10 +1,10 @@
 package com.example.springhillel.api.service.service;
 
 import com.example.springhillel.exception.NotFoundException;
-import com.example.springhillel.model.dto.TaskAttributeDTO;
-import com.example.springhillel.model.entity.TaskAttribute;
-import com.example.springhillel.repository.TaskRepository;
-import com.example.springhillel.api.service.TaskService;
+import com.example.springhillel.model.dto.TicketDTO;
+import com.example.springhillel.model.entity.Ticket;
+import com.example.springhillel.repository.TicketRepository;
+import com.example.springhillel.api.service.TicketService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
@@ -13,39 +13,39 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 
 @Service
-public class TaskServiceImpl implements TaskService {
+public class TicketServiceImpl implements TicketService {
 
-    @Qualifier("jpaTaskRepositoryImpl")
+    @Qualifier("jpaTicketRepositoryImpl")
     @Autowired
-    private TaskRepository jpaRepository;
+    private TicketRepository jpaRepository;
 
     @Override
-    public List<TaskAttribute> getAllTask() {
+    public List<Ticket> getAllTask() {
         return jpaRepository.getAllTask();
     }
 
     @Override
     @Transactional
-    public void createTask(TaskAttributeDTO taskAttribute) {
+    public void createTask(TicketDTO taskAttribute) {
         jpaRepository.createTask(taskAttribute);
     }
 
     @Override
     @Transactional
-    public void updateTask(TaskAttribute taskAttribute) {
+    public void updateTask(Ticket ticket) {
 
-        jpaRepository.updateTask(taskAttribute);
+        jpaRepository.updateTask(ticket);
     }
 
     @Override
     @Transactional
-    public List<TaskAttribute> getTaskUser(int user) {
+    public List<Ticket> getTaskUser(int user) {
         return jpaRepository.getTaskUser(user);
     }
 
     @Override
     @Transactional
-    public TaskAttribute getTask(long id) {
+    public Ticket getTask(long id) {
 
         validTask(id);
 
@@ -63,9 +63,9 @@ public class TaskServiceImpl implements TaskService {
     }
 
     private void validTask(long idTask){
-        TaskAttribute taskAttribute = jpaRepository.getTask(idTask);
+        Ticket ticket = jpaRepository.getTask(idTask);
 
-        if(taskAttribute == null){
+        if(ticket == null){
             throw new NotFoundException("Task not found");
         }
     }

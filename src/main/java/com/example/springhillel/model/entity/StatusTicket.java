@@ -10,8 +10,8 @@ import javax.persistence.*;
 @NoArgsConstructor
 @Data
 @Entity
-@Table(name = "status_task")
-public class StatusTask {
+@Table(name = "status_ticket")
+public class StatusTicket {
 
     @Id
     @Column(name = "id")
@@ -21,5 +21,7 @@ public class StatusTask {
     @Column(name = "name")
     private String name;
 
-
+    public StatusTicket(long id) {
+        this.id = id;
+    }
 }

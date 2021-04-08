@@ -11,8 +11,8 @@ import javax.persistence.*;
 @NoArgsConstructor
 @Data
 @Entity
-@Table(name = "type_task")
-public class TypeTask {
+@Table(name = "type_ticket")
+public class TypeTicket {
 
     @Id
     @Column(name = "id")

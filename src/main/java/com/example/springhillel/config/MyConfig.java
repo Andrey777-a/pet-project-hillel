@@ -1,13 +1,7 @@
 package com.example.springhillel.config;
 
-import com.example.springhillel.model.entity.TaskAttribute;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.config.BeanPostProcessor;
 import org.springframework.context.annotation.*;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
-
-import javax.annotation.PostConstruct;
-import java.time.LocalDateTime;
 
 @Configuration
 @ComponentScan(basePackages = "com.example.springhillel")

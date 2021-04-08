@@ -11,8 +11,8 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "task_user")
-public class TaskAttribute {
+@Table(name = "ticket_user")
+public class Ticket {
 
     @Id
     @Column(name = "id")
@@ -31,7 +31,7 @@ public class TaskAttribute {
 
     @ManyToOne(optional = false, cascade = CascadeType.ALL)
     @JoinColumn(name = "status_id", referencedColumnName = "id")
-    private StatusTask status;
+    private StatusTicket status;
 
     @Column(name = "priority")
     private int priority;
@@ -47,12 +47,12 @@ public class TaskAttribute {
 
     @ManyToOne(optional = false, cascade = CascadeType.ALL)
     @JoinColumn(name = "type_id", referencedColumnName = "id")
-    private TypeTask typeTask;
+    private TypeTicket typeTicket;
 
 
-    public TaskAttribute(String name, String description, User assignee, StatusTask status, int priority,
-                         double timeSpent, LocalDateTime timeEstimated, LocalDateTime createdOnDate,
-                         TypeTask typeTask) {
+    public Ticket(String name, String description, User assignee, StatusTicket status, int priority,
+                  double timeSpent, LocalDateTime timeEstimated, LocalDateTime createdOnDate,
+                  TypeTicket typeTicket) {
         this.name = name;
         this.description = description;
         this.user = assignee;
@@ -61,7 +61,7 @@ public class TaskAttribute {
         this.timeSpent = timeSpent;
         this.timeEstimated = timeEstimated;
         this.createdOnDate = createdOnDate;
-        this.typeTask = typeTask;
+        this.typeTicket = typeTicket;
     }
 
 }

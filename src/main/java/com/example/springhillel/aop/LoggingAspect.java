@@ -1,7 +1,6 @@
 package com.example.springhillel.aop;
 
-import com.example.springhillel.exception.NotFoundException;
-import com.example.springhillel.model.entity.TaskAttribute;
+import com.example.springhillel.model.entity.Ticket;
 import com.example.springhillel.model.entity.User;
 import lombok.extern.slf4j.Slf4j;
 import org.aspectj.lang.JoinPoint;
@@ -40,11 +39,11 @@ public class LoggingAspect {
                     log.info("User parameter " + obj.toString());
                 }
 
-            } else if (obj instanceof TaskAttribute){
+            } else if (obj instanceof Ticket){
                 switch (joinPoint.getSignature().getName()) {
                     case "createTask" :
                     case "updateTask":
-                        log.info("Task " + ((TaskAttribute) obj).getName());
+                        log.info("Task " + ((Ticket) obj).getName());
                         break;
                     case "getTaskUser":
                         log.info("Task " + obj.toString());
@@ -81,13 +80,13 @@ public class LoggingAspect {
                     log.info("User parameter " + obj.toString() + " - added.");
                 }
 
-            } else if (obj instanceof TaskAttribute){
+            } else if (obj instanceof Ticket){
                 switch (joinPoint.getSignature().getName()) {
                     case "createTask":
-                        log.info("Task " + ((TaskAttribute) obj).getName() + " - added.");
+                        log.info("Task " + ((Ticket) obj).getName() + " - added.");
                         break;
                     case "updateTask":
-                        log.info("Task " + ((TaskAttribute) obj).getName() + " - updated.");
+                        log.info("Task " + ((Ticket) obj).getName() + " - updated.");
                         break;
                     case "getTaskUser":
                         log.info("Task " + obj.toString() + " - unloaded.");

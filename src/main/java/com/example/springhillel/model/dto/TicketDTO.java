@@ -9,7 +9,7 @@ import java.time.LocalDateTime;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class TaskAttributeDTO {
+public class TicketDTO {
 
     private long id;
 
@@ -19,7 +19,7 @@ public class TaskAttributeDTO {
 
     private long assignee;
 
-    private int status;
+    private long status;
 
     private int priority;
 
@@ -29,12 +29,12 @@ public class TaskAttributeDTO {
 
     private LocalDateTime createdOnDate;
 
-    private int typeTask;
+    private long typeTicket;
 
 
-    public TaskAttributeDTO(String name, String description, long assignee, int status, int priority,
-                         double timeSpent, LocalDateTime timeEstimated, LocalDateTime createdOnDate,
-                         int typeTask) {
+    public TicketDTO(String name, String description, long assignee, long status, int priority,
+                     double timeSpent, LocalDateTime timeEstimated, LocalDateTime createdOnDate,
+                     long typeTicket) {
         this.name = name;
         this.description = description;
         this.assignee = assignee;
@@ -43,7 +43,7 @@ public class TaskAttributeDTO {
         this.timeSpent = timeSpent;
         this.timeEstimated = timeEstimated;
         this.createdOnDate = createdOnDate;
-        this.typeTask = typeTask;
+        this.typeTicket = typeTicket;
     }
 
 }
