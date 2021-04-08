@@ -1,4 +1,4 @@
-package com.example.springhillel.config;
+package com.example.springhillel.springbatch;
 
 import com.example.springhillel.model.entity.StatusTicket;
 import com.example.springhillel.model.entity.Ticket;

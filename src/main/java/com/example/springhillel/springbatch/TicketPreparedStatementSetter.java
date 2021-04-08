@@ -1,4 +1,4 @@
-package com.example.springhillel.config;
+package com.example.springhillel.springbatch;
 
 import com.example.springhillel.model.entity.Ticket;
 import org.springframework.batch.item.database.ItemPreparedStatementSetter;

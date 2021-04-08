@@ -15,30 +15,12 @@ import org.springframework.scheduling.annotation.Async;
 import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.scheduling.annotation.Scheduled;
 
-import java.util.concurrent.atomic.AtomicBoolean;
-import java.util.concurrent.atomic.AtomicInteger;
-
 @Configuration
 //@EnableScheduling
 public class SpringSchedulingConfiguration {
 
     @Autowired
     JobLauncher jobLauncher;
-
-    @Autowired
-    JobExplorer jobExplorer;
-
-/*    @Autowired
-    public JobOperator jobOperator;*/
-
-    private AtomicBoolean enabled = new AtomicBoolean(true);
-    private AtomicInteger batchRunCounter = new AtomicInteger(0);
-/*
-    @Autowired
-    JobInstance jobInstance;*/
-
-    @Autowired
-    JobRepository jobRepository;
 
     @Autowired
     Job job;

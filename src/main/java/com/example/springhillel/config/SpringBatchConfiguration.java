@@ -1,25 +1,17 @@
 package com.example.springhillel.config;
 
 import com.example.springhillel.model.entity.Ticket;
+import com.example.springhillel.springbatch.TicketItemProcessor;
+import com.example.springhillel.springbatch.TicketPreparedStatementSetter;
 import org.springframework.batch.core.Job;
 import org.springframework.batch.core.Step;
-import org.springframework.batch.core.configuration.JobRegistry;
-import org.springframework.batch.core.configuration.annotation.EnableBatchProcessing;
 import org.springframework.batch.core.configuration.annotation.JobBuilderFactory;
 import org.springframework.batch.core.configuration.annotation.StepBuilderFactory;
-import org.springframework.batch.core.explore.JobExplorer;
-import org.springframework.batch.core.explore.support.JobExplorerFactoryBean;
-import org.springframework.batch.core.launch.JobLauncher;
-import org.springframework.batch.core.launch.JobOperator;
 import org.springframework.batch.core.launch.support.RunIdIncrementer;
-import org.springframework.batch.core.launch.support.SimpleJobOperator;
-import org.springframework.batch.core.repository.JobRepository;
 import org.springframework.batch.item.ItemProcessor;
 import org.springframework.batch.item.ItemReader;
 import org.springframework.batch.item.ItemWriter;
-import org.springframework.batch.item.database.BeanPropertyItemSqlParameterSourceProvider;
 import org.springframework.batch.item.database.ItemPreparedStatementSetter;
-import org.springframework.batch.item.database.JdbcBatchItemWriter;
 import org.springframework.batch.item.database.builder.JdbcBatchItemWriterBuilder;
 import org.springframework.batch.item.database.builder.JdbcCursorItemReaderBuilder;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -38,9 +30,6 @@ public class SpringBatchConfiguration {
 
     @Autowired
     public StepBuilderFactory stepBuilderFactory;
-
-    /*@Autowired
-    JobExplorer jobExplorer;*/
 
 
     @Bean
@@ -102,26 +91,5 @@ public class SpringBatchConfiguration {
     public JdbcTemplate jdbcTemplate(DataSource dataSource) {
         return new JdbcTemplate(dataSource);
     }
-
-   /* @Bean
-    public JobOperator jobOperator(final JobLauncher jobLauncher, final JobRepository jobRepository,
-                                   final JobRegistry jobRegistry, final JobExplorer jobExplorer) {
-        final SimpleJobOperator jobOperator = new SimpleJobOperator();
-        jobOperator.setJobLauncher(jobLauncher);
-        jobOperator.setJobRepository(jobRepository);
-        jobOperator.setJobRegistry(jobRegistry);
-        jobOperator.setJobExplorer(jobExplorer);
-        return jobOperator;
-    }
-
-    @Bean
-    public JobExplorer jobExplorer(final DataSource dataSource) throws Exception {
-        final JobExplorerFactoryBean bean = new JobExplorerFactoryBean();
-        bean.setDataSource(dataSource);
-        bean.setTablePrefix("BATCH_");
-        bean.setJdbcOperations(new JdbcTemplate(dataSource));
-        bean.afterPropertiesSet();
-        return bean.getObject();
-    }*/
 
 }
