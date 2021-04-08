@@ -1,8 +1,8 @@
 package com.example.springhillel.config;
 
 import com.example.springhillel.model.entity.Ticket;
-import com.example.springhillel.springbatch.TicketItemProcessor;
-import com.example.springhillel.springbatch.TicketPreparedStatementSetter;
+import com.example.springhillel.springbatch.ticket.TicketItemProcessor;
+import com.example.springhillel.springbatch.ticket.TicketPreparedStatementSetter;
 import org.springframework.batch.core.Job;
 import org.springframework.batch.core.Step;
 import org.springframework.batch.core.configuration.annotation.JobBuilderFactory;
