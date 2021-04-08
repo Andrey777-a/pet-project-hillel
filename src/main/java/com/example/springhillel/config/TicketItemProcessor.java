@@ -16,12 +16,12 @@ public class TicketItemProcessor implements ItemProcessor<Ticket, Ticket> {
 //        StatusTicket statusTicket = new StatusTicket(5);
 //
 
-            if (LocalDateTime.now().isAfter(localDateTime)) {
+        if (LocalDateTime.now().isAfter(localDateTime)) {
 //                ticket.setStatus(statusTicket);
-                return ticket;
-            }
-
+            return ticket;
+        }
 
         return null;
+
     }
 }

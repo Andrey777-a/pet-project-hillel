@@ -16,6 +16,7 @@ import org.springframework.batch.item.ItemReader;
 import org.springframework.batch.item.ItemWriter;
 import org.springframework.batch.item.database.JpaCursorItemReader;
 import org.springframework.batch.item.database.JpaItemWriter;
+import org.springframework.batch.item.database.JpaPagingItemReader;
 import org.springframework.batch.item.database.builder.JdbcCursorItemReaderBuilder;
 import org.springframework.batch.item.database.builder.JpaCursorItemReaderBuilder;
 import org.springframework.batch.item.database.builder.JpaItemWriterBuilder;
@@ -30,10 +31,10 @@ import javax.persistence.EntityManagerFactory;
 import javax.sql.DataSource;
 
 @Configuration
-@EnableBatchProcessing
+//@EnableBatchProcessing
 public class ConfigTest {
 
-    @Autowired
+   /* @Autowired
     public JobBuilderFactory jobBuilderFactory;
 
     @Autowired
@@ -48,16 +49,21 @@ public class ConfigTest {
 
     @Bean
     public ItemReader<Ticket> itemReader() {
-       /* JpaCursorItemReaderBuilder<Ticket> jpaCursorItemReaderBuilder = new JpaCursorItemReaderBuilder<>();
-        jpaCursorItemReaderBuilder.entityManagerFactory(emf);
-        jpaCursorItemReaderBuilder.queryString("SELECT t FROM Ticket t");
-        jpaCursorItemReaderBuilder.build();
-        jpaCursorItemReaderBuilder.saveState(true);*/
-        JpaCursorItemReader<Ticket> s = new JpaCursorItemReader<>();
+        *//*JpaCursorItemReaderBuilder<Ticket> s = new JpaCursorItemReaderBuilder<>();
+        s.entityManagerFactory(emf);
+        s.queryString("SELECT t FROM Ticket t");
+        s.saveState(true);
+        s.build();*//*
+       *//* JpaCursorItemReader<Ticket> s = new JpaCursorItemReader<>();
 
         s.setEntityManagerFactory(emf);
         s.setQueryString("SELECT t FROM Ticket t");
         s.setSaveState(true);
+        s.setName("name");*//*
+
+        JpaPagingItemReader <Ticket> s = new JpaPagingItemReader<>();
+        s.setEntityManagerFactory(emf);
+        s.setQueryString("SELECT t FROM Ticket t");
 
 
         return s;
@@ -75,14 +81,15 @@ public class ConfigTest {
         writer.setEntityManagerFactory(emf);
 
         return writer;
+
     }
 
     @Bean
-    public Job importTicket(JobBuilderFactory jobs, Step s1) {
+    public Job importTicket(JobBuilderFactory jobs, Step step1) {
 
-        return jobs.get("import")
+        return jobs.get("importTicket")
                 .incrementer(new RunIdIncrementer())
-                .flow(s1)
+                .flow(step1)
                 .end()
                 .build();
     }
@@ -96,6 +103,5 @@ public class ConfigTest {
                 .processor(processor)
                 .writer(writer)
                 .build();
-    }
-
+    }*/
 }
