@@ -1,5 +1,6 @@
 package com.example.springhillel.config;
 
+import com.example.springhillel.model.dto.TicketDTO;
 import com.example.springhillel.model.entity.Ticket;
 import com.example.springhillel.springbatch.ticket.TicketItemProcessor;
 import com.example.springhillel.springbatch.ticket.TicketPreparedStatementSetter;
@@ -33,35 +34,35 @@ public class SpringBatchConfiguration {
 
 
     @Bean
-    public ItemReader<Ticket> itemReader(DataSource dataSource){
+    public ItemReader<TicketDTO> itemReader(DataSource dataSource){
 
-        return new JdbcCursorItemReaderBuilder<Ticket>()
+        return new JdbcCursorItemReaderBuilder<TicketDTO>()
                 .name("itemReaderJdbc")
                 .dataSource(dataSource)
                 .sql("SELECT * FROM ticket_user")
-                .rowMapper(new BeanPropertyRowMapper<>(Ticket.class))
+                .rowMapper(new BeanPropertyRowMapper<>(TicketDTO.class))
                 .build();
 
     }
 
     @Bean
-    public ItemWriter<Ticket> itemWriter(DataSource dataSource){
+    public ItemWriter<TicketDTO> itemWriter(DataSource dataSource){
 //        JdbcBatchItemWriter<Ticket> writer = new JdbcBatchItemWriterBuilder<>();
 //        writer.setItemSqlParameterSourceProvider(new BeanPropertyItemSqlParameterSourceProvider<Ticket>());
 //        writer.setSql("UPDATE ticket_user SET status_id = ? WHERE id = ?");
 //        writer.setDataSource(dataSource);
 
-        ItemPreparedStatementSetter<Ticket> itemPreparedStatementSetter = new TicketPreparedStatementSetter();
+        ItemPreparedStatementSetter<TicketDTO> itemPreparedStatementSetter = new TicketPreparedStatementSetter();
 //        writer.setItemPreparedStatementSetter(itemPreparedStatementSetter);
 
-        return new JdbcBatchItemWriterBuilder<Ticket>().dataSource(dataSource)
+        return new JdbcBatchItemWriterBuilder<TicketDTO>().dataSource(dataSource)
                 .sql("UPDATE ticket_user SET status_id = ? WHERE id = ?")
                 .itemPreparedStatementSetter(itemPreparedStatementSetter)
                 .build();
     }
 
     @Bean
-    public ItemProcessor<Ticket, Ticket> processor() {
+    public ItemProcessor<TicketDTO, TicketDTO> processor() {
         return new TicketItemProcessor();
     }
 
@@ -77,10 +78,10 @@ public class SpringBatchConfiguration {
     }
 
     @Bean
-    public Step step1(StepBuilderFactory stepBuilderFactory, ItemReader<Ticket> reader,
-                      ItemWriter<Ticket> writer, ItemProcessor<Ticket, Ticket> processor) {
+    public Step step1(StepBuilderFactory stepBuilderFactory, ItemReader<TicketDTO> reader,
+                      ItemWriter<TicketDTO> writer, ItemProcessor<TicketDTO, TicketDTO> processor) {
         return stepBuilderFactory.get("step1")
-                .<Ticket, Ticket> chunk(10)
+                .<TicketDTO, TicketDTO> chunk(10)
                 .reader(reader)
                 .processor(processor)
                 .writer(writer)
