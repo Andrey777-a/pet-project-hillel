@@ -1,5 +1,6 @@
 package com.example.springhillel.model.entity;
 
+import com.example.springhillel.model.AbstractEntity;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -12,14 +13,10 @@ import javax.persistence.*;
 @Data
 @Entity
 @Table(name = "type_ticket")
-public class TypeTicket {
-
-    @Id
-    @Column(name = "id")
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+public class TypeTicket extends AbstractEntity {
 
     @Column(name = "name")
     private String name;
+
 
 }

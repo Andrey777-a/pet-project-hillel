@@ -1,6 +1,6 @@
 package com.example.springhillel.model.entity;
 
-import lombok.AllArgsConstructor;
+import com.example.springhillel.model.AbstractEntity;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -9,15 +9,9 @@ import java.time.LocalDateTime;
 
 @Data
 @NoArgsConstructor
-@AllArgsConstructor
 @Entity
 @Table(name = "ticket_user")
-public class Ticket {
-
-    @Id
-    @Column(name = "id")
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+public class Ticket extends AbstractEntity {
 
     @Column(name = "name")
     private String name;

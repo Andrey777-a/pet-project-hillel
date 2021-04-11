@@ -7,10 +7,10 @@ import org.springframework.batch.item.database.ItemPreparedStatementSetter;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
-public class TicketPreparedStatementSetter implements ItemPreparedStatementSetter<TicketDTO> {
+public class TicketPreparedStatementSetter implements ItemPreparedStatementSetter<Ticket> {
 
     @Override
-    public void setValues(TicketDTO ticket, PreparedStatement preparedStatement) throws SQLException {
+    public void setValues(Ticket ticket, PreparedStatement preparedStatement) throws SQLException {
         preparedStatement.setLong(1, 5);
         preparedStatement.setLong(2, ticket.getId());
     }

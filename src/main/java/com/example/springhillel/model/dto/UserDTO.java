@@ -4,6 +4,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import javax.validation.constraints.Email;
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
@@ -17,6 +19,8 @@ public class UserDTO {
 
     private String password;
 
+    @Email(message = "Email is not correct")
+//    @Email
     private String email;
 
     private long roleId;

@@ -1,6 +1,5 @@
 package com.example.springhillel.config;
 
-import com.example.springhillel.model.dto.TicketDTO;
 import com.example.springhillel.model.entity.Ticket;
 import com.example.springhillel.springbatch.ticket.TicketItemProcessor;
 import com.example.springhillel.springbatch.ticket.TicketPreparedStatementSetter;
@@ -23,46 +22,40 @@ import org.springframework.jdbc.core.JdbcTemplate;
 
 import javax.sql.DataSource;
 @Configuration
-//@EnableBatchProcessing
 public class SpringBatchConfiguration {
 
     @Autowired
-    public JobBuilderFactory jobBuilderFactory;
+    private JobBuilderFactory jobBuilderFactory;
 
     @Autowired
-    public StepBuilderFactory stepBuilderFactory;
+    private StepBuilderFactory stepBuilderFactory;
 
 
     @Bean
-    public ItemReader<TicketDTO> itemReader(DataSource dataSource){
+    public ItemReader<Ticket> itemReader(DataSource dataSource){
 
-        return new JdbcCursorItemReaderBuilder<TicketDTO>()
+        return new JdbcCursorItemReaderBuilder<Ticket>()
                 .name("itemReaderJdbc")
                 .dataSource(dataSource)
                 .sql("SELECT * FROM ticket_user")
-                .rowMapper(new BeanPropertyRowMapper<>(TicketDTO.class))
+                .rowMapper(new BeanPropertyRowMapper<>(Ticket.class))
                 .build();
 
     }
 
     @Bean
-    public ItemWriter<TicketDTO> itemWriter(DataSource dataSource){
-//        JdbcBatchItemWriter<Ticket> writer = new JdbcBatchItemWriterBuilder<>();
-//        writer.setItemSqlParameterSourceProvider(new BeanPropertyItemSqlParameterSourceProvider<Ticket>());
-//        writer.setSql("UPDATE ticket_user SET status_id = ? WHERE id = ?");
-//        writer.setDataSource(dataSource);
+    public ItemWriter<Ticket> itemWriter(DataSource dataSource){
 
-        ItemPreparedStatementSetter<TicketDTO> itemPreparedStatementSetter = new TicketPreparedStatementSetter();
-//        writer.setItemPreparedStatementSetter(itemPreparedStatementSetter);
+        ItemPreparedStatementSetter<Ticket> itemPreparedStatementSetter = new TicketPreparedStatementSetter();
 
-        return new JdbcBatchItemWriterBuilder<TicketDTO>().dataSource(dataSource)
+        return new JdbcBatchItemWriterBuilder<Ticket>().dataSource(dataSource)
                 .sql("UPDATE ticket_user SET status_id = ? WHERE id = ?")
                 .itemPreparedStatementSetter(itemPreparedStatementSetter)
                 .build();
     }
 
     @Bean
-    public ItemProcessor<TicketDTO, TicketDTO> processor() {
+    public ItemProcessor<Ticket, Ticket> processor() {
         return new TicketItemProcessor();
     }
 
@@ -78,10 +71,10 @@ public class SpringBatchConfiguration {
     }
 
     @Bean
-    public Step step1(StepBuilderFactory stepBuilderFactory, ItemReader<TicketDTO> reader,
-                      ItemWriter<TicketDTO> writer, ItemProcessor<TicketDTO, TicketDTO> processor) {
+    public Step step1(StepBuilderFactory stepBuilderFactory, ItemReader<Ticket> reader,
+                      ItemWriter<Ticket> writer, ItemProcessor<Ticket, Ticket> processor) {
         return stepBuilderFactory.get("step1")
-                .<TicketDTO, TicketDTO> chunk(10)
+                .<Ticket, Ticket> chunk(10)
                 .reader(reader)
                 .processor(processor)
                 .writer(writer)

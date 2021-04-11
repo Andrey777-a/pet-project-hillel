@@ -1,6 +1,5 @@
 package com.example.springhillel.springbatch.ticket;
 
-import com.example.springhillel.model.dto.TicketDTO;
 import com.example.springhillel.model.entity.Ticket;
 import org.springframework.batch.item.ItemProcessor;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,22 +7,23 @@ import org.springframework.beans.factory.annotation.Autowired;
 import javax.persistence.EntityManager;
 import java.time.LocalDateTime;
 
-public class TicketItemProcessor implements ItemProcessor<TicketDTO, TicketDTO> {
+public class TicketItemProcessor implements ItemProcessor<Ticket, Ticket> {
 
     @Autowired
     private EntityManager entityManager;
 
     @Override
-    public TicketDTO process(TicketDTO ticketDTO) {
+    public Ticket process(Ticket ticket) {
 
-        Ticket ticket = entityManager.find(Ticket.class, ticketDTO.getId());
+        Ticket ticketEntity = entityManager.find(Ticket.class, ticket.getId());
 
-        LocalDateTime localDateTime = ticketDTO
+//        Ticket ticket1 = ticket;
+        LocalDateTime localDateTime = ticket
                 .getTimeEstimated();
 
-        if (LocalDateTime.now().isAfter(localDateTime) && ticket.getStatus().getId() != 5) {
+        if (LocalDateTime.now().isAfter(localDateTime) && ticketEntity.getStatus().getId() != 5) {
 
-            return ticketDTO;
+            return ticket;
 
         }
 
