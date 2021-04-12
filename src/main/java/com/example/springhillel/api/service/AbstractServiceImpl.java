@@ -10,10 +10,13 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 import java.util.Optional;
 
-public abstract class AbstractServiceImpl <E extends AbstractEntity, D> implements AbstractService<E, D>{
+public abstract class AbstractServiceImpl <E extends AbstractEntity, D, R extends AbstractRepository<E>> implements AbstractService<E, D>{
 
     @Autowired
-    private AbstractRepository<E> abstractRepository;
+    private R abstractRepository;
+//
+//    @Autowired
+//    private AbstractRepository<E> abstractRepository;
 
     @Autowired
     private AbstractConvert<E, D> abstractConvert;

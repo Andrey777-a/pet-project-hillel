@@ -20,7 +20,6 @@ public class UserDTO {
     private String password;
 
     @Email(message = "Email is not correct")
-//    @Email
     private String email;
 
     private long roleId;
