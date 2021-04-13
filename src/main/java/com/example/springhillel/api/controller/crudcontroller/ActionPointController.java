@@ -7,7 +7,7 @@ import com.example.springhillel.model.entity.ActionPoint;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-@RestController("actionPointControllerCrud")
+@RestController
 @RequestMapping("/action-point")
 public class ActionPointController extends AbstractControllerImpl<ActionPoint, ActionPointDTO, ActionPointService> {
 }

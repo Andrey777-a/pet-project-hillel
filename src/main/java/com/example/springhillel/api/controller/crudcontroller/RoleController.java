@@ -7,7 +7,7 @@ import com.example.springhillel.model.entity.Role;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-@RestController("roleControllerCrud")
+@RestController
 @RequestMapping("/role")
 public class RoleController extends AbstractControllerImpl<Role, RoleDTO, RoleService> {
 }

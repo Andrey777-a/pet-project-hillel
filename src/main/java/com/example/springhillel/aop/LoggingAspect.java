@@ -9,8 +9,6 @@ import org.aspectj.lang.annotation.*;
 import org.aspectj.lang.reflect.MethodSignature;
 import org.springframework.stereotype.Component;
 
-import java.util.List;
-
 @Component
 @Aspect
 @Slf4j
@@ -114,16 +112,6 @@ public class LoggingAspect {
         log.info("Method " + methodSignature.getMethod() + " finished. Operating time - " + duration + " ms.");
 
         return object;
-    }
-
-
-    @AfterReturning(pointcut = "getInfo()", returning = "listUser")
-    public void infoUser(List<com.example.springhillel.model.entity.User> listUser){
-
-        for(com.example.springhillel.model.entity.User user: listUser){
-            log.info(user.toString());
-        }
-
     }
 
     @AfterThrowing(pointcut = "loggingAllMethod()", throwing = "exception")
