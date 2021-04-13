@@ -1,5 +1,6 @@
 package com.example.springhillel.model.entity;
 
+import com.example.springhillel.model.AbstractEntity;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -12,12 +13,8 @@ import java.util.List;
 @Data
 @Entity
 @Table(name = "role")
-public class Role {
+public class Role extends AbstractEntity {
 
-    @Id
-    @Column(name = "id")
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
 
     @Column(name = "name")
     private String name;

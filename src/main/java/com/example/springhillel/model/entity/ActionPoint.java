@@ -1,34 +1,22 @@
 package com.example.springhillel.model.entity;
 
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import lombok.AllArgsConstructor;
+import com.example.springhillel.model.AbstractEntity;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.ToString;
 
-import javax.persistence.*;
-import java.util.List;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
 
-@AllArgsConstructor
 @NoArgsConstructor
 @Data
 @Entity
 @Table(name = "action_point")
-public class ActionPoint {
-
-    @Id
-    @Column(name = "id")
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+public class ActionPoint extends AbstractEntity {
 
     @Column(name = "name")
     private String name;
-
-    /*@ManyToMany(mappedBy = "actionPoints")
-    @ToString.Exclude
-    @JsonIgnore
-    private List<Role> roles;*/
 
     public ActionPoint(String name) {
         this.name = name;

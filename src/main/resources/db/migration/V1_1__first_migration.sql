@@ -36,17 +36,17 @@ create table user
     constraint user_role_id_fk
         foreign key (role_id) references role (id)
 );
-create table status_task (
+create table status_ticket (
+                               id int auto_increment primary key,
+                               name varchar(500)  not null
+);
+
+create table type_ticket (
                              id int auto_increment primary key,
                              name varchar(500)  not null
 );
 
-create table type_task (
-                           id int auto_increment primary key,
-                           name varchar(500)  not null
-);
-
-create table task_user
+create table ticket_user
 (
     id int auto_increment primary key,
     name            varchar(500)                         not null,
@@ -61,20 +61,20 @@ create table task_user
     constraint task_user_user_id_fk
         foreign key (user_id) references user (id),
 	constraint task_user_status_id_fk
-        foreign key (status_id) references status_task (id),
+        foreign key (status_id) references status_ticket (id),
 	constraint task_user_type_id_fk
-        foreign key (type_id) references type_task (id)
+        foreign key (type_id) references type_ticket (id)
 );
 
-insert into type_task(name) values('USER_STORY');
-insert into type_task(name) values('SUP_TASK');
-insert into type_task(name) values('EPIC');
+insert into type_ticket(name) values('USER_STORY');
+insert into type_ticket(name) values('SUP_TASK');
+insert into type_ticket(name) values('EPIC');
 
-insert into status_task(name) values('IN_WORK');
-insert into status_task(name) values('ASSIGN');
-insert into status_task(name) values('DONE');
-insert into status_task(name) values('HOLD');
-insert into status_task(name) values('DELETE');
+insert into status_ticket(name) values('IN_WORK');
+insert into status_ticket(name) values('ASSIGN');
+insert into status_ticket(name) values('DONE');
+insert into status_ticket(name) values('HOLD');
+insert into status_ticket(name) values('DELETE');
 
 insert role (name) values ("ROLE_ADMIN");
 insert role (name) values ("ROLE_ANALYST");

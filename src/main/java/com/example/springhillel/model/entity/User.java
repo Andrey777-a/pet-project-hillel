@@ -1,6 +1,6 @@
 package com.example.springhillel.model.entity;
 
-import lombok.AllArgsConstructor;
+import com.example.springhillel.model.AbstractEntity;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -40,16 +40,11 @@ import javax.persistence.*;
 
 
 @Data
-@AllArgsConstructor
+//@AllArgsConstructor
 @NoArgsConstructor
 @Entity
 @Table(name = "user")
-public class User {
-
-    @Id
-    @Column(name = "id")
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+public class User extends AbstractEntity {
 
     @Column(name = "first_name")
     private String firstName;
@@ -69,14 +64,14 @@ public class User {
     @JoinColumn(name = "role_id", referencedColumnName = "id")
     private Role role;
 
-    public User(long id) {
+    /*public User(long id) {
         this.id = id;
     }
 
     public User(long id, Role role) {
         this.id = id;
         this.role = role;
-    }
+    }*/
 
     public User(String firstName, String lastName, String password, String email) {
         this.firstName = firstName;
