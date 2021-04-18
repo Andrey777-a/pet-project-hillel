@@ -1,7 +1,5 @@
 package com.example.springhillel.aop;
 
-import com.example.springhillel.model.entity.Ticket;
-import com.example.springhillel.model.entity.User;
 import lombok.extern.slf4j.Slf4j;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.ProceedingJoinPoint;
@@ -9,7 +7,8 @@ import org.aspectj.lang.annotation.*;
 import org.aspectj.lang.reflect.MethodSignature;
 import org.springframework.stereotype.Component;
 
-import java.util.List;
+import java.util.Arrays;
+import java.util.stream.Collectors;
 
 @Component
 @Aspect
@@ -19,83 +18,11 @@ public class LoggingAspect {
     @Pointcut("within(com.example.springhillel..*)")
     private void loggingAllMethod(){}
 
-    @Pointcut("within(com.example.springhillel.repository..*)")
-    private void loggingRepositoryMethod(){}
-
-    @Pointcut("execution(* com.example.springhillel.repository..get*())")
+    @Pointcut("execution(* com.example.springhillel.repository..*())")
     private void getInfo(){}
 
-
-    @Before("loggingRepositoryMethod()")
-    public void loggingParamMethodBefore(JoinPoint joinPoint){
-
-        Object[] arg = joinPoint.getArgs();
-
-        for (Object obj: arg){
-
-            if(obj instanceof com.example.springhillel.model.entity.User) {
-
-                if(joinPoint.getSignature().getName().equals("create")){
-                    log.info("User parameter " + obj.toString());
-                }
-
-            } else if (obj instanceof Ticket){
-                switch (joinPoint.getSignature().getName()) {
-                    case "createTask" :
-                    case "updateTask":
-                        log.info("Task " + ((Ticket) obj).getName());
-                        break;
-                    case "getTaskUser":
-                        log.info("Task " + obj.toString());
-                        break;
-                }
-            }
-        }
-
-    }
-
-    @AfterReturning("loggingRepositoryMethod()")
-    public void loggingParamMethodAfter(JoinPoint joinPoint){
-        Object[] arg = joinPoint.getArgs();
-
-        for (Object obj: arg){
-
-            if (obj instanceof Integer){
-                switch (joinPoint.getSignature().getName()) {
-                    case "deleted":
-                        log.info("User " + ((Integer) obj).intValue() + " - deleted.");
-                        break;
-                    case "findUserById":
-                        log.info("parameter " + ((Integer) obj).intValue() + " to search for user");
-                        break;
-                    case "getTaskUser":
-                        log.info(((Integer) obj).intValue() + " user tasks - unloaded.");
-                        break;
-                }
-            }
-
-            else if(obj instanceof User) {
-
-                if(joinPoint.getSignature().getName().equals("create")){
-                    log.info("User parameter " + obj.toString() + " - added.");
-                }
-
-            } else if (obj instanceof Ticket){
-                switch (joinPoint.getSignature().getName()) {
-                    case "createTask":
-                        log.info("Task " + ((Ticket) obj).getName() + " - added.");
-                        break;
-                    case "updateTask":
-                        log.info("Task " + ((Ticket) obj).getName() + " - updated.");
-                        break;
-                    case "getTaskUser":
-                        log.info("Task " + obj.toString() + " - unloaded.");
-                        break;
-                }
-            }
-        }
-
-    }
+    @Pointcut("execution(* com.example.springhillel.repository..*(..))")
+    private void addParamInfo(){}
 
     @Around("loggingAllMethod()")
     public Object info(ProceedingJoinPoint proceedingJoinPoint) throws Throwable {
@@ -116,12 +43,26 @@ public class LoggingAspect {
         return object;
     }
 
+    @AfterReturning("getInfo()||addParamInfo()")
+    public void loggingParamMethodAfter(JoinPoint joinPoint){
 
-    @AfterReturning(pointcut = "getInfo()", returning = "listUser")
-    public void infoUser(List<com.example.springhillel.model.entity.User> listUser){
+        String args = Arrays.stream(joinPoint.getArgs())
+                .map(Object::toString)
+                .collect(Collectors.joining(","));
 
-        for(com.example.springhillel.model.entity.User user: listUser){
-            log.info(user.toString());
+        switch (joinPoint.getSignature().getName()){
+            case "findAll" :
+                log.info("Method " + joinPoint.getSignature().getName() + " - Information received.");
+                break;
+            case "save":
+                log.info("Information save. " + joinPoint + ", args=[" + args + "]");
+                break;
+            case "deleteById":
+                log.info("Information delete. " + joinPoint + ", args=[" + args + "]");
+                break;
+            case "findById":
+                log.info("Information search performed " + joinPoint + ", args=[" + args + "]");
+                break;
         }
 
     }

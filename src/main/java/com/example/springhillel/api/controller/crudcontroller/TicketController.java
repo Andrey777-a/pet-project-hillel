@@ -7,7 +7,7 @@ import com.example.springhillel.model.entity.Ticket;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-@RestController("ticketControllerCrud")
+@RestController
 @RequestMapping("/ticket")
 public class TicketController extends AbstractControllerImpl<Ticket, TicketDTO, TicketService> {
 }

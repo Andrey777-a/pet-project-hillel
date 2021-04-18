@@ -15,6 +15,7 @@
 	<description>Demo project for Spring Boot</description>
 	<properties>
 		<java.version>11</java.version>
+		<spring-boot.version>2.4.3</spring-boot.version>
 		<flyway.version>6.5.6</flyway.version>
 		<swagger.version>2.9.2</swagger.version>
 	</properties>
@@ -65,23 +66,24 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-batch</artifactId>
-			<version>2.4.1</version>
+			<version>${spring-boot.version}</version>
 		</dependency>
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-aop</artifactId>
 		</dependency>
-		<!--<dependency>
-			<groupId>javax.validation</groupId>
-			<artifactId>validation-api</artifactId>
-			<version>2.0.1.Final</version>
-		</dependency>-->
-		<!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-validation -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-validation</artifactId>
-			<version>2.4.3</version>
+			<version>${spring-boot.version}</version>
 		</dependency>
+		<!--<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-security</artifactId>
+			<version>${spring-boot.version}</version>
+		</dependency>-->
+
 	</dependencies>
 
 	<build>
@@ -143,7 +145,10 @@
 				<artifactId>flyway-maven-plugin</artifactId>
 				<version>${flyway.version}</version>
 			</plugin>
-
+			<plugin>
+				<artifactId>maven-war-plugin</artifactId>
+				<version>3.2.2</version>
+			</plugin>
 		</plugins>
 	</build>
 
