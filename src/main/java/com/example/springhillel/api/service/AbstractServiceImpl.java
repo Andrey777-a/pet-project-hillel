@@ -55,6 +55,8 @@ public abstract class AbstractServiceImpl <E extends AbstractEntity, D, R extend
         return abstractRepository.findById(id);
     }
 
+
+
     private void valid(long id){
         Optional<E> optional = abstractRepository.findById(id);
 
