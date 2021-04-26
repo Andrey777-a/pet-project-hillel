@@ -1,6 +1,5 @@
 package com.example.springhillel.springbatch.ticket;
 
-import com.example.springhillel.model.dto.TicketDTO;
 import com.example.springhillel.model.entity.Ticket;
 import org.springframework.batch.item.database.ItemPreparedStatementSetter;
 
