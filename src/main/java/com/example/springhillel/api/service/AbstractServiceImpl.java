@@ -37,7 +37,7 @@ public abstract class AbstractServiceImpl <E extends AbstractEntity, D, R extend
     @Override
     @Transactional(readOnly = true)
     public List<E> getAll() {
-        return (List<E>) abstractRepository.findAll();
+        return abstractRepository.findAll();
     }
 
     @Override
