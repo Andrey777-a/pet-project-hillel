@@ -19,7 +19,7 @@ public class SpringSchedulingConfiguration {
     private Job job;
 
 
-    @Scheduled(fixedDelay = 1000000)
+    @Scheduled(fixedDelay = 100000)
     public void scheduleFixedDelayTask() throws JobInstanceAlreadyCompleteException, JobExecutionAlreadyRunningException, JobParametersInvalidException, JobRestartException {
 
         System.out.println("Fixed delay task - " + System.currentTimeMillis() / 1000);

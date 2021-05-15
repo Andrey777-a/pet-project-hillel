@@ -21,15 +21,15 @@ import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 
 import javax.sql.DataSource;
+
 @Configuration
 public class SpringBatchConfiguration {
 
     @Autowired
-    private JobBuilderFactory jobBuilderFactory;
+    protected JobBuilderFactory jobBuilderFactory;
 
     @Autowired
-    private StepBuilderFactory stepBuilderFactory;
-
+    protected StepBuilderFactory stepBuilderFactory;
 
     @Bean
     public ItemReader<Ticket> itemReader(DataSource dataSource){

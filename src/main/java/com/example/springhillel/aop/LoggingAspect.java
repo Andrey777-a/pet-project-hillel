@@ -16,13 +16,13 @@ import java.util.stream.Collectors;
 public class LoggingAspect {
 
     @Pointcut("within(com.example.springhillel..*)")
-    private void loggingAllMethod(){}
+    protected void loggingAllMethod(){}
 
     @Pointcut("execution(* com.example.springhillel.repository..*())")
-    private void getInfo(){}
+    protected void getInfo(){}
 
     @Pointcut("execution(* com.example.springhillel.repository..*(..))")
-    private void addParamInfo(){}
+    protected void addParamInfo(){}
 
     @Around("loggingAllMethod()")
     public Object info(ProceedingJoinPoint proceedingJoinPoint) throws Throwable {
@@ -36,7 +36,7 @@ public class LoggingAspect {
 
         long endTime = System.currentTimeMillis();
 
-        long duration = (endTime - startTime);
+        long duration = endTime - startTime;
 
         log.info("Method " + methodSignature.getMethod() + " finished. Operating time - " + duration + " ms.");
 

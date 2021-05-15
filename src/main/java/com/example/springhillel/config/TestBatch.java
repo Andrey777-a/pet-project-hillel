@@ -1,6 +1,6 @@
 package com.example.springhillel.config;
 
-import com.example.springhillel.model.entity.Ticket;
+/*import com.example.springhillel.model.entity.Ticket;
 import com.example.springhillel.repository.AbstractRepository;
 import com.example.springhillel.springbatch.ticket.TicketItemProcessor;
 import org.springframework.batch.core.Job;
@@ -19,7 +19,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.data.domain.Sort;
 
 import java.util.HashMap;
-import java.util.Map;
+import java.util.Map;*/
 
 //@Configuration
 public class TestBatch {

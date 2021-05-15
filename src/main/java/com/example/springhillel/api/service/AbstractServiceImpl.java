@@ -37,7 +37,7 @@ public abstract class AbstractServiceImpl <E extends AbstractEntity, D, R extend
     @Override
     @Transactional(readOnly = true)
     public List<E> getAll() {
-        return (List<E>) abstractRepository.findAll();
+        return abstractRepository.findAll();
     }
 
     @Override
@@ -54,6 +54,8 @@ public abstract class AbstractServiceImpl <E extends AbstractEntity, D, R extend
         valid(id);
         return abstractRepository.findById(id);
     }
+
+
 
     private void valid(long id){
         Optional<E> optional = abstractRepository.findById(id);
