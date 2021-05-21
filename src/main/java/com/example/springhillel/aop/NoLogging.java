@@ -1,8 +1,7 @@
 package com.example.springhillel.aop;
 
-import java.lang.annotation.ElementType;
 import java.lang.annotation.Target;
 
-@Target(ElementType.METHOD)
+@Target({java.lang.annotation.ElementType.TYPE})
 public @interface NoLogging {
 }

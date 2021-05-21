@@ -20,6 +20,7 @@ import static org.springframework.http.HttpHeaders.AUTHORIZATION;
 
 @Component
 //@Slf4j
+//@NoLogging
 public class JwtFilter extends GenericFilterBean{
 
     @Autowired

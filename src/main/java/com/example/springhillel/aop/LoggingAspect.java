@@ -3,21 +3,19 @@ package com.example.springhillel.aop;
 import lombok.extern.slf4j.Slf4j;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.ProceedingJoinPoint;
-import org.aspectj.lang.annotation.AfterReturning;
-import org.aspectj.lang.annotation.AfterThrowing;
-import org.aspectj.lang.annotation.Around;
-import org.aspectj.lang.annotation.Pointcut;
+import org.aspectj.lang.annotation.*;
 import org.aspectj.lang.reflect.MethodSignature;
+import org.springframework.stereotype.Component;
 
 import java.util.Arrays;
 import java.util.stream.Collectors;
 
-//@Component
-//@Aspect
+@Component
+@Aspect
 @Slf4j
 public class LoggingAspect {
 //&& !@annotation(com.example.springhillel.aop.NoLogging)
-    @Pointcut("within(com.example.springhillel..*) ")
+    @Pointcut("within(com.example.springhillel..*) && !within(com.example.springhillel.security.JwtFilter)")
     protected void loggingAllMethod(){}
 
     @Pointcut("execution(* com.example.springhillel.repository..*())")
