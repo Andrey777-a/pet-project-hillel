@@ -14,8 +14,8 @@ import java.util.stream.Collectors;
 @Aspect
 @Slf4j
 public class LoggingAspect {
-
-    @Pointcut("within(com.example.springhillel..*)")
+//&& !@annotation(com.example.springhillel.aop.NoLogging)
+    @Pointcut("within(com.example.springhillel..*) && !within(com.example.springhillel.security.JwtFilter)")
     protected void loggingAllMethod(){}
 
     @Pointcut("execution(* com.example.springhillel.repository..*())")
